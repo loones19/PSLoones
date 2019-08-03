@@ -1,0 +1,9 @@
+Hi {firstname} {lastname},
+
+Thank you for creating a seller account at {shop_name}.
+
+E-mail address: {email}
+Password is in your welcome mail.
+{message} 
+
+{shop_url} powered by PrestaShop™

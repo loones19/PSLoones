@@ -1,0 +1,4 @@
+this is used to controll the payment module appearance based on shopping cart contents.
+- tokens only
+- list options only
+- seller products only

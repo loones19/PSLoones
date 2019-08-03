@@ -1,0 +1,1 @@
+<span>&nbsp;{l s='Number of upload images:' mod='agilemultipleseller'}&nbsp;{$image_number_limit}</span>

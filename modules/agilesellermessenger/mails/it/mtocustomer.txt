@@ -1,0 +1,8 @@
+[{subject}]
+
+Reply from: {seller_name}
+Reply Message:
+{message}
+
+{shop_url}
+{shop_name}

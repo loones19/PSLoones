@@ -1,0 +1,73 @@
+How to use this customization
+==============================
+1. Install Agile Multiple Seller module 3.3.1.1 or higher
+2. Configure the module to use customization field "Date1,Date2 (or Date3,Date4)" - define this in code file
+3. Copy SellerHolidays.php to following folder
+/modules/agilemultipleseller/custom/sellerholidays/
+
+4. Add following code 
+in file: /controllers/front/OrderController.php, 
+in override method: init(), 
+after: parent::init();
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php");
+			$isholiday = Tools::displayError('Seller %s is in holidays during %s');
+			$retmsg = SellerHolidays::get_holidays_message($isholiday);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+				return;
+			}
+		}
+
+5. Copy and paste following code 
+in file: /controllers/front/OrderOpcController.php
+in override method: _getPaymentMethods()
+before line: return parent::_getPaymentMethods()
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php");
+			$isholiday = Tools::displayError('Seller %s is in holidays during %s');
+			$retmsg = SellerHolidays::get_holidays_message($isholiday);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+				return;
+			}
+		}
+
+6. Show holidays message after adding products popup "cart block" (with continue/checkout buttons) 
+6.A Copy and paste folloging code into 
+    File: /modules/blockcart/blockcart.php 
+	Location1: inside function hookRightColumn($params), before  line: "return $this->display(__FILE__, 'blockcart.tpl');"
+	Location2: inside function hookAjaxCall($params), before  line: "return $this->display(__FILE__, 'blockcart-json.tpl');"
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php");
+			$isholiday = Tools::displayError('Seller %s is in holidays during %s');
+			$retmsg = SellerHolidays::get_holidays_message($isholiday);
+			$this->smarty->assign('seller_holidays_message',$retmsg);
+		}
+
+6.B Coppy and paste folowing code into
+    File: /modules/blockcart/blockcart.tpl
+	Location: after following 2 lines
+		{if !$PS_CATALOG_MODE && $active_overlay == 1}
+			<div id="layer_cart">
+
+	Add following code
+		<div style="color:red;">
+			{if isset($seller_holidays_message) AND !empty($seller_holidays_message)}
+				<span id="seller_holidays_message">{$seller_holidays_message}</span>
+			{/if}
+		</div>
+

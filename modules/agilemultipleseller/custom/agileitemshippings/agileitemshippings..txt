@@ -1,0 +1,86 @@
+What is this
+==================
+This customzation is to implement shipping per product item. You can define different shipping for each product 
+a. First item fee 
+b. Additional items fee
+
+Dependence:
+This customization requires following two modules
+- Agile Multiple Seller module 2.1.6 or above
+- Agile Seller Shipping module 1.2.4 or above
+
+Conditions:
+After use this customization, seller will not be able to use private shipping, because this customization override all other shipping carriers.
+
+How install
+=====================
+1. Copy the package to following folder
+/moduiles/agilemultipleseller/custom/
+
+2. Add contents of following file into /moduiles/agilemultipleseller/install.sql
+itemshipping.sql
+
+3. Add following code 
+in file: /moduiles/agilemultipleseller/controllers/front/sellerproductdetailbase.php
+inside method:  initContentForShipping()
+at bottom of above method
+
+		///Custom code begin ============================
+		if(file_exists(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php"))
+		{
+			include_once(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php");
+			AgileItemShippings::assignItemShippngData($this->id_object);
+		}
+		///Custom code end ===============================
+
+4. Add following code
+in file: /moduiles/agilemultipleseller/controllers/front/sellerproductdetailbase.php
+inside method:  processShipping()
+at bottom of above method
+
+			///Custom code begin ============================
+			if(file_exists(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php"))
+			{
+				include_once(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php");
+				AgileItemShippings::updateItemShippingData($product->id);
+			}
+			///Custom code end ===============================
+
+5. Add following code 
+in file: /moduiles/agilemultipleseller/views/templates/front/products/shipping.tpl
+before : the code of save button
+
+{* custom code begin ============================ *}
+{include file="$agilemultipleseller_custom./agileitemshippings/itemshipping_form.tpl"}
+{* customer code end ============================ *}
+
+You may also want to hide orignal shipping settting GUI by using style="display:none;"
+
+
+6. Add following code
+in file: /override/classes/Cart.php
+inside override method: public function getOrderShippingCostPerSellerCarrier(...)
+before code for Tax calculation line: if (isset($carrierTax))$shipping_cost *= 1 + ($carrierTax / 100);
+
+		///Custom code begin ============================
+		if(file_exists(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php"))
+		{
+			include_once(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php");
+			$shipping_cost = AgileItemShippings::getItemShippingCost4SellerCarrier($this->id, $id_seller, $id_carrier, $id_zone);		
+		}
+		///Custom code end ===============================
+
+7. Add following code 
+in file: /modules/agilesellershipping/agilesellershippingbase.php
+inside method: private function get_available_carriers(....)
+before Tax calculation line: $tax_display = Group::getPriceDisplayMethod(Group::getCurrent()->id);
+
+			///Custom code begin ============================
+			if(file_exists(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php"))
+			{
+				include_once(_PS_ROOT_DIR_ . "/modules/agilemultipleseller/custom/agileitemshippings/agileitemshippings.php");
+				$carrier_cost = AgileItemShippings::getItemShippingCost4Product($id_product, $id_zone, $quantity);		
+			}
+			///Custom code end ===============================
+
+ 

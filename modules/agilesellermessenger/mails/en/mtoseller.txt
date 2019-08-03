@@ -1,0 +1,11 @@
+[{subject}]
+Inquiry from {customer_name} {customer_email} about following product
+
+Product Name:{product_name}
+Product URL: {product_link}
+
+Message:
+{message}
+
+{shop_url}
+{shop_name}

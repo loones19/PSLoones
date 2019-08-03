@@ -1,0 +1,31 @@
+Version 1.7.1.5 - 2017.09.30
+- Change Lower version compatibility - add $link smarty variable in Controller.php so that it will be available in all pages.
+			'link' => $this->context->link
+- Fix: tghe googlemaps.js URL was incorrect for back office Seller Buisiness Info page
+- Fix - when try to download invoice, the default file name does not include ".pdf" if the agile seller invoice number has been installed.
+- Fix - new tables created in different DB engine with existing tables
+
+Version 1.7.1.3 - 2017.04.08
+Adjusted overrides for PrestaShop 1.7.1
+function - remove phone numbers from message
+function -  remove email address from message
+
+
+Version 1.7.1.0 - 2016.12.28
+- Moved all google map related common component into kernel
+- Implemnt common modial feature for all Agile modules
+- Change all javascript alert message to user friendly Modal dialog message box
+
+
+Version 1.7.0.3 - 2016.12.11
+Compatible with PrestaShop 1.7x
+
+Add override class Module.php as common override
+removed AgileModule.php class
+Changed to keep configuraitons when module is uninstalled and then reinstalled for all modules.
+
+
+Version 1.0.2.0 - 2016.02.15
+   Feature - implement Google herflang feature to target international support.
+   Fix - Changed to incclude Goole Recaptcha JS URL only on product page that requires it instead of showing on all page.
+   Change - Changed the URL of module update info service point.

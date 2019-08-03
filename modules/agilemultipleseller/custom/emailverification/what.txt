@@ -1,0 +1,6 @@
+What does this do?
+==================
+This customization will enable customer account registration email verification. 
+When a new customer is registered, it will be set acgive = 0 and send the Welcome email with link to verify email address.
+Once the email address is verified, user will be able to log in.
+

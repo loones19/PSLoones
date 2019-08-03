@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="9d1a0949c39e66a0cd65240bc0ac9177">
+        <source>Sunday</source>
+        <target>Sunday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:100</note>
+      </trans-unit>
+      <trans-unit id="6f8522e0610541f1ef215a22ffa66ff6">
+        <source>Monday</source>
+        <target>Monday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:101</note>
+      </trans-unit>
+      <trans-unit id="5792315f09a5d54fb7e3d066672b507f">
+        <source>Tuesday</source>
+        <target>Tuesday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:102</note>
+      </trans-unit>
+      <trans-unit id="796c163589f295373e171842f37265d5">
+        <source>Wednesday</source>
+        <target>Wednesday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:103</note>
+      </trans-unit>
+      <trans-unit id="78ae6f0cd191d25147e252dc54768238">
+        <source>Thursday</source>
+        <target>Thursday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:104</note>
+      </trans-unit>
+      <trans-unit id="c33b138a163847cdb6caeeb7c9a126b4">
+        <source>Friday</source>
+        <target>Friday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:105</note>
+      </trans-unit>
+      <trans-unit id="8b7051187b9191cdcdae6ed5a10e5adc">
+        <source>Saturday</source>
+        <target>Saturday</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:106</note>
+      </trans-unit>
+      <trans-unit id="86f5978d9b80124f509bdb71786e929e">
+        <source>January</source>
+        <target>January</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:110</note>
+      </trans-unit>
+      <trans-unit id="659e59f062c75f81259d22786d6c44aa">
+        <source>February</source>
+        <target>February</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:111</note>
+      </trans-unit>
+      <trans-unit id="fa3e5edac607a88d8fd7ecb9d6d67424">
+        <source>March</source>
+        <target>March</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:112</note>
+      </trans-unit>
+      <trans-unit id="3fcf026bbfffb63fb24b8de9d0446949">
+        <source>April</source>
+        <target>April</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:113</note>
+      </trans-unit>
+      <trans-unit id="195fbb57ffe7449796d23466085ce6d8">
+        <source>May</source>
+        <target>May</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:114</note>
+      </trans-unit>
+      <trans-unit id="688937ccaf2a2b0c45a1c9bbba09698d">
+        <source>June</source>
+        <target>June</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:115</note>
+      </trans-unit>
+      <trans-unit id="1b539f6f34e8503c97f6d3421346b63c">
+        <source>July</source>
+        <target>July</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:116</note>
+      </trans-unit>
+      <trans-unit id="41ba70891fb6f39327d8ccb9b1dafb84">
+        <source>August</source>
+        <target>August</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:117</note>
+      </trans-unit>
+      <trans-unit id="cc5d90569e1c8313c2b1c2aab1401174">
+        <source>September</source>
+        <target>September</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:118</note>
+      </trans-unit>
+      <trans-unit id="eca60ae8611369fe28a02e2ab8c5d12e">
+        <source>October</source>
+        <target>October</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:119</note>
+      </trans-unit>
+      <trans-unit id="7e823b37564da492ca1629b4732289a8">
+        <source>November</source>
+        <target>November</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:120</note>
+      </trans-unit>
+      <trans-unit id="82331503174acbae012b2004f6431fa5">
+        <source>December</source>
+        <target>December</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:121</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

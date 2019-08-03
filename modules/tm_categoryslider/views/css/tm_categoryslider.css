@@ -1,0 +1,11 @@
+#tmcategorytabs .categoryimage .category_img{ margin:10px 0; max-width: 100%; }
+#tmcategorytabs .tab-content .tab-pane{
+	padding: 0px;
+    border: none;
+    background: none;
+}
+#tmcategorytabs .tab-content .products {
+	position: relative;
+	float: left;
+	width: 100%;
+}

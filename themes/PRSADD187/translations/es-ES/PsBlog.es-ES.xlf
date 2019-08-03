@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_diquis_comment.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="ea73c46132229a90f0b82d20a8806078">
+        <source>Please enable JavaScript to view the.</source>
+        <target>Please enable JavaScript to view the.</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_diquis_comment.tpl:36</note>
+      </trans-unit>
+      <trans-unit id="150ded9fdd200aea93b8044ccf352657">
+        <source>Comments powered by Disqus.</source>
+        <target>Comments powered by Disqus.</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_diquis_comment.tpl:36</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_pagination.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="62840e75dabf86e20957db513b0058d0">
+        <source>Showing %blogShowingStart% - %blogShowing% of %nb_items% items</source>
+        <target>Showing %blogShowingStart% - %blogShowing% of %nb_items% items</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_pagination.tpl:102</note>
+      </trans-unit>
+      <trans-unit id="b7cc749fbb3fe5602c70015f67ca4991">
+        <source>Showing %blogShowingStart% - %blogShowing% of 1 item</source>
+        <target>Showing %blogShowingStart% - %blogShowing% of 1 item</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_pagination.tpl:108</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_social.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="8ebb3e0f09899fb8aac0a325ada5b7ce">
+        <source>Like This</source>
+        <target>Like This</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_social.tpl:27</note>
+      </trans-unit>
+      <trans-unit id="2491bc9c7d8731e1ae33124093bc7026">
+        <source>Twitter</source>
+        <target>Twitter</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_social.tpl:34</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,7 @@
+﻿1. replace this for the category part of associations.tpl
+   the first table
+2. prepare following to smarty variables
+ (this has been included in multiple seller 2.2.0 or higher)
+	id_category_default
+	id_first_available_category
+	ajx_category_url - pointing to ajax_agile_categories.php

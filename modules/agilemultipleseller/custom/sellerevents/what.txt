@@ -1,0 +1,20 @@
+What does this customization do?
+==================================
+Seller can add/edit/delete events on My Seller Accounts 
+Admin can also manage the events at back office Administration/Seller Events tab
+
+The seller events will be listed in main store CMS page as long as the CMS page contents contains followiong keyword - including the brackets
+ {seller_event_list}
+
+Fields of event
+- seller(id_seller)
+- Subject 
+- Start date
+- End date
+- Place 
+- Description(HTML editor)
+- Active
+
+
+Only event is in active state and End Date is not passed will be listed
+ 

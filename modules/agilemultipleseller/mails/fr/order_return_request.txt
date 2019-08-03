@@ -1,0 +1,12 @@
+[{shop_url}] 
+Hi {sellername},
+
+You've received a order return request.
+
+Customer: {customername}
+Email: {customermail}
+Order Reference #:  {order_name}
+Message: {message}
+
+
+{shop_name} [{shop_url}] 

@@ -1,0 +1,11 @@
+Hi Administrator,
+
+A Seller account has been added to {shop_name}.
+Seller Name: {firstname} {lastname}
+Seller Id: {seller_id}
+Seller Company: {seller_company}
+Seller Email: {email}
+
+if account approval is required for seller registering from the front office, please approve or activate this seller.
+
+{shop_url} powered by PrestaShop™

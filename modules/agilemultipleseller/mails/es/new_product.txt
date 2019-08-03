@@ -1,0 +1,8 @@
+Hi,
+
+{seller_company}(Id:{seller_id}) added a new product.
+
+Product name: {product_name}
+Product Id: {product_id}
+
+{shop_url} powered by PrestaShop™

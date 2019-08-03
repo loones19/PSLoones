@@ -1,0 +1,24 @@
+Change history
+2014.11.01 
+- Changed free support period from "30 days" to "3 months".
+- Changed from "up to 5 times" free upgrade" to "unlimited times of free upgrades" within a year and within the same major version of PrestaShop.
+
+Terms and Conditions
+By downloading and using our software, modules, themes, and modifications; or purchasing services related to the software, modules, themes, or modifications; you accept the "Software License Agreement" stated below in a legally binding manner.
+It is highly recommended that you verify the fit and applicability of our products by reviewing all information on our product pages and examining the demo site (provided upon request) before purchasing any of our products.
+
+Software License Agreement
+1. This is an agreement between Licensor (Agile) and Licensee, who is being licensed to use the software, modules, themes, and modifications (hereafter referred to as "Software").
+2. Licensee acknowledges that this is a limited, nonexclusive license.  Licensor is, and remains, the sole owner of all titles, rights, and interests in the Software.
+3. Each copy of the software must be used on only one production website, though it may also be used on additional test servers so long as they will never go into ‘production’.  You are not permitted to make copies of the software without first purchasing the appropriate additional licenses.  This license does not grant any reseller privileges.
+4. All Software are provided "as is", without warranty or guarantee of any kind, either oral or written, express or implied, including but not limited to any implied warranties or conditions of merchantability or fitness for a particular purpose, or the warranty of non-infringement.  In no event shall the authors or copyright holders be held liable for any claims, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the Software or the use of or other dealings with the Software.
+5. We provide 3 months free technical support for all Software that is purchased directly from our site.  After 3 months, if you still face any issue, we will try to sort it out for a small fee which will be determined on a case by case basis personally with each customer depending on complexity.  We do offer free advice above and beyond any time limits when and where possible.
+If Software that is specific to a particular major version of PrestaShop has been enhanced since the date of purchase, you will be eligible for free upgrades within one (1) year period from the date of purchase, as long as the prices for the Software remain the same.  If the prices for the software, modules, or mods that are specific to a particular version of PrestaShop have changed, you will need to pay the difference in price.  After one (1) year from the date of purchase, there will be a small upgrade fee plus the price difference if you choose to upgrade.  If the software is specific to a different major version of PrestaShop on the day you purchased, you may or may not need to pay upgrade fee, depending on the amount of work required to modify the software for the new version of PrestaShop.
+6. All Software are downloadable products. Once Licensee has downloaded or used the Software, they are not eligible for refund unless there are defects found within the software that could not be corrected by Licensor.
+7. In addition, Agile software is partial open source. We provide open code for all PrestaShop common class override files, module theme files, javascript files. But in order to deter code piracy, our Agile kernal PHP code and module PHP code have been processed through a code obfuscation system.  Should you need modifications to our modules to fit your particular need, you would need to contact us to discuss providing that ability. Those obfuscated code files are not provided in an editable format.
+8. Licensee agrees to defend and indemnify Licensor and hold Licensor harmless from all claims, losses, damages, complaints, or expenses connected with or resulting from Licensee's business operations.
+9. Licensor has the right to terminate this License Agreement and Licensee's right to use this Software upon any material breach by Licensee.
+10. Licensee agrees to return to Licensor or to destroy all copies of the Software upon termination of the License.
+11. This License Agreement is the entire and exclusive agreement between Licensor and Licensee regarding this Software. This License Agreement replaces and supersedes all prior negotiations, dealings, and agreements between Licensor and Licensee regarding this Software.
+12. This License Agreement is governed by the laws of Ontario, Canada, applicable to Ontario, Canada contracts.
+13. This License Agreement is valid without Licensor's signature. It becomes effective upon the earlier of Licensee's signature or Licensee's use of the Software.

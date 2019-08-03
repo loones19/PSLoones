@@ -1,0 +1,623 @@
+/* Agile Multiple Seller */
+.agile-align-right {
+    text-align: right;
+}
+
+a.button-small span {
+    display: inline-block;
+}
+
+/* Product List*/
+table.std td.pointer { cursor: pointer; }
+table.std td {vertical-align: middle;}
+table.std td.center {
+    text-align:center;
+}
+table.std td.left {
+    text-align:left;
+}    
+table.std td.right {
+    text-align:right;
+}
+
+.agile-map-canvas 
+{
+	width:100%;
+	height:250px;
+	float:inherit;
+}
+@media (min-width: 480px) {
+    .agile-map-canvas {
+	    height:250px;
+    }
+}
+@media (min-width: 768px) {
+    .agile-map-canvas {
+	    height:320px;
+    }
+}
+@media (min-width: 992px) {
+    .agile-map-canvas {
+	    height:4000px;
+    }
+}
+@media (min-width: 1200px) {
+    .agile-map-canvas {
+	    height:480px;
+    }
+}
+fieldset .agile-seller-payment
+{
+	margin:10px;
+	padding:10px;
+}
+
+
+ul.footer_links {
+  padding: 10px 0 10px 0;
+  border-top: 1px solid #bce8f1;
+  height:auto; 
+}
+  
+ul.footer_links li {
+    float: left; }
+
+ul.footer_links a {
+	padding: 3px 4px;
+	text-decoration: none;
+	color: #d9534f !important;
+	line-height: 100%;
+}
+
+
+ul.footer_links li + li {
+      margin-left: 10px; 
+}
+
+
+ul.footer_links a:hover {
+	color: #09a90c !important;
+}
+
+
+.icon-AdminParentCustomer:before { content: "\f0c0"; }
+.process-icon-back:before { content: "\f0a8"; }
+	
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*This is a copy from admin css*/
+#agile .text-muted, #agile .module_description, #agile .hook_panel_header .hook_description { color: #999999; }
+#agile .text-primary { color: #1ba6e5; }
+#agile .text-primary:hover { color: #1585b8; }
+#agile .text-warning { color: #c09853; }
+#agile .text-warning:hover { color: #a47e3c; }
+#agile .text-danger { color: #b94a48; }
+#agile .text-danger:hover { color: #953b39; }
+#agile .text-success { color: #468847; }
+#agile .text-success:hover { color: #356635; }
+#agile .text-info { color: #3a87ad; }
+#agile .text-info:hover { color: #2d6987; }
+#agile .text-left { text-align: left; }
+#agile .text-right { text-align: right; }
+#agile .text-center {text-align: center;}
+
+#agile .page-head h2.page-title { float: left; }
+#agile .page-head h2[class^="icon-"].page-title, #agile .page-head h2[class*=" icon-"].page-title { margin-right: .3em; }
+#agile *, #agile *:before, #agile *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#agile .lead {font-size: 18px;}
+#agile .page-header { padding-bottom: 7.5px; margin: 34px 0 17px; border-bottom: 1px solid #eeeeee; }
+#agile .pagination { margin:4px 0;}
+
+#agile .table { border-collapse: separate; border-spacing: 0 2px 0 0; margin-bottom: 5px; }
+#agile .table thead > tr > th { border: none; font-weight: normal; vertical-align: top; background: white; border-bottom: solid 1px #8bc6e7; }
+#agile .table thead > tr > th span.title_box { color: black; font-size: 1.1em; font-weight: bold; display: block; word-wrap: nowrap; white-space: nowrap; }
+#agile .table thead > tr > th span.title_box.active { font-weight: bold; }
+#agile .table thead > tr > th span.title_box a { text-decoration: none; }
+#agile .table thead > tr > th span.title_box a.active { color: black; }
+#agile .table thead > tr.filter > th { background-color: #dfeff8; }
+#agile .table thead > tr.filter > th input[type="text"].filter, #agile .table thead > tr.filter > th input[type="password"].filter, #agile .table thead > tr.filter > th select.filter { font-size: 12px; border-color: #a0d0eb; }
+#agile .table input, #agile .table select { margin: 0; }
+#agile .table tbody > tr > td { border-top: none; background-color: white; padding: 3px 7px; vertical-align: middle; word-wrap: nowrap; font-size: 12px; border-bottom: solid 1px #eeeeee; }
+#agile .table tbody > tr.odd > td { background-color: #f9f9f9; }
+#agile .table tbody > tr:hover > td { background-color: #fae608; }
+#agile .table td.center, #agile .table th.center { text-align: center; }
+#agile .table td.pointer { cursor: pointer; }
+#agile tr.highlighted td { background-color: #1ba6e5 !important; color: white; }
+#agile td.actions { min-width: 200px; }
+
+#agile table { max-width: 100%; background-color: transparent; }
+#agile th { text-align: left; }
+#agile .table { width: 100%; margin-bottom: 17px; }
+#agile .table > thead > tr > th, 
+#agile .table > thead > tr > td, 
+#agile .table > tbody > tr > th, 
+#agile .table > tbody > tr > td, 
+#agile .table > tfoot > tr > th, 
+#agile .table > tfoot > tr > td { padding: 8px; line-height: 1.42857; vertical-align:middle; border-top: 1px solid #dddddd;}
+#agile .table > thead > tr > th,
+#agile .table > thead > tr > td {background-color:rgba(156, 120, 120, 0.4);}
+
+#agile .table > thead > tr > th { vertical-align: bottom; border-bottom: 2px solid #dddddd; }
+#agile .table > caption + thead > tr:first-child > th, #agile .table > caption + thead > tr:first-child > td, #agile .table > colgroup + thead > tr:first-child > th, #agile .table > colgroup + thead > tr:first-child > td, #agile .table > thead:first-child > tr:first-child > th, #agile .table > thead:first-child > tr:first-child > td { border-top: 0; }
+#agile .table > tbody + tbody { border-top: 2px solid #dddddd; }
+#agile .table .table { background-color: #f8f8f8; }
+#agile .table-condensed > thead > tr > th, #agile .table-condensed > thead > tr > td, #agile .table-condensed > tbody > tr > th, #agile .table-condensed > tbody > tr > td, #agile .table-condensed > tfoot > tr > th, #agile .table-condensed > tfoot > tr > td { padding: 5px; }
+#agile .table-bordered { border: 1px solid #dddddd; }
+#agile .table-bordered > thead > tr > th, #agile .table-bordered > thead > tr > td, #agile .table-bordered > tbody > tr > th, #agile .table-bordered > tbody > tr > td, #agile .table-bordered > tfoot > tr > th, #agile .table-bordered > tfoot > tr > td { border: 1px solid #dddddd; }
+#agile .table-bordered > thead > tr > th, #agile .table-bordered > thead > tr > td { border-bottom-width: 2px; }
+#agile .table-striped > tbody > tr:nth-child(odd) > td, #agile .table-striped > tbody > tr:nth-child(odd) > th { background-color: #f9f9f9; }
+#agile .table-hover > tbody > tr:hover > td, #agile .table-hover > tbody > tr:hover > th { background-color: #edf7fb; }
+#agile table col[class*="col-"] { float: none; display: table-column; }
+#agile table td[class*="col-"], #agile table th[class*="col-"] { float: none; display: table-cell; }
+#agile .table > thead > tr > td.active, #agile .table > thead > tr > th.active, #agile .table > thead > tr.active > td, #agile .table > thead > tr.active > th, #agile .table > tbody > tr > td.active, #agile .table > tbody > tr > th.active, #agile .table > tbody > tr.active > td, #agile .table > tbody > tr.active > th, #agile .table > tfoot > tr > td.active, #agile .table > tfoot > tr > th.active, #agile .table > tfoot > tr.active > td, #agile .table > tfoot > tr.active > th { background-color: #edf7fb; }
+#agile .table > thead > tr > td.success, #agile .table > thead > tr > th.success, #agile .table > thead > tr.success > td, #agile .table > thead > tr.success > th, #agile .table > tbody > tr > td.success, #agile .table > tbody > tr > th.success, #agile .table > tbody > tr.success > td, #agile .table > tbody > tr.success > th, #agile .table > tfoot > tr > td.success, #agile .table > tfoot > tr > th.success, #agile .table > tfoot > tr.success > td, #agile .table > tfoot > tr.success > th { background-color: #dff0d8; }
+#agile .table-hover > tbody > tr > td.success:hover, #agile .table-hover > tbody > tr > th.success:hover, #agile .table-hover > tbody > tr.success:hover > td, #agile .table-hover > tbody > tr.success:hover > th { background-color: #d0e9c6; }
+#agile .table > thead > tr > td.danger, #agile .table > thead > tr > th.danger, #agile .table > thead > tr.danger > td, #agile .table > thead > tr.danger > th, #agile .table > tbody > tr > td.danger, #agile .table > tbody > tr > th.danger, #agile .table > tbody > tr.danger > td, #agile .table > tbody > tr.danger > th, #agile .table > tfoot > tr > td.danger, #agile .table > tfoot > tr > th.danger, #agile .table > tfoot > tr.danger > td, #agile .table > tfoot > tr.danger > th { background-color: #f2dede; }
+#agile .table-hover > tbody > tr > td.danger:hover, #agile .table-hover > tbody > tr > th.danger:hover, #agile .table-hover > tbody > tr.danger:hover > td, #agile .table-hover > tbody > tr.danger:hover > th { background-color: #ebcccc; }
+#agile .table > thead > tr > td.warning, #agile .table > thead > tr > th.warning, #agile .table > thead > tr.warning > td, #agile .table > thead > tr.warning > th, #agile .table > tbody > tr > td.warning, #agile .table > tbody > tr > th.warning, #agile .table > tbody > tr.warning > td, #agile .table > tbody > tr.warning > th, #agile .table > tfoot > tr > td.warning, #agile .table > tfoot > tr > th.warning, #agile .table > tfoot > tr.warning > td, #agile .table > tfoot > tr.warning > th { background-color: #fcf8e3; }
+#agile .table-hover > tbody > tr > td.warning:hover, #agile .table-hover > tbody > tr > th.warning:hover, #agile .table-hover > tbody > tr.warning:hover > td, #agile .table-hover > tbody > tr.warning:hover > th { background-color: #faf2cc; }
+
+#agile .table-responsive { width: 100%; margin-bottom: 12.75px;margin-top:4px; overflow-y:hidden; overflow-x: scroll; -ms-overflow-style: -ms-autohiding-scrollbar; border: 1px solid #dddddd; -webkit-overflow-scrolling: touch; }
+#agile .table-responsive > .table { margin-bottom: 0;}
+#agile .table-responsive > .table > thead > tr > th, #agile .table-responsive > .table > thead > tr > td, #agile .table-responsive > .table > tbody > tr > th, #agile .table-responsive > .table > tbody > tr > td, #agile .table-responsive > .table > tfoot > tr > th, #agile .table-responsive > .table > tfoot > tr > td { white-space: nowrap; }
+#agile .table-responsive > .table-bordered { border: 0; }
+#agile .table-responsive > .table-bordered > thead > tr > th:first-child, #agile .table-responsive > .table-bordered > thead > tr > td:first-child, #agile .table-responsive > .table-bordered > tbody > tr > th:first-child, #agile .table-responsive > .table-bordered > tbody > tr > td:first-child, #agile .table-responsive > .table-bordered > tfoot > tr > th:first-child, #agile .table-responsive > .table-bordered > tfoot > tr > td:first-child { border-left: 0; }
+#agile .table-responsive > .table-bordered > thead > tr > th:last-child, #agile .table-responsive > .table-bordered > thead > tr > td:last-child, #agile .table-responsive > .table-bordered > tbody > tr > th:last-child, #agile .table-responsive > .table-bordered > tbody > tr > td:last-child, #agile .table-responsive > .table-bordered > tfoot > tr > th:last-child, #agile .table-responsive > .table-bordered > tfoot > tr > td:last-child { border-right: 0; }
+#agile .table-responsive > .table-bordered > tbody > tr:last-child > th, #agile .table-responsive > .table-bordered > tbody > tr:last-child > td, #agile .table-responsive > .table-bordered > tfoot > tr:last-child > th, #agile .table-responsive > .table-bordered > tfoot > tr:last-child > td { border-bottom: 0; } 
+
+#agile .panel, #agile #header_notifs_icon_wrapper .notifs_panel, #header_notifs_icon_wrapper #agile .notifs_panel, #agile #dash_version {padding:10px; margin-bottom: 17px; background-color: white; border: 1px solid transparent; border-radius: 3px; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+#agile .panel-body { padding: 15px; }
+#agile .panel-body:before, #agile .panel-body:after { content: " "; /* 1 */ display: table; /* 2 */ }
+#agile .panel-body:after { clear: both; }
+#agile .panel > .list-group, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group, #agile #dash_version > .list-group, #agile #dashboard .panel > .data_list, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list, #agile #dashboard #dash_version > .data_list { margin-bottom: 0; }
+#agile .panel > .list-group .list-group-item, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group .list-group-item, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group .list-group-item, #agile #dash_version > .list-group .list-group-item, #agile #dashboard .panel > .data_list .list-group-item, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list .list-group-item, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list .list-group-item, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list .list-group-item, #agile #dashboard #dash_version > .data_list .list-group-item, #agile .panel > .list-group #dashboard .data_list li, #agile #dashboard .data_list .panel > .list-group li, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group #dashboard .data_list li, #agile #dashboard .data_list #header_notifs_icon_wrapper .notifs_panel > .list-group li, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group #dashboard .data_list li, #header_notifs_icon_wrapper #agile #dashboard .data_list .notifs_panel > .list-group li, #agile #dash_version > .list-group #dashboard .data_list li, #agile #dashboard .data_list #dash_version > .list-group li, #agile #dashboard .panel > .data_list li, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list li, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list li, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list li, #agile #dashboard #dash_version > .data_list li { border-width: 1px 0; }
+#agile .panel > .list-group .list-group-item:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group .list-group-item:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group .list-group-item:first-child, #agile #dash_version > .list-group .list-group-item:first-child, #agile #dashboard .panel > .data_list .list-group-item:first-child, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list .list-group-item:first-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list .list-group-item:first-child, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list .list-group-item:first-child, #agile #dashboard #dash_version > .data_list .list-group-item:first-child, #agile .panel > .list-group #dashboard .data_list li:first-child, #agile #dashboard .data_list .panel > .list-group li:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group #dashboard .data_list li:first-child, #agile #dashboard .data_list #header_notifs_icon_wrapper .notifs_panel > .list-group li:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group #dashboard .data_list li:first-child, #header_notifs_icon_wrapper #agile #dashboard .data_list .notifs_panel > .list-group li:first-child, #agile #dash_version > .list-group #dashboard .data_list li:first-child, #agile #dashboard .data_list #dash_version > .list-group li:first-child, #agile #dashboard .panel > .data_list li:first-child, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list li:first-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list li:first-child, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list li:first-child, #agile #dashboard #dash_version > .data_list li:first-child { border-top-right-radius: 0; border-top-left-radius: 0; }
+#agile .panel > .list-group .list-group-item:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group .list-group-item:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group .list-group-item:last-child, #agile #dash_version > .list-group .list-group-item:last-child, #agile #dashboard .panel > .data_list .list-group-item:last-child, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list .list-group-item:last-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list .list-group-item:last-child, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list .list-group-item:last-child, #agile #dashboard #dash_version > .data_list .list-group-item:last-child, #agile .panel > .list-group #dashboard .data_list li:last-child, #agile #dashboard .data_list .panel > .list-group li:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .list-group #dashboard .data_list li:last-child, #agile #dashboard .data_list #header_notifs_icon_wrapper .notifs_panel > .list-group li:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .list-group #dashboard .data_list li:last-child, #header_notifs_icon_wrapper #agile #dashboard .data_list .notifs_panel > .list-group li:last-child, #agile #dash_version > .list-group #dashboard .data_list li:last-child, #agile #dashboard .data_list #dash_version > .list-group li:last-child, #agile #dashboard .panel > .data_list li:last-child, #agile #header_notifs_icon_wrapper #dashboard .notifs_panel > .data_list li:last-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel > .data_list li:last-child, #header_notifs_icon_wrapper #agile #dashboard .notifs_panel > .data_list li:last-child, #agile #dashboard #dash_version > .data_list li:last-child { border-bottom: 0; }
+#agile .panel-heading + .list-group .list-group-item:first-child, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .list-group .list-group-item:first-child, #header_notifs_icon_wrapper .notifs_panel #agile .notifs_panel_header + .list-group .list-group-item:first-child, #agile #dashboard .panel-heading + .data_list .list-group-item:first-child, #agile #header_notifs_icon_wrapper .notifs_panel #dashboard .notifs_panel_header + .data_list .list-group-item:first-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .data_list .list-group-item:first-child, #header_notifs_icon_wrapper .notifs_panel #agile #dashboard .notifs_panel_header + .data_list .list-group-item:first-child, #agile .panel-heading + .list-group #dashboard .data_list li:first-child, #agile #dashboard .data_list .panel-heading + .list-group li:first-child, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .list-group #dashboard .data_list li:first-child, #agile #dashboard .data_list #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .list-group li:first-child, #header_notifs_icon_wrapper .notifs_panel #agile .notifs_panel_header + .list-group #dashboard .data_list li:first-child, #header_notifs_icon_wrapper .notifs_panel #agile #dashboard .data_list .notifs_panel_header + .list-group li:first-child, #agile #dashboard .panel-heading + .data_list li:first-child, #agile #header_notifs_icon_wrapper .notifs_panel #dashboard .notifs_panel_header + .data_list li:first-child, #agile #dashboard #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .data_list li:first-child, #header_notifs_icon_wrapper .notifs_panel #agile #dashboard .notifs_panel_header + .data_list li:first-child { border-top-width: 0; }
+#agile .panel > .table, #agile #header_notifs_icon_wrapper .notifs_panel > .table, #header_notifs_icon_wrapper #agile .notifs_panel > .table, #agile #dash_version > .table, #agile .panel > .table-responsive, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive, #agile #dash_version > .table-responsive { margin-bottom: 0; }
+#agile .panel > .panel-body + .table, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-body + .table, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-body + .table, #agile #dash_version > .panel-body + .table, #agile .panel > .panel-body + .table-responsive, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-body + .table-responsive, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-body + .table-responsive, #agile #dash_version > .panel-body + .table-responsive { border-top: 1px solid #dddddd; }
+#agile .panel > .table-bordered, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered, #agile #dash_version > .table-bordered, #agile .panel > .table-responsive > .table-bordered, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered, #agile #dash_version > .table-responsive > .table-bordered { border: 0; }
+#agile .panel > .table-bordered > thead > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr > th:first-child, #agile #dash_version > .table-bordered > thead > tr > th:first-child, #agile .panel > .table-bordered > thead > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr > td:first-child, #agile #dash_version > .table-bordered > thead > tr > td:first-child, #agile .panel > .table-bordered > tbody > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr > th:first-child, #agile #dash_version > .table-bordered > tbody > tr > th:first-child, #agile .panel > .table-bordered > tbody > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr > td:first-child, #agile #dash_version > .table-bordered > tbody > tr > td:first-child, #agile .panel > .table-bordered > tfoot > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr > th:first-child, #agile #dash_version > .table-bordered > tfoot > tr > th:first-child, #agile .panel > .table-bordered > tfoot > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr > td:first-child, #agile #dash_version > .table-bordered > tfoot > tr > td:first-child, #agile .panel > .table-responsive > .table-bordered > thead > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr > th:first-child, #agile #dash_version > .table-responsive > .table-bordered > thead > tr > th:first-child, #agile .panel > .table-responsive > .table-bordered > thead > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr > td:first-child, #agile #dash_version > .table-responsive > .table-bordered > thead > tr > td:first-child, #agile .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr > th:first-child, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr > th:first-child, #agile .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr > td:first-child, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr > td:first-child, #agile .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr > th:first-child, #agile .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr > td:first-child { border-left: 0; }
+#agile .panel > .table-bordered > thead > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr > th:last-child, #agile #dash_version > .table-bordered > thead > tr > th:last-child, #agile .panel > .table-bordered > thead > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr > td:last-child, #agile #dash_version > .table-bordered > thead > tr > td:last-child, #agile .panel > .table-bordered > tbody > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr > th:last-child, #agile #dash_version > .table-bordered > tbody > tr > th:last-child, #agile .panel > .table-bordered > tbody > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr > td:last-child, #agile #dash_version > .table-bordered > tbody > tr > td:last-child, #agile .panel > .table-bordered > tfoot > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr > th:last-child, #agile #dash_version > .table-bordered > tfoot > tr > th:last-child, #agile .panel > .table-bordered > tfoot > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr > td:last-child, #agile #dash_version > .table-bordered > tfoot > tr > td:last-child, #agile .panel > .table-responsive > .table-bordered > thead > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr > th:last-child, #agile #dash_version > .table-responsive > .table-bordered > thead > tr > th:last-child, #agile .panel > .table-responsive > .table-bordered > thead > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr > td:last-child, #agile #dash_version > .table-responsive > .table-bordered > thead > tr > td:last-child, #agile .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr > th:last-child, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr > th:last-child, #agile .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr > td:last-child, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr > td:last-child, #agile .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr > th:last-child, #agile .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr > td:last-child { border-right: 0; }
+#agile .panel > .table-bordered > thead > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr:last-child > th, #agile #dash_version > .table-bordered > thead > tr:last-child > th, #agile .panel > .table-bordered > thead > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > thead > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > thead > tr:last-child > td, #agile #dash_version > .table-bordered > thead > tr:last-child > td, #agile .panel > .table-bordered > tbody > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr:last-child > th, #agile #dash_version > .table-bordered > tbody > tr:last-child > th, #agile .panel > .table-bordered > tbody > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tbody > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tbody > tr:last-child > td, #agile #dash_version > .table-bordered > tbody > tr:last-child > td, #agile .panel > .table-bordered > tfoot > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr:last-child > th, #agile #dash_version > .table-bordered > tfoot > tr:last-child > th, #agile .panel > .table-bordered > tfoot > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-bordered > tfoot > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-bordered > tfoot > tr:last-child > td, #agile #dash_version > .table-bordered > tfoot > tr:last-child > td, #agile .panel > .table-responsive > .table-bordered > thead > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr:last-child > th, #agile #dash_version > .table-responsive > .table-bordered > thead > tr:last-child > th, #agile .panel > .table-responsive > .table-bordered > thead > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > thead > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > thead > tr:last-child > td, #agile #dash_version > .table-responsive > .table-bordered > thead > tr:last-child > td, #agile .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr:last-child > th, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr:last-child > th, #agile .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tbody > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tbody > tr:last-child > td, #agile #dash_version > .table-responsive > .table-bordered > tbody > tr:last-child > td, #agile .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr:last-child > th, #agile .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td, #agile #header_notifs_icon_wrapper .notifs_panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td, #header_notifs_icon_wrapper #agile .notifs_panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td, #agile #dash_version > .table-responsive > .table-bordered > tfoot > tr:last-child > td { border-bottom: 0; }
+#agile .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .notifs_panel_header { padding: 10px 15px; border-bottom: 1px solid transparent; border-top-right-radius: 2px; border-top-left-radius: 2px; }
+#agile .panel-heading > .dropdown .dropdown-toggle, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header > .dropdown .dropdown-toggle, #header_notifs_icon_wrapper .notifs_panel #agile .notifs_panel_header > .dropdown .dropdown-toggle { color: inherit; }
+#agile .panel-title { margin-top: 0; margin-bottom: 0; font-size: 14px; }
+#agile .panel-title > a { color: inherit; }
+#agile .panel-footer, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer, #header_notifs_icon_wrapper .notifs_panel #agile .notifs_panel_footer { padding: 10px 15px; background-color: whitesmoke; border-top: 1px solid #dddddd; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; }
+#agile .panel-group .panel, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel, #header_notifs_icon_wrapper #agile .panel-group .notifs_panel, #agile .panel-group #dash_version { margin-bottom: 0; border-radius: 3px; overflow: hidden; }
+#agile .panel-group .panel + .panel, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel + .panel, #header_notifs_icon_wrapper #agile .panel-group .notifs_panel + .panel, #agile .panel-group #dash_version + .panel, #agile .panel-group #header_notifs_icon_wrapper .panel + .notifs_panel, #header_notifs_icon_wrapper #agile .panel-group .panel + .notifs_panel, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel + .notifs_panel, #header_notifs_icon_wrapper #agile .panel-group .notifs_panel + .notifs_panel, #agile .panel-group #header_notifs_icon_wrapper #dash_version + .notifs_panel, #header_notifs_icon_wrapper #agile .panel-group #dash_version + .notifs_panel, #agile .panel-group .panel + #dash_version, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel + #dash_version, #header_notifs_icon_wrapper #agile .panel-group .notifs_panel + #dash_version, #agile .panel-group #dash_version + #dash_version { margin-top: 5px; }
+#agile .panel-group .panel-heading, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-group .notifs_panel_header { border-bottom: 0; }
+#agile .panel-group .panel-heading + .panel-collapse .panel-body, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-group .notifs_panel_header + .panel-collapse .panel-body { border-top: 1px solid #dddddd; }
+#agile .panel-group .panel-footer, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer, #header_notifs_icon_wrapper .notifs_panel #agile .panel-group .notifs_panel_footer { border-top: 0; }
+#agile .panel-group .panel-footer + .panel-collapse .panel-body, #agile .panel-group #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-group .notifs_panel_footer + .panel-collapse .panel-body { border-bottom: 1px solid #dddddd; }
+#agile .panel-default, #agile #header_notifs_icon_wrapper .notifs_panel, #header_notifs_icon_wrapper #agile .notifs_panel { border-color: #dddddd; }
+#agile .panel-default > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-heading, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-default > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-default > .notifs_panel_header, #agile #header_notifs_icon_wrapper .notifs_panel > .notifs_panel_header, #header_notifs_icon_wrapper #agile .notifs_panel > .notifs_panel_header { color: #333333; background-color: whitesmoke; border-color: #dddddd; }
+#agile .panel-default > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-heading + .panel-collapse .panel-body, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-default > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-default > .notifs_panel_header + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper #agile .notifs_panel > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #dddddd; }
+#agile .panel-default > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-heading > .dropdown .caret, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-default > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-default > .notifs_panel_header > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper #agile .notifs_panel > .notifs_panel_header > .dropdown .caret { border-color: #333333 transparent; }
+#agile .panel-default > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel > .panel-footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper #agile .notifs_panel > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-default > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-default > .notifs_panel_footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper #agile .notifs_panel > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #dddddd; }
+#agile .panel-primary { border-color: #1ba6e5; }
+#agile .panel-primary > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-primary > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-primary > .notifs_panel_header { color: white; background-color: #1ba6e5; border-color: #1ba6e5; }
+#agile .panel-primary > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-primary > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-primary > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #1ba6e5; }
+#agile .panel-primary > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-primary > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-primary > .notifs_panel_header > .dropdown .caret { border-color: white transparent; }
+#agile .panel-primary > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-primary > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-primary > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #1ba6e5; }
+#agile .panel-success { border-color: #d6e9c6; }
+#agile .panel-success > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-success > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-success > .notifs_panel_header { color: #468847; background-color: #dff0d8; border-color: #d6e9c6; }
+#agile .panel-success > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-success > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-success > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #d6e9c6; }
+#agile .panel-success > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-success > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-success > .notifs_panel_header > .dropdown .caret { border-color: #468847 transparent; }
+#agile .panel-success > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-success > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-success > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #d6e9c6; }
+#agile .panel-warning { border-color: #faebcc; }
+#agile .panel-warning > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-warning > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-warning > .notifs_panel_header { color: #c09853; background-color: #fcf8e3; border-color: #faebcc; }
+#agile .panel-warning > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-warning > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-warning > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #faebcc; }
+#agile .panel-warning > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-warning > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-warning > .notifs_panel_header > .dropdown .caret { border-color: #c09853 transparent; }
+#agile .panel-warning > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-warning > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-warning > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #faebcc; }
+#agile .panel-danger { border-color: #ebccd1; }
+#agile .panel-danger > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-danger > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-danger > .notifs_panel_header { color: #b94a48; background-color: #f2dede; border-color: #ebccd1; }
+#agile .panel-danger > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-danger > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-danger > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #ebccd1; }
+#agile .panel-danger > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-danger > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-danger > .notifs_panel_header > .dropdown .caret { border-color: #b94a48 transparent; }
+#agile .panel-danger > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-danger > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-danger > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #ebccd1; }
+#agile .panel-info { border-color: #bce8f1; }
+#agile .panel-info > .panel-heading, #agile #header_notifs_icon_wrapper .notifs_panel .panel-info > .notifs_panel_header, #header_notifs_icon_wrapper .notifs_panel #agile .panel-info > .notifs_panel_header { color: #3a87ad; background-color: #d9edf7; border-color: #bce8f1; }
+#agile .panel-info > .panel-heading + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-info > .notifs_panel_header + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-info > .notifs_panel_header + .panel-collapse .panel-body { border-top-color: #bce8f1; }
+#agile .panel-info > .panel-heading > .dropdown .caret, #agile #header_notifs_icon_wrapper .notifs_panel .panel-info > .notifs_panel_header > .dropdown .caret, #header_notifs_icon_wrapper .notifs_panel #agile .panel-info > .notifs_panel_header > .dropdown .caret { border-color: #3a87ad transparent; }
+#agile .panel-info > .panel-footer + .panel-collapse .panel-body, #agile #header_notifs_icon_wrapper .notifs_panel .panel-info > .notifs_panel_footer + .panel-collapse .panel-body, #header_notifs_icon_wrapper .notifs_panel #agile .panel-info > .notifs_panel_footer + .panel-collapse .panel-body { border-bottom-color: #bce8f1; }
+#agile .well, #agile .hook_panel { min-height: 20px; padding: 19px; margin-bottom: 20px; background-color: #ebebeb; border: 1px solid #d9d9d9; border-radius: 3px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+#agile .well blockquote, #agile .hook_panel blockquote { border-color: #ddd; border-color: rgba(0, 0, 0, 0.15); }
+#agile .well-lg { padding: 24px; border-radius: 6px; }
+#agile .well-sm { padding: 9px; border-radius: 3px; }
+#agile .close { float: right; font-size: 18px; font-weight: bold; line-height: 1; color: black; text-shadow: 0 1px 0 white; opacity: 0.2; filter: alpha(opacity=20); }
+#agile .close:hover, #agile .close:focus { color: black; text-decoration: none; cursor: pointer; opacity: 0.5; filter: alpha(opacity=50); }
+
+
+#agile .panel .panel-footer, #agile #header_notifs_icon_wrapper .notifs_panel .panel-footer, #header_notifs_icon_wrapper #agile .notifs_panel .panel-footer, #agile #dash_version .panel-footer, #header_notifs_icon_wrapper .notifs_panel #agile .panel .notifs_panel_footer, #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer, #header_notifs_icon_wrapper #agile .notifs_panel .notifs_panel_footer, #header_notifs_icon_wrapper .notifs_panel #agile #dash_version .notifs_panel_footer { margin: 15px -20px -20px; height: 73px; }
+#agile .panel .panel-footer .btn.pull-right:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel .panel-footer .btn.pull-right:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel .panel-footer .btn.pull-right:not(:first-child), #agile #dash_version .panel-footer .btn.pull-right:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #agile .panel .notifs_panel_footer .btn.pull-right:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .btn.pull-right:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel .notifs_panel_footer .btn.pull-right:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #agile #dash_version .notifs_panel_footer .btn.pull-right:not(:first-child), #content#agile .panel .panel-footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #content#agile h3:not(.modal-title) .panel .panel-footer .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .panel-footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #content#agile h3:not(.modal-title) #header_notifs_icon_wrapper .notifs_panel .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .notifs_panel .panel-footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile h3:not(.modal-title) .notifs_panel .panel-footer .btn.panel-heading-action:not(:first-child), #content#agile #dash_version .panel-footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #content#agile h3:not(.modal-title) #dash_version .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel .notifs_panel_footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile h3:not(.modal-title) .panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #content#agile h3:not(.modal-title) #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .notifs_panel .notifs_panel_footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile h3:not(.modal-title) .notifs_panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile #dash_version .notifs_panel_footer h3:not(.modal-title) .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile h3:not(.modal-title) #dash_version .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #content#agile .panel .panel-footer .panel-heading .btn.panel-heading-action:not(:first-child), #content#agile .panel-heading .panel .panel-footer .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .panel-footer .panel-heading .btn.panel-heading-action:not(:first-child), #content#agile .panel-heading #header_notifs_icon_wrapper .notifs_panel .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .notifs_panel .panel-footer .panel-heading .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .panel-heading .notifs_panel .panel-footer .btn.panel-heading-action:not(:first-child), #content#agile #dash_version .panel-footer .panel-heading .btn.panel-heading-action:not(:first-child), #content#agile .panel-heading #dash_version .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel .notifs_panel_footer .panel-heading .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel-heading .panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .panel-heading .btn.panel-heading-action:not(:first-child), #content#agile .panel-heading #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .notifs_panel .notifs_panel_footer .panel-heading .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile .panel-heading .notifs_panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile #dash_version .notifs_panel_footer .panel-heading .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel-heading #dash_version .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #content#agile .panel .panel-footer #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .panel-footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile #header_notifs_icon_wrapper .notifs_panel .panel-footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .panel-footer .btn.panel-heading-action:not(:first-child), #content#agile #dash_version .panel-footer #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #content#agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_header .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel .panel-footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header .panel .panel-footer .btn.panel-heading-action:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel .panel-footer #content#agile .notifs_panel_header .btn.panel-heading-action:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel .panel-footer #content#agile .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel #content#agile .notifs_panel_header .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile #dash_version .panel-footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header #dash_version .panel-footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .panel .notifs_panel_footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header .panel .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel .notifs_panel_footer #content#agile .notifs_panel_header .btn.panel-heading-action:not(:first-child), #agile #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel .notifs_panel_footer #content#agile .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper #agile .notifs_panel #content#agile .notifs_panel_header .notifs_panel_footer .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile #dash_version .notifs_panel_footer .notifs_panel_header .btn.panel-heading-action:not(:first-child), #header_notifs_icon_wrapper .notifs_panel #content#agile .notifs_panel_header #dash_version .notifs_panel_footer .btn.panel-heading-action:not(:first-child) { margin-right: 5px; }
+
+#agile .fixed-width-xs { width: 40px !important; }
+#agile .fixed-width-sm { width: 80px !important; }
+#agile .fixed-width-md { width: 120px !important; }
+#agile .fixed-width-lg { width: 160px !important; }
+#agile .fixed-width-xl { width: 200px !important; }
+#agile .fixed-width-xxl { width: 250px !important; }
+
+#agile .alert { padding: 15px; margin-bottom: 17px; border: 1px solid transparent; border-radius: 3px; }
+#agile .alert h4 { margin-top: 0; color: inherit; }
+#agile .alert .alert-link, #agile #carrier_wizard .wizard_error .alert-link { font-weight: bold; }
+#agile .alert > p, #agile #carrier_wizard .wizard_error > p, #agile .alert > ul, #agile #carrier_wizard .wizard_error > ul { margin-bottom: 0; }
+#agile .alert > p + p, #agile #carrier_wizard .wizard_error > p + p { margin-top: 5px; }
+#agile .alert-dismissable { padding-right: 35px; }
+#agile .alert-dismissable .close { position: relative; top: -2px; right: -21px; color: inherit; }
+#agile .alert-success { background-color: #dff0d8; border-color: #d6e9c6; color: #468847; }
+#agile .alert-success hr { border-top-color: #c9e2b3; }
+#agile .alert-success .alert-link { color: #356635; }
+#agile .alert-info { background-color: #d9edf7; border-color: #bce8f1; color: #3a87ad; }
+#agile .alert-info hr { border-top-color: #a6e1ec; }
+#agile .alert-info .alert-link { color: #2d6987; }
+#agile .alert-warning { background-color: #fcf8e3; border-color: #faebcc; color: #c09853; }
+#agile .alert-warning hr { border-top-color: #f7e1b5; }
+#agile .alert-warning .alert-link { color: #a47e3c; }
+#agile .alert-danger, #agile #carrier_wizard .wizard_error { background-color: #f2dede; border-color: #ebccd1; color: #b94a48; }
+#agile .alert-danger hr, #agile #carrier_wizard .wizard_error hr { border-top-color: #e4b9c0; }
+#agile .alert-danger .alert-link, #agile #carrier_wizard .wizard_error .alert-link { color: #953b39; }
+
+#agile .alert.alert-danger { padding-left: 60px; position: relative; }
+#agile .alert.alert-danger:before { position: absolute; top: 30%; left: 10px; display: block; min-height: 25px; min-width: 25px; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size:inherit; text-decoration: inherit; -webkit-font-smoothing: antialiased; content: "\f00d"; }
+#agile .alert.alert-success { padding-left: 60px; position: relative; }
+#agile .alert.alert-success:before { position: absolute; top: 30%; left: 10px; display: block; min-height: 25px; min-width: 25px; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size: 35px; text-decoration: inherit; -webkit-font-smoothing: antialiased; content: "\f00c"; }
+#agile .alert.alert-info { padding-left: 60px; position: relative; }
+#agile .alert.alert-info:before { position: absolute; top: 30%; left: 10px; display: block; min-height: 25px; min-width: 25px; font-family: FontAwesome; font-weight: normal; font-style: normal; font-size: 35px; text-decoration: inherit; -webkit-font-smoothing: antialiased; content: "\F05A"; }
+
+#content#agile { padding: 80px 10px 0; -webkit-transition-property: margin; transition-property: margin; -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+#content#agile .panel, #content#agile #header_notifs_icon_wrapper .notifs_panel, #header_notifs_icon_wrapper #content#agile .notifs_panel, #content#agile #dash_version { padding: 20px; margin-bottom: 20px; border: solid 1px #dfdfdf; background-color: white; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset; box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset; }
+
+
+#agile .tree { padding: 0 0 0 20px; list-style: none; }
+#agile .tree input { margin-right: 4px; }
+#agile .tree i { font-size: 1.3em; }
+#agile .tree .tree-item-name, #agile .tree .tree-folder-name { padding: 0 5px; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; font-weight: normal; }
+#agile .tree .tree-item-name:hover, #agile .tree .tree-folder-name:hover { background-color: #eeeeee; cursor: pointer; }
+#agile .tree .tree-selected { background-color: #a4dcf5; }
+#agile .tree .tree-selected i.tree-dot { background-color: #1ba6e5; }
+#agile .tree i.tree-dot { display: inline-block; position: relative; width: 6px; height: 6px; margin: 0 4px 0 6px; background-color: #cccccc; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; }
+#agile .tree .tree-item-disable, #agile .tree .tree-folder-name-disable { color: #cccccc; }
+#agile .tree .tree-item-disable:hover, #agile .tree .tree-folder-name-disable:hover { color: #cccccc; background-color: none; }
+#agile .tree-actions { display: inline-block; }
+#agile .tree-panel-heading-controls { margin: -20px -20px 20px; padding: 5px; border-bottom: solid 1px #dfdfdf; }
+
+#agile .input-group { position: relative; display: table; border-collapse: separate; }
+#agile .input-group.col { float: none; padding-left: 0; padding-right: 0; }
+#agile .input-group .form-control, #agile .input-group input[type="text"], #agile .input-group input[type="search"], #agile .input-group input[type="password"], #agile .input-group textarea, #agile .input-group select { width: 100%; margin-bottom: 0; }
+#agile .input-group-addon, #agile .input-group-btn, #agile .input-group .form-control, #agile .input-group input[type="text"], #agile .input-group input[type="search"], #agile .input-group input[type="password"], #agile .input-group textarea, #agile .input-group select { display: table-cell; }
+#agile .input-group-addon:not(:first-child):not(:last-child), #agile .input-group-btn:not(:first-child):not(:last-child), #agile .input-group .form-control:not(:first-child):not(:last-child), #agile .input-group input[type="text"]:not(:first-child):not(:last-child), #agile .input-group input[type="search"]:not(:first-child):not(:last-child), #agile .input-group input[type="password"]:not(:first-child):not(:last-child), #agile .input-group textarea:not(:first-child):not(:last-child), #agile .input-group select:not(:first-child):not(:last-child) { border-radius: 0; }
+#agile .input-group-addon, #agile .input-group-btn { width: 1%; white-space: nowrap; vertical-align: middle; }
+#agile .input-group-addon { padding: 4px 8px; font-size: 12px; font-weight: normal; line-height: 1; color: #555555; text-align: center; background-color: #eeeeee; border: 1px solid #cccccc; border-radius: 3px; }
+#agile .input-group-addon.input-sm, #agile .input-group-sm > .input-group-addon, #agile .input-group-sm > .input-group-btn > .input-group-addon.btn { padding: 5px 10px; font-size: 11px; border-radius: 3px; }
+#agile .input-group-addon.input-lg, #agile .input-group-lg > .input-group-addon, #agile .input-group-lg > .input-group-btn > .input-group-addon.btn { padding: 10px 16px; font-size: 15px; border-radius: 6px; }
+#agile .input-group-addon input[type="radio"], #agile .input-group-addon input[type="checkbox"] { margin-top: 0; }
+#agile .input-group .form-control:first-child, #agile .input-group input[type="text"]:first-child, #agile .input-group input[type="search"]:first-child, #agile .input-group input[type="password"]:first-child, #agile .input-group textarea:first-child, #agile .input-group select:first-child, #agile .input-group-addon:first-child, #agile .input-group-btn:first-child > .btn, #agile .input-group-btn:first-child > .dropdown-toggle, #agile .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) { border-bottom-right-radius: 0; border-top-right-radius: 0; }
+#agile .input-group-addon:first-child { border-right: 0; }
+#agile .input-group .form-control:last-child, #agile .input-group input[type="text"]:last-child, #agile .input-group input[type="search"]:last-child, #agile .input-group input[type="password"]:last-child, #agile .input-group textarea:last-child, #agile .input-group select:last-child, #agile .input-group-addon:last-child, #agile .input-group-btn:last-child > .btn, #agile .input-group-btn:last-child > .dropdown-toggle, #agile .input-group-btn:first-child > .btn:not(:first-child) { border-bottom-left-radius: 0; border-top-left-radius: 0; }
+#agile .input-group-addon:last-child { border-left: 0; }
+#agile .input-group-btn { position: relative; white-space: nowrap; }
+#agile .input-group-btn:first-child > .btn { margin-right: -1px; }
+#agile .input-group-btn:last-child > .btn { margin-left: -1px; }
+#agile .input-group-btn > .btn { position: relative; }
+#agile .input-group-btn > .btn + .btn { margin-left: -4px; }
+#agile .input-group-btn > .btn:hover, #agile .input-group-btn > .btn:active { z-index: 2; }
+
+#agile label.control-label { font-size: 13px; font-weight: normal; color: #666666; padding-top: 2px;  }
+#agile label.control-label span.label-tooltip { text-decoration: none; font-size: 13px; color: #3586ae; background-color: #edf7fb; border: none; border-bottom: solid 1px #d8edf7; padding: 0 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+
+#agile .form-horizontal .radio {
+    padding-top: 2px;
+}
+#agile .form-horizontal .checkbox {
+    min-height: 12px;
+    line-height: 1em;
+    padding-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#expiredproducts-list, .checkbox {
+    min-height: 12px;
+    line-height: 1em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+   margin-top: 3px;
+    margin-bottom: 6px;
+}
+#agile .form-group:before, #agile  .form-group:after { content: " "; /* 1 */ display: table; /* 2 */ }
+#agile .form-group:after { clear: both; }
+
+#agile .form-control, #agile input[type="text"], #agile input[type="search"], #agile input[type="password"], #agile textarea, #agile select { display: block; width: 100%; height: 27px; padding: 4px 8px; font-size: 12px; line-height: 1.42857; color: #555555; vertical-align: middle; background-color: white; background-image: none; border: 1px solid #cccccc; border-radius: 3px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+    #agile textarea.textarea {
+        height:6em;
+    }
+#agile .form-control:focus, #agile input[type="text"]:focus, #agile input[type="search"]:focus, #agile input[type="password"]:focus, #agile textarea:focus, #agile select:focus { border-color: #66afe9; outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+#agile .form-control:-moz-placeholder, #agile input[type="text"]:-moz-placeholder, #agile input[type="search"]:-moz-placeholder, #agile input[type="password"]:-moz-placeholder, #agile textarea:-moz-placeholder, #agile select:-moz-placeholder { color: #999999; }
+#agile .form-control::-moz-placeholder, #agile input[type="text"]::-moz-placeholder, #agile input[type="search"]::-moz-placeholder, #agile input[type="password"]::-moz-placeholder, #agile textarea::-moz-placeholder, #agile select::-moz-placeholder { color: #999999; }
+#agile .form-control:-ms-input-placeholder, #agile input[type="text"]:-ms-input-placeholder, #agile input[type="search"]:-ms-input-placeholder, #agile input[type="password"]:-ms-input-placeholder, #agile textarea:-ms-input-placeholder, #agile select:-ms-input-placeholder { color: #999999; }
+#agile .form-control::-webkit-input-placeholder, #agile input[type="text"]::-webkit-input-placeholder, #agile input[type="search"]::-webkit-input-placeholder, #agile input[type="password"]::-webkit-input-placeholder, #agile textarea::-webkit-input-placeholder, #agile select::-webkit-input-placeholder { color: #999999; }
+#agile .form-control[disabled], #agile input[disabled][type="text"], #agile input[disabled][type="search"], #agile input[disabled][type="password"], #agile textarea[disabled], #agile select[disabled], #agile .form-control[readonly], #agile input[readonly][type="text"], #agile input[readonly][type="search"], #agile input[readonly][type="password"], #agile textarea[readonly], #agile select[readonly], fieldset[disabled] #agile .form-control, fieldset[disabled] #agile input[type="text"], fieldset[disabled] #agile input[type="search"], fieldset[disabled] #agile input[type="password"], fieldset[disabled] #agile textarea, fieldset[disabled] #agile select { cursor: not-allowed; background-color: #eeeeee; }
+
+#center_column #agile { padding: 4px 10px 0; -webkit-transition-property: margin; transition-property: margin; -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out; transition-timing-function: ease-out; }
+#center_column #agile .panel, #content#agile #header_notifs_icon_wrapper .notifs_panel, #header_notifs_icon_wrapper #content#agile .notifs_panel, #content#agile #dash_version { padding: 20px; margin-bottom: 20px; border: solid 1px #dfdfdf; background-color: white; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset; box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset; }
+#center_column#agile h3:not(.modal-title){ border: none; padding: 0 5px; margin: -16px -16px 15px -16px; color: contrasted(#e6e8e3); font-size: 1.2em; line-height: 30px; font-weight: 300; text-transform: uppercase; background-color: white; border-bottom: solid 1px #cccccc; }
+#agile .panel > h3 {
+    margin-top: -5px;
+}
+#center_column #agile h3 a, ul.footer_links li a { color:blue; }
+
+#agile select { 
+ display: block;
+ width: 100%;
+ height: 27px;
+ padding: 4px 8px;
+ font-size: 12px;
+ line-height: 1.42857;
+ color: #555555;
+ vertical-align: middle;
+ background-color: white;
+ background-image: none;
+ border: 1px solid #cccccc;
+ border-radius: 3px;
+ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+ -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+ transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+ }
+
+#agile .help-block { display: block; margin-top: 5px; margin-bottom: 10px; color: #959595; }
+
+#agile .row, #agile #dashboard .data_list_vertical { margin-left: -5px; margin-right: -5px; }
+#agile .row:before, #agile #dashboard .data_list_vertical:before, #agile .row:after, #agile #dashboard .data_list_vertical:after { content: " "; /* 1 */ display: table; /* 2 */ }
+#agile .row:after, #agile #dashboard .data_list_vertical:after { clear: both; }
+
+
+.agile-margin-left3px {
+    margin-left: -3px;
+}
+
+
+#agile .list-unstyled, #agile .list-inline, 
+#agile #dashboard .data_list_large, 
+#agile #dashboard #agile .list-inline > li { display: inline-block; padding-left: 5px; padding-right: 5px; }
+#agile .list-inline > li:first-child { padding-left: 0; }
+#agile .list-inline > li div,#agile .list-inline > li label {
+         display: table-cell !important;
+         vertical-align: middle !important;
+    }
+
+
+#agile .prestashop-switch { min-width: 150px; background-color: #eeeeee; border-radius: 3px; color: #333333; text-align: center; font-weight: 400; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 1px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 1px inset; }
+#agile .prestashop-switch * { outline: 0 !important; }
+#agile .prestashop-switch label { text-transform: uppercase; color: #bbbbbb; font-weight: 400; cursor: pointer; -webkit-transition: color 0.2s ease-out; transition: color 0.2s ease-out; }
+#agile .prestashop-switch input:checked + label { color: #666666; }
+#agile .prestashop-switch input:not(:checked) + label i { color: #999999 !important; }
+#agile .prestashop-switch > span { color: #666666; text-transform: uppercase; cursor: pointer; }
+#agile .prestashop-switch.switch-light input:checked ~ a { border: solid 1px #5cb85c; background-color: #80c780; -webkit-box-shadow: #5cb85c 0 -1px 0 inset; box-shadow: #5cb85c 0 -1px 0 inset; }
+#agile .prestashop-switch.switch-light input:checked ~ span span:first-of-type { color: white; }
+#agile .prestashop-switch.switch-light input:checked ~ span span:last-of-type { color: #cccccc; }
+#agile .prestashop-switch.switch-light input ~ a { border: solid 1px #d9534f; background-color: #e27c79; -webkit-box-shadow: #d9534f 0 -1px 0 inset; box-shadow: #d9534f 0 -1px 0 inset; }
+#agile .prestashop-switch.switch-light input ~ span span:first-of-type { color: #cccccc; }
+#agile .prestashop-switch.switch-light input ~ span span:last-of-type { color: white; } }
+
+
+#agile .btn { text-transform: uppercase; }
+#agile .btn .caret { border-top-color: #333333 !important; }
+#agile .btn:hover .caret, #agile .btn:focus .caret { border-top-color: white !important; }
+#agile .btn.btn-default { -webkit-box-shadow: #e6e6e6 0 -2px 0 inset; box-shadow: #e6e6e6 0 -2px 0 inset; }
+#agile .btn.btn-default:hover { -webkit-box-shadow: none; box-shadow: none; background-color: #1ba6e5; color: white; border-color: #1585b8; }
+#agile .btn.btn-default:hover i { color: white; }
+#agile .btn.btn-primary { background-color: #1ba6e5; color: white; border-color: #1585b8; }
+#agile .btn.btn-default[disabled] { border-color: #999999; color: #999999; background-color: #f2f2f2; -webkit-box-shadow: #cccccc 0 -2px 0 inset; box-shadow: #cccccc 0 -2px 0 inset; }
+
+#agile fieldset { padding: 0; margin: 0; border: 0; }
+#agile legend { display: block; width: 100%; padding: 0; margin-bottom: 17px; font-size: 18px; line-height: inherit; color: #333333; border: 0; border-bottom: 1px solid #e5e5e5; }
+#agile label { display: inline-block; margin-bottom: 2px; font-weight: bold; }
+#agile input[type="search"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#agile input[type="radio"], #agile input[type="checkbox"] { margin: 4px 0 0; margin-top: 1px \9; /* IE8-9 */ line-height: normal; }
+#agile input[type="file"] { display: block; }
+#agile select[multiple], #agile select[size] { height: auto; }
+#agile select optgroup { font-size: inherit; font-style: inherit; font-family: inherit; }
+#agile input[type="file"]:focus, #agile input[type="radio"]:focus, #agile input[type="checkbox"]:focus { outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+#agile input[type="number"]::-webkit-outer-spin-button, #agile input[type="number"]::-webkit-inner-spin-button { height: auto; }
+#agile output { display: block; padding-top: 5px; font-size: 12px; line-height: 1.42857; color: #555555; vertical-align: middle; }
+
+
+#agile .list-group, #agile #dashboard .data_list { margin-bottom: 20px; padding-left: 0; }
+#agile .list-group-item, #agile #dashboard .data_list li { position: relative; display: block; padding: 10px 15px; margin-bottom: -1px; background-color: white; border: 1px solid #dddddd; }
+#agile .list-group-item:first-child, #agile #dashboard .data_list li:first-child { border-top-right-radius: 3px; border-top-left-radius: 3px; }
+#agile .list-group-item:last-child, #agile #dashboard .data_list li:last-child { margin-bottom: 0; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; }
+#agile .list-group-item > .badge, #agile #dashboard .data_list li > .badge, #agile #header_notifs_icon_wrapper .list-group-item > .notifs_badge, #header_notifs_icon_wrapper #agile .list-group-item > .notifs_badge, #agile #dashboard .data_list #header_notifs_icon_wrapper li > .notifs_badge, #header_notifs_icon_wrapper #agile #dashboard .data_list li > .notifs_badge { float: right; }
+#agile .list-group-item > .badge + .badge, #agile #dashboard .data_list li > .badge + .badge, #agile #header_notifs_icon_wrapper .list-group-item > .notifs_badge + .badge, #header_notifs_icon_wrapper #agile .list-group-item > .notifs_badge + .badge, #agile #dashboard .data_list #header_notifs_icon_wrapper li > .notifs_badge + .badge, #header_notifs_icon_wrapper #agile #dashboard .data_list li > .notifs_badge + .badge, #agile #header_notifs_icon_wrapper .list-group-item > .badge + .notifs_badge, #header_notifs_icon_wrapper #agile .list-group-item > .badge + .notifs_badge, #agile #dashboard .data_list #header_notifs_icon_wrapper li > .badge + .notifs_badge, #header_notifs_icon_wrapper #agile #dashboard .data_list li > .badge + .notifs_badge, #agile #header_notifs_icon_wrapper .list-group-item > .notifs_badge + .notifs_badge, #header_notifs_icon_wrapper #agile .list-group-item > .notifs_badge + .notifs_badge, #agile #dashboard .data_list #header_notifs_icon_wrapper li > .notifs_badge + .notifs_badge, #header_notifs_icon_wrapper #agile #dashboard .data_list li > .notifs_badge + .notifs_badge { margin-right: 5px; }
+#agile a.list-group-item { color: #555555; }
+#agile a.list-group-item .list-group-item-heading { color: #333333; }
+#agile a.list-group-item:hover, #agile a.list-group-item:focus { text-decoration: none; background-color: whitesmoke; }
+#agile a.list-group-item.active, #agile a.list-group-item.active:hover, #agile a.list-group-item.active:focus { z-index: 2; color: white; background-color: #1ba6e5; border-color: #1ba6e5; }
+#agile a.list-group-item.active .list-group-item-heading, #agile a.list-group-item.active:hover .list-group-item-heading, #agile a.list-group-item.active:focus .list-group-item-heading { color: inherit; }
+#agile a.list-group-item.active .list-group-item-text, #agile a.list-group-item.active:hover .list-group-item-text, #agile a.list-group-item.active:focus .list-group-item-text { color: #d2edfa; }
+#agile .list-group-item-heading { margin-top: 0; margin-bottom: 5px; }
+#agile .list-group-item-text { margin-bottom: 0; line-height: 1.3; }
+
+#agile .switch-light * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#agile .switch-light a { display: block; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+#agile .switch-light label, #agile .switch-light > span { line-height: 26px; vertical-align: middle; }
+#agile .switch-light label { position: relative; z-index: 3; display: block; width: 100%; }
+#agile .switch-light input { position: absolute; opacity: 0; z-index: 5; }
+#agile .switch-light input:checked ~ a { left: 0%; }
+#agile .switch-light > span { position: absolute; left: 0; width: 100%; margin: 0; text-align: left; }
+#agile .switch-light > span span { position: absolute; top: 0; left: 0; z-index: 5; display: block; width: 50%; text-align: center; }
+#agile .switch-light > span span:last-child { left: 50%; }
+#agile .switch-light a { position: absolute; left: 50%; top: 0; z-index: 4; display: block; width: 50%; height: 100%; padding: 0; }
+#agile .switch { display: block; height: 26px; position: relative; padding: 0 !important; }
+#agile .switch * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#agile .switch a { display: block; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+#agile .switch label, #agile .switch > span { line-height: 26px; vertical-align: middle; }
+#agile .switch input { position: absolute; opacity: 0; }
+#agile .switch label { position: relative; z-index: 2; float: left; width: 50%; height: 100%; margin: 0; text-align: center; }
+#agile .switch a { position: absolute; top: 0; left: 0; padding: 0; z-index: 1; width: 50%; height: 100%; }
+#agile .switch input:last-of-type:checked ~ a { left: 50%; }
+#agile .switch.switch-3 label, #agile .switch.switch-3 a { width: 33.33333%; }
+#agile .switch.switch-3 input:checked:nth-of-type(2) ~ a { left: 33.33333%; }
+#agile .switch.switch-3 input:checked:last-of-type ~ a { left: 66.66667%; }
+#agile .switch.switch-4 label, #agile .switch.switch-4 a { width: 25%; }
+#agile .switch.switch-4 input:checked:nth-of-type(2) ~ a { left: 25%; }
+#agile .switch.switch-4 input:checked:nth-of-type(3) ~ a { left: 50%; }
+#agile .switch.switch-4 input:checked:last-of-type ~ a { left: 75%; }
+#agile .switch.switch-5 label, #agile .switch.switch-5 a { width: 20%; }
+#agile .switch.switch-5 input:checked:nth-of-type(2) ~ a { left: 20%; }
+#agile .switch.switch-5 input:checked:nth-of-type(3) ~ a { left: 40%; }
+#agile .switch.switch-5 input:checked:nth-of-type(4) ~ a { left: 60%; }
+#agile .switch.switch-5 input:checked:last-of-type ~ a { left: 80%; }
+ 
+#agile .prestashop-switch { min-width: 150px; background-color: #eeeeee; border-radius: 3px; color: #333333; text-align: center; font-weight: 400; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 1px inset; box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 1px inset; }
+#agile .prestashop-switch * { outline: 0 !important; }
+#agile .prestashop-switch label { text-transform: uppercase; color: #bbbbbb; font-weight: 400; cursor: pointer; -webkit-transition: color 0.2s ease-out; transition: color 0.2s ease-out; }
+#agile .prestashop-switch input:checked + label { color: #666666; }
+#agile .prestashop-switch input:not(:checked) + label i { color: #999999 !important; }
+#agile .prestashop-switch > span { color: #666666; text-transform: uppercase; cursor: pointer; }
+#agile .prestashop-switch.switch-light input:checked ~ a { border: solid 1px #5cb85c; background-color: #80c780; -webkit-box-shadow: #5cb85c 0 -1px 0 inset; box-shadow: #5cb85c 0 -1px 0 inset; }
+#agile .prestashop-switch.switch-light input:checked ~ span span:first-of-type { color: white; }
+#agile .prestashop-switch.switch-light input:checked ~ span span:last-of-type { color: #cccccc; }
+#agile .prestashop-switch.switch-light input ~ a { border: solid 1px #d9534f; background-color: #e27c79; -webkit-box-shadow: #d9534f 0 -1px 0 inset; box-shadow: #d9534f 0 -1px 0 inset; }
+#agile .prestashop-switch.switch-light input ~ span span:first-of-type { color: #cccccc; }
+#agile .prestashop-switch.switch-light input ~ span span:last-of-type { color: white; } 
+
+
+.agile-btn {
+  position:relative;
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.42857;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+  .agile-btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  .agile-btn:hover, .agile-btn:focus {
+    color: #333333;
+    text-decoration: none; }
+  .agile-btn:active, .agile-btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+  .agile-btn.disabled, .agile-btn[disabled], fieldset[disabled] .agile-btn {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.agile-btn-default {
+  color: white;
+  background-color: #1ba6e5;
+  border-color: #1585b8; }
+  .agile-btn-default:hover, .agile-btn-default:focus, .agile-btn-default:active, .agile-btn-default.active {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad; }
+  .open .agile-btn-default.dropdown-toggle {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad; 
+  }
+
+
+  .agile-btn-default:active, .agile-btn-default.active {
+    background-image: none; }
+  .open .agile-btn-default.dropdown-toggle {
+    background-image: none; }
+  .agile-btn-default.disabled, .agile-btn-default.disabled:hover, .agile-btn-default.disabled:focus, .agile-btn-default.disabled:active, .agile-btn-default.disabled.active, .agile-btn-default[disabled], .agile-btn-default[disabled]:hover, .agile-btn-default[disabled]:focus, .agile-btn-default[disabled]:active, .agile-btn-default[disabled].active, fieldset[disabled] .agile-btn-default, fieldset[disabled] .agile-btn-default:hover, fieldset[disabled] .agile-btn-default:focus, fieldset[disabled] .agile-btn-default:active, fieldset[disabled] .agile-btn-default.active {
+    background-color: white;
+    border-color: #cccccc; }
+
+
+
+ #agile .tagify-container{
+	background-color:#fff;
+	padding:0px 3px;
+	min-height:30px;
+	overflow:auto;
+	border:solid 1px #ccc;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:rgba(0,0,0,0.075) 0 1px 1px inset;
+	box-shadow:rgba(0,0,0,0.075) 0 1px 1px inset
+}
+
+#agile .tagify-container span{
+	float:left
+}
+
+#agile .tagify-container>span{
+	display:inline-block;
+	padding:2px 5px;
+	margin:3px;
+	border-radius:2px;
+	border:1px solid #00aff0;
+	background-color:#3ecbff;
+	color:#fff
+}
+
+#agile .tagify-container>span>a{
+	color:#00aff0;
+	text-decoration:none;
+	font-weight:bold;
+	padding-left:5px
+}
+
+#agile .tagify-container>input{
+	margin-top:2px;
+	border:0 none;
+	width:140px;
+	height:auto;
+	-webkit-box-shadow:none;
+	box-shadow:none
+}
+
+#agile .tagify-container>input:focus{
+	outline:0;
+	-webkit-box-shadow:none;
+	box-shadow:none
+}
+
+#agile .list-unstyled {
+	padding-left:0;
+	list-style:none
+}
+
+#agile .list-unstyled a {
+    color: #00AFF0;
+    text-decoration: none;
+}
+
+.red {
+    color:red;
+}
+
+.bootstrap .sep hr{
+    margin-top:0;
+    margin-bottom:0;
+    height: 1px;
+    border-top:dotted 1px gray;
+}
+
+input#seller_terms.width10 {
+    width:10% ;
+}

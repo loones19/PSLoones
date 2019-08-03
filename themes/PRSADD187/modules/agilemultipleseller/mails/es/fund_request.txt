@@ -1,0 +1,7 @@
+Hola,
+
+{seller_company}(ID:{seller_id}) ha hecho una solicitud de fondos.
+
+Cantidad solicitada: {amount_requested}
+
+{shop_url}

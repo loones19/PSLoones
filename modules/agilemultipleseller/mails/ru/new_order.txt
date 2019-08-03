@@ -1,0 +1,59 @@
+[{shop_url}] 
+Здравствуйте {seller-firstname} {seller-lastname},
+
+Вы получили новый заказ от {firstname} {lastname} на {shop_name}.
+
+Заказ: {order_name}, размещенные на {date}
+
+Оплата: {payment}
+
+Ссылка
+
+Продукт
+
+ЦЕНА ЗА ЕДИНИЦУ
+
+Количество
+
+ОБЩАЯ СТОИМОСТЬ
+
+{products} 
+
+{discounts} 
+
+Продукты 
+
+{total_products} 
+
+Скидки 
+
+{total_discounts} 
+
+ПОДАРОЧНАЯ УПАКОВКА 
+
+{total_wrapping} 
+
+Доставка 
+
+{total_shipping} 
+
+ИТОГО НАЛОГ
+
+{total_tax_paid} 
+
+ВСЕГО ОПЛАЧЕНО 
+
+{total_paid} 
+
+Перевозчик: {carrier}
+
+Оплата: {payment}
+
+{delivery_block_html} 
+
+{invoice_block_html} 
+
+Сообщение клиента:
+{message}
+
+{shop_name} [{shop_url}]

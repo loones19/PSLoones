@@ -1,0 +1,36 @@
+What is does:
+==============
+Front store
+- Show a new tab "Selelr Bank Info" on My Seller Account page
+- It allow seller to enter bank info for store to pay seller when "Store Collects Payment" mode
+- The bank data in this tab could be password protected.
+
+Back office
+Admin is able to get a list of payment into and export to CSV
+
+
+How to install
+================
+1. Copy following 2 files to store root and run the script
+install_db.php
+install_db.sql
+
+2. Copy following file to /modules/agilemultipleseller/controllers/front/
+./controllers/front/sellerbankinfo.php
+
+3. Copy following file to /modules/agilemultipleseller/views/templates/front/
+./views/templates/front/sellerbankinfo.tpl
+
+
+4. Copy following file to /modules/agilemultipleseller/
+./SellerBankInfo.php
+./AdminSellerBankInfos.php
+
+5. Remove comment out from following line to make tab visible in file:  /modules/agilemultipleseller/views.templates/front/seller_tabs.tpl
+
+					{*
+					<li {if $seller_tab_id==12}class="current"{/if}><a id="seller_otherinfo" href="{if $seller_tab_id==12}#idTab12{else}{$link->getModuleLink('agilemultipleseller', 'sellerbankinfo', [], true)}{/if}">{l s='Bank Info' mod='agilemultipleseller'}</a></li>
+					*}
+
+
+

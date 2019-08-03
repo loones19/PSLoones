@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>agilemultipleseller</name>
+    <displayName><![CDATA[Agile Multiple Seller module]]></displayName>
+    <version><![CDATA[3.7.3.2]]></version>
+    <description><![CDATA[This module will turn your normal PrestaShop store into a multiple seller/vendor marketplace. With this module, you will be able to allow anyone sign up as seller on your store to sell products with your store.]]></description>
+    <author><![CDATA[addons-modules.com]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

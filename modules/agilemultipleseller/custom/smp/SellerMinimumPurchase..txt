@@ -1,0 +1,85 @@
+How to use this customization
+==============================
+1. Install Agile Multiple Seller module 2.1.6.0 or above
+2. Configure the module to use customization field "Number1"
+3. Copy SellerMinimumPurchase.php to following folder
+/modules/agilemultipleseller/custom/smp/
+
+4. To show "Minimum Purchase: $XXX" at cart block
+4.A Copy and paste folloging code into 
+    File: /modules/blockcart/blockcart.php 
+	Location1: inside function hookRightColumn($params), before last line: "return $this->display(__FILE__, 'blockcart.tpl');"
+	Location2: inside function hookAjaxCall($params), after line: "$this->assignContentVars($params);"
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php");
+			$retmsg = SellerMinimumPurchase::validate_seller_min_purchase($this->context, true);
+			$this->smarty->assign('seller_min_purchase',$retmsg);
+		}
+
+
+
+4.B Coppy and paste folowing code into
+    File: /modules/blockcart/blockcart.tpl
+	Location: bottom before last 2 "</div>"
+
+		{if isset($seller_min_purchase) AND !empty($seller_min_purchase)}
+		<br>
+		<span id="minPurchaseAmount">{$seller_min_purchase}</span>
+		{/if}
+
+
+    File: /modules/blockcart/blockcart-json.tpl
+	before line:
+			"shippingCost": "{$shipping_cost|html_entity_decode:2:'UTF-8'}",
+	Add line
+			"minPurchaseAmount": "{$seller_min_purchase}",
+
+    File: /modules/blockcart/blockcart.js
+	inside of "updateCart : function(jsonData) {" 
+	add following code in non-error section
+
+			$('#minPurchaseAmount').html(jsonData.minPurchaseAmount);
+
+
+5. Add following code 
+in file: /controllers/front/OrderController.php, 
+in override method: init(), 
+after: parent::init();
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php");
+			$retmsg = SellerMinimumPurchase::validate_seller_min_purchase($this->context);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+				return;
+			}
+		}
+
+6. Copy and paste following code 
+in file: /controllers/front/OrderOpcController.php
+in override method: _getPaymentMethods()
+before line: return parent::_getPaymentMethods()
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php");
+			$retmsg = SellerMinimumPurchase::validate_seller_min_purchase($this->context);
+			if(!empty($retmsg))
+			{
+				return '<p class="error">' . $retmsg . '</p>';
+			}
+		}
+
+
+===== Further customization =====
+7. If you want to change the message, you can use PrestaShop translation function - Localization - Translations
+please choose Translate Error Message
+

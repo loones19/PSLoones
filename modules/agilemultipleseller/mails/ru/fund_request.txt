@@ -1,0 +1,7 @@
+Привет,
+
+{seller_company}(ID:{seller_id}) обратился с запросом фонда.
+
+Запрашиваемая сумма: {amount_requested}
+
+{shop_url} powered by PrestaShop™

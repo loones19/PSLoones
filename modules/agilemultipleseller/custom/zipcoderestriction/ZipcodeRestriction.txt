@@ -1,0 +1,49 @@
+What is this?
+==================
+This customization will allow you to set delivery area restriction based on zipcode
+The error message will displayed at when user try to checkout if the buyer's address zip code in the list of restriction.
+
+How to use this customization
+==============================
+1. Install Agile Multiple Seller module 2.1.6.0 or above
+
+2. Copy ZipcodeRestriction.php to following folder
+/modules/agilemultipleseller/custom/zipcoderestriction/
+
+3. Add following code 
+in file: /controllers/front/OrderController.php, 
+in override method: init(), 
+after: parent::init();
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/zipcoderestriction/ZipcodeRestriction.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/zipcoderestriction/ZipcodeRestriction.php");
+			$retmsg = ZipcodeRestriction::validate_zipcode($this->context);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+				return;
+			}
+		}
+
+4. Copy and paste following code 
+in file: /controllers/front/OrderOpcController.php
+in override method: _getPaymentMethods()
+before line: return parent::_getPaymentMethods()
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/zipcoderestriction/ZipcodeRestriction.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/zipcoderestriction/ZipcodeRestriction.php");
+			$retmsg = ZipcodeRestriction::validate_zipcode($this->context);
+			if(!empty($retmsg))
+			{
+				return '<p class="error">' . $retmsg . '</p>';
+			}
+		}
+
+
+===== Further customization =====
+If you want to change the message, you can use PrestaShop translation function - Localization - Translations
+please choose Translate Error Message
+

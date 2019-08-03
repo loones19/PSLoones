@@ -1,0 +1,7 @@
+Hi {firstname} {lastname},
+
+El producto que has añadido no ha sido aprobado.
+ID: {id_product}
+Nombre: {product_name}
+
+{shop_url} 

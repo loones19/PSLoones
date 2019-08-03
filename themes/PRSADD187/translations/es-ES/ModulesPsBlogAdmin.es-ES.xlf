@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="b55959152ffe9590cd605fe4966c73f4">
+        <source>Click Here to see Module Guide</source>
+        <target>Click Here to see Module Guide</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:31</note>
+      </trans-unit>
+      <trans-unit id="a85f2e1dc09b7d4b8591c8348f9cb40c">
+        <source>Global Config</source>
+        <target>Global Config</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:37</note>
+      </trans-unit>
+      <trans-unit id="c54f9f209ed8fb4683e723daa4955377">
+        <source>General Setting</source>
+        <target>General Setting</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:42</note>
+      </trans-unit>
+      <trans-unit id="f501690b17bc2e8b5d8da9361b0733f0">
+        <source>Listing Blog Setting</source>
+        <target>Listing Blog Setting</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:45</note>
+      </trans-unit>
+      <trans-unit id="27014f828e7fc5f3fe1a13addb43d890">
+        <source>Item Blog Setting</source>
+        <target>Item Blog Setting</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:48</note>
+      </trans-unit>
+      <trans-unit id="9481b70eee63ae2332528802ddaddd5c">
+        <source>Quick Tools</source>
+        <target>Quick Tools</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:61</note>
+      </trans-unit>
+      <trans-unit id="c33e404a441c6ba9648f88af3c68a1ca">
+        <source>Statistics</source>
+        <target>Statistics</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:80</note>
+      </trans-unit>
+      <trans-unit id="d6b9ea32b921a9f56de32062ba4b94f3">
+        <source>Blogs</source>
+        <target>Blogs</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:85</note>
+      </trans-unit>
+      <trans-unit id="af1b98adf7f686b84cd0b443e022b7a0">
+        <source>Categories</source>
+        <target>Categories</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:90</note>
+      </trans-unit>
+      <trans-unit id="8413c683b4b27cc3f4dbd4c90329d8ba">
+        <source>Comments</source>
+        <target>Comments</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:95</note>
+      </trans-unit>
+      <trans-unit id="bf17ac149e2e7a530c677e9bd51d3fd2">
+        <source>Modules</source>
+        <target>Modules</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:108</note>
+      </trans-unit>
+      <trans-unit id="8ac10e2a89fe6670aee0660b0cc919d5">
+        <source>Lastest Comments</source>
+        <target>Lastest Comments</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:116</note>
+      </trans-unit>
+      <trans-unit id="be5006eb5af9ab6dbca803f8d3065bbc">
+        <source>Most Viewed</source>
+        <target>Most Viewed</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:121</note>
+      </trans-unit>
+      <trans-unit id="44749712dbec183e983dcd78a7736c41">
+        <source>Date</source>
+        <target>Date</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:135</note>
+      </trans-unit>
+      <trans-unit id="8f2e1d1125e894e8f67ad91265660003">
+        <source>User :</source>
+        <target>User :</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:135</note>
+      </trans-unit>
+      <trans-unit id="b69df945ae986e6b1882cdc87ad19617">
+        <source>Hits</source>
+        <target>Hits</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\admin\psblog_dashboard\panel.tpl:144</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

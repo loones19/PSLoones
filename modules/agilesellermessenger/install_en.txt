@@ -1,0 +1,51 @@
+New Install
+======================
+
+1. Log in to the PrestaShop back office and click the Modules tab.
+
+2. Click "Add new module" icon in the top right corner of the screen. Choose the module package file you have downlaoded and saved to your hard drive, then click the "Upload this module" button.
+
+3. In the search box of the Module page, enter "agile". Select "Agile Product Reviews" from the drop-down list. The module will be displayed on your screen in the module list.
+
+4. Click the "Install" link associated with the module, and the module will be installed automatically.
+
+5. Click the "Configure" link under the module, this will bring you to the module configuration screen. Configure the module as required and click "Save".
+   
+Installation is now complete.
+
+
+Upgrade from old version
+========================
+
+1. Please back up your database before proceeding.
+
+2. Note all current module configuration parameters.
+
+3. Disable and Uninstall the previous version of Agile Seller Messenger at the back office - Modules tab
+
+4. Delete the module after uninstalling. (make sure all files are gone via FTP or File manager)
+
+5. Execute the above "New Insall" instructions 1-5.
+
+Update is now complete. Your existing data will remain unchanged, but you will need to re-configure the module.
+
+---------------------------------
+
+Variables you can use in the mail template:
+
+Seller to customer: (template name: mtocustomer)
+- {seller_name}
+- {message}
+- {shop_name}
+- {shop_url}
+
+Customer to seller:(template name: mtoseller)
+- {seller_name}
+- {message}
+- {shop_name}
+- {customer_name}
+- {product_name}
+- {product_link}
+- {message}
+- {shop_name}
+- {shop_url}

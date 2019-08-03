@@ -1,0 +1,8 @@
+[{subject}]
+
+Ответ от: {seller_name}
+Ответ На Сообщение:
+{message}
+
+{shop_url}
+{shop_name}

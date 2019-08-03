@@ -1,0 +1,102 @@
+How to use this customization
+==============================
+1. Install Agile Multiple Seller module 3.3.1.1 or higher
+2. Configure the module to use customization field "String1, String2, ... Striong7" - define this in code file
+3. Copy SellerWorkHours.php to following folder
+/modules/agilemultipleseller/custom/sellerworkhours/
+
+4. Add following code 
+in file: /controllers/front/OrderController.php, 
+in override method: init(), 
+after: parent::init();
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php");
+			$staus_messages = array(
+				SellerWorkHours::OPEN_NOW => Tools::displayError(''),  /// Leave it as empty
+				SellerWorkHours::CLOSED_TODAY => Tools::displayError('Seller %s is closed today'), ///%s is seller name, will be filled by the module automatically
+				SellerWorkHours::OUT_OF_HOUR => Tools::displayError('Seller %s is out of work hour at this moment. Work hours is: %s'),  ///first %s is seller name, second %s is work hours, will be filled in automatically
+			);
+			$retmsg = SellerWorkHours::get_work_hour_message($staus_messages);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+			}
+		}
+
+5. Copy and paste following code 
+in file: /controllers/front/OrderOpcController.php
+in override method: _getPaymentMethods()
+before line: return parent::_getPaymentMethods()
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php");
+			$staus_messages = array(
+				SellerWorkHours::OPEN_NOW => Tools::displayError(''),  /// Leave it as empty
+				SellerWorkHours::CLOSED_TODAY => Tools::displayError('Seller %s is closed today'), ///%s is seller name, will be filled by the module automatically
+				SellerWorkHours::OUT_OF_HOUR => Tools::displayError('Seller %s is out of work hour at this moment. Work hours is: %s'),  ///first %s is seller name, second %s is work hours, will be filled in automatically
+			);
+			$retmsg = SellerWorkHours::get_work_hour_message($staus_messages);
+			if(!empty($retmsg))
+			{
+				$this->step = 0;
+				$this->errors[] = $retmsg;
+			}
+		}
+
+6. Show working hour message after adding products popup "cart block" (with continue/checkout buttons) 
+6.A Copy and paste folloging code into 
+    File: /modules/blockcart/blockcart.php 
+	Location1: inside function hookRightColumn($params), before last line: "return $this->display(__FILE__, 'blockcart.tpl');"
+	Location2: inside function hookAjaxCall($params), after line: "$this->assignContentVars($params);"
+
+		if (Module::isInstalled('agilemultipleseller') AND file_exists(_PS_ROOT_DIR_ ."/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php"))
+		{
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/agilemultipleseller.php");
+			include_once(_PS_ROOT_DIR_  . "/modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php");
+			$staus_messages = array(
+				SellerWorkHours::OPEN_NOW => Tools::displayError(''),  /// Leave it as empty
+				SellerWorkHours::CLOSED_TODAY => Tools::displayError('Seller %s is closed today'), ///%s is seller name, will be filled by the module automatically
+				SellerWorkHours::OUT_OF_HOUR => Tools::displayError('Seller %s is out of work hour at this moment. Work hours is: %s'),  ///first %s is seller name, second %s is work hours, will be filled in automatically
+			);
+			$retmsg = SellerWorkHours::get_work_hour_message($staus_messages);
+			$this->smarty->assign('seller_workhours_message',$retmsg);
+		}
+
+6.B Coppy and paste folowing code into
+    File: /modules/blockcart/blockcart.tpl
+	Location: after following 2 lines
+		{if !$PS_CATALOG_MODE && $active_overlay == 1}
+			<div id="layer_cart">
+
+	Add following code
+		<div style="color:red;">
+			{if isset($seller_workhours_message) AND !empty($seller_workhours_message)}
+				<span id="seller_workhours_message">{$seller_workhours_message}</span>
+			{/if}
+		</div>
+
+
+
+==== Notes ==========
+Here is data entry rules:
+   A. Leave it empty for non-work days
+   B. HH:MM-HH:MM for start time and end time.
+   C. You and have 2 periods of work hours in a day. please separator with comma. for example:  6:30-11:30, 13:30-19:00
+   D. Any week day with invalid data will be treated as non-work day.
+
+Here is mapping between custom field and weekdays
+	String1 - Sunday
+	String2 - Monday
+	String3 - Tuesday
+	String4 - Wednesday
+	String5 - Thursday
+	String6 - Friday
+	String7 - Saturday
+
+

@@ -1,0 +1,37 @@
+
+Memo for the customization.
+
+1. We have configured agile multiple seller to select to use custom fields: Date1 and Date2 (....), please keep this configuration.
+
+2. Following files and are new added files
+    /modules/agilemultipleseller/custom/sellerholidays/SellerHolidays.php
+
+3. Following files have been modified
+    /override/controllers/front/OrderController.php
+	/override/controllers/front/OrderOpcController.php
+
+	Also following 2 files are identical to above 2 files
+	/modules/agilemultipleseller/override/controllers/front/OrderController.php
+	/modules/agilemultipleseller/override/controllers/front/OrderOpcController.php
+
+	/modules/blockcart/blockcart.php 
+	/modules/blockcart/blockcart.tpl
+
+
+4. There will be 2 new fileds displayed at seller business info management page - both at front and back office
+	Date1
+	Date2
+	Date3
+	Date4
+
+5. Please use PrestaShop translation function to translate the label as following
+   Date1  ==> Holidays 1 Start
+   Date2  ==> Holidays 1 End
+   Date3  ==> Holidays 2 Start
+   Date4  ==> Holidays 2 End
+   
+ You can do the back office - Localization - Translation - choose "Translate installed modules" and then look for agilemultipleseller section.
+
+6. Please use PrestaShop translation function to translate "Hints for Date1", "Hints for Date2",... into meaningful descriptions.
+
+  

@@ -1,0 +1,8 @@
+Hola,
+
+{seller_company}(Id:{seller_id}) añadió un nuevo producto.
+
+Nombre del producto: {product_name}
+ID del producto: {product_id}
+
+{shop_url} 

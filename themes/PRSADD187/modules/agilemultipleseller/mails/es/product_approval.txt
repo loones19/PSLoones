@@ -1,0 +1,7 @@
+Hola {firstname} {lastname},
+
+El producto que has añadido ha sido aprobado.
+ID: {id_product}
+Nombre: {product_name}
+
+{shop_url} 

@@ -1,0 +1,25 @@
+Please Note
+A. You can change your auto import password from here in /config/config.inc.php
+   define('_CSV_AUTOIMPORT_PASS', 'PassCodeHere');
+
+B. Set up a cron job on your server to calling following URL to execute automatically 
+    for products import
+	YouStoreRootUrl/module/agilesellertools/productimport?auto=1&pass= PassCodeHere&entity=0
+
+    for combinations import
+	YouStoreRootUrl/module/agilesellertools/productimport?auto=1&pass= PassCodeHere&entity=1
+
+    Note:  For testing purpose, you can also run above URL from browser to execute auto import - You must be logged out from the store.
+
+C. The CSV data file name and path must be following folder
+	for products
+    YourStoreRootFolder/modules/agilesellertools/import/0/auto_import_products_0.csv
+
+	for combinations
+    YourStoreRootFolder/modules/agilesellertools/import/0/auto_import_combinations_0.csv
+
+     Note: After the auto import is run, the file will be renamed to  auto_import_xxxxxxx_0.csv.done, so it will not be executed repeatedly.
+
+D. Data format for auto import.
+    Please use attached CSV import template as exsample, it is from Prestashop CSV template for product imports.
+    There is additional column at first column ID_Seller, you will need to enter seller ID

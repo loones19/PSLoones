@@ -1,0 +1,14 @@
+What does this do?
+==================
+This customization will allow seller or admin to set workdays and work hours
+The error message will displayed when user try to checkout if the seller is closed of the day or out of hours
+Default message is defined in OrderControllers for following 2 types
+		out of hour
+		cloased today
+
+
+You can set one or two time periods for each work day
+   A. Leave it empty for non-work days
+   B. HH:MM-HH:MM for start time and end time.
+   C. You and have 2 periods of work hours in a day. please separator with comma. for example:  6:30-11:30, 13:30-19:00
+   D. Any week day with invalid data will be treated as non-work day.

@@ -1,0 +1,39 @@
+
+Memo for the customization.
+
+1. We have configured agile multiple seller to select to use custom fields: "String1", "String2",... "String7", please keep this configuration.
+
+2. Following files and are new added files
+    /modules/agilemultipleseller/custom/sellerworkhours/SellerWorkHours.php
+
+3. Following files have been modified
+    /override/controllers/front/OrderController.php
+	/override/controllers/front/OrderOpcController.php
+
+	Also following 2 files are identical to above 2 files
+	/modules/agilemultipleseller/override/controllers/front/OrderController.php
+	/modules/agilemultipleseller/override/controllers/front/OrderOpcController.php
+
+4. There will be 7 new fileds displayed at seller business info management page - both at front and back office
+   Here is data entry rules:
+   A. Leave it empty for non-work days
+   B. HH:MM-HH:MM for start time and end time.
+   C. You and have 2 periods of work hours in a day. please separator with comma. for example:  6:30-11:30, 13:30-19:00
+   D. Any week day with invalid data will be treated as non-work day.
+
+5. Please use PrestaShop translation function to change the label "String1", "Stribng2", ..., "String7" as following
+	String1 - Sunday
+	String2 - Monday
+	String3 - Tuesday
+	String4 - Wednesday
+	String5 - Thursday
+	String6 - Friday
+	String7 - Saturday
+
+	You can do the back office - Localization - Translation - choose "Translate installed modules" and then look for agilemultipleseller section.
+
+6. Please use PrestaShop translation function to chnage hints for each field to following
+  
+   "Please enter begin time and end time with format: HH:MM-HH:MM or leave it empty for non workdays, if there are 2 periods, please separated by comma. For example:  6:30-11:30, 13:30-19:00 "
+
+  

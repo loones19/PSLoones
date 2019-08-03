@@ -1,0 +1,20 @@
+Hi {firstname} {lastname},
+
+Thank you for creating a seller account at {shop_name}.
+
+Here are your login details:
+
+E-mail address: {email}
+Password is in your welcome mail.
+You can access your seller account by: login to front office, go to my seller account then click link to your seller account at back office.
+ 
+You can now log on our shop: {shop_url}
+
+Important Security Tips:
+
+1. Always keep your account details safe.
+2. Never disclose your login details to anyone.
+3. Change your password regularly.
+4. Should you suspect someone is using your account illegally, please notify us immediately.
+
+{shop_url} powered by PrestaShop™

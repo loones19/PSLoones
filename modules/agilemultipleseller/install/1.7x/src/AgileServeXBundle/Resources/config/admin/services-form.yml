@@ -1,0 +1,34 @@
+services:
+    form.type.elementbridge.association:
+        class: AgileServeXBundle\Form\Admin\ElementBridge\ProductAssociation
+        arguments:
+            - "@translator"
+            - "@prestashop.adapter.legacy.context"
+            - "@router"
+            - "@prestashop.adapter.data_provider.category"
+            - "@prestashop.adapter.data_provider.product"
+            - "@prestashop.adapter.data_provider.manufacturer"
+        tags:
+            - { name: form.type }
+
+    form.type.elementbridge.images:
+        class: AgileServeXBundle\Form\Admin\ElementBridge\ProductImages
+        arguments:
+            - "@translator"
+            - "@prestashop.adapter.legacy.context"
+            - "@router"
+            - "@prestashop.adapter.data_provider.category"
+            - "@prestashop.adapter.data_provider.product"
+        tags:
+            - { name: form.type }
+
+    form.type.elementbridge.features:
+        class: AgileServeXBundle\Form\Admin\ElementBridge\ProductFeatures
+        arguments:
+            - "@translator"
+            - "@prestashop.adapter.legacy.context"
+            - "@router"
+            - "@prestashop.adapter.data_provider.category"
+            - "@prestashop.adapter.data_provider.product"
+        tags:
+            - { name: form.type }

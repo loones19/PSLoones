@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\ps_socialfollow\ps_socialfollow.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="624d34c407341e48607c4913917a5d10">
+        <source>follow us</source>
+        <target>follow us</target>
+        <note>Context:
+File: themes\PRSADD187\modules\ps_socialfollow\ps_socialfollow.tpl:36</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\templates\catalog\_partials\active_filters.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="2143f8cb66482342b35208bdc3fd949c">
+        <source>Active filters</source>
+        <target>Active filters</target>
+        <note>Context:
+File: themes\PRSADD187\templates\catalog\_partials\active_filters.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\templates\catalog\_partials\facets.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="7a1c5301da6b1ce9e4345bd501397045">
+        <source>(no filter)</source>
+        <target>(no filter)</target>
+        <note>Context:
+File: themes\PRSADD187\templates\catalog\_partials\facets.tpl:119</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\templates\index.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="ca7d973c26c57b69e0857e7a0332d545">
+        <source>Featured products</source>
+        <target>Featured products</target>
+        <note>Context:
+File: themes\PRSADD187\templates\index.tpl:39</note>
+      </trans-unit>
+      <trans-unit id="9ff0635f5737513b1a6f559ac2bff745">
+        <source>New products</source>
+        <target>New products</target>
+        <note>Context:
+File: themes\PRSADD187\templates\index.tpl:44</note>
+      </trans-unit>
+      <trans-unit id="d7b2933ba512ada478c97fa43dd7ebe6">
+        <source>Best Sellers</source>
+        <target>Best Sellers</target>
+        <note>Context:
+File: themes\PRSADD187\templates\index.tpl:49</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

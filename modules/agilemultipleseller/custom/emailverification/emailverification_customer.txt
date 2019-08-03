@@ -1,0 +1,19 @@
+Change has been made
+==============================
+Following is added or changed
+===============================
+Override class
+--------------
+/override/controllers/AuthController.php
+
+email templates:
+----------------
+/mails/xx/account.html
+/themes/yourtheme/mails/xx/account.html 
+
+where xx is iso language code, such as en, es,...
+
+Theme fies
+----------
+/themes/yourtheme/authentication.tpl
+

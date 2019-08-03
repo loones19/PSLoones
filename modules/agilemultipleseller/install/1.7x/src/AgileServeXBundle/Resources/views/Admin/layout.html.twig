@@ -1,0 +1,69 @@
+{% block stylesheets %}
+    <link href="{{ asset('themes/new-theme/public/theme.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+<script type="text/javascript" src="{{ asset('../js/jquery/jquery-1.11.0.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('../js/admin.js') }}"></script>
+<script type="text/javascript" src="{{ asset('../js/tools.js') }}"></script>
+<script type="text/javascript" src="{{ asset('themes/new-theme/public/bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('themes/default/js/bundle/default.js') }}"></script>
+
+
+{% block translate_javascripts %}
+<script>
+  var translate_javascripts = {{ js_translatable|json_encode()|raw }};
+  var PS_ALLOW_ACCENTED_CHARS_URL = {{ 'PS_ALLOW_ACCENTED_CHARS_URL'|configuration|intCast }};
+</script>
+{% endblock %}
+
+{% block content %}
+    {% embed 'PrestaShopBundle:Admin/Helpers:bootstrap_popup.html.twig' with {
+            'id': 'confirmation_modal',
+            'title': "Warning" | trans({}, 'AdminTabs'),
+            'closable': false,
+            'actions': [
+              {
+                'type': 'button',
+                'label': "Yes" | trans({}, 'AdminTabs'),
+                'class': 'btn btn-danger continue'
+              },{
+                'type': 'button',
+                'label': "No" | trans({}, 'AdminTabs'),
+                'class': 'btn btn-default cancel'
+              }
+            ],
+          } 
+      %}
+          {% block content %}
+              <div class="modal-body"></div>
+      {% endblock %}
+
+    {% endembed %}
+
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+
+
+{% set js_translatable = {
+"Form update success": "Form update success" | trans({}, 'AdminProducts'),
+"Form update errors": "Form update errors" | trans({}, 'AdminProducts'),
+"Delete": "Delete" | trans( {}, 'AdminProducts'),
+"ToLargeFile": "The file is too large ({{filesize}}). Allowed maximum size is {{maxFilesize}}." | trans({}, 'AdminProducts'),
+"Drop images here": "Drop images here" | trans({}, 'AdminProducts'),
+"or select files": "or select files" | trans({}, 'AdminProducts'),
+"files recommandations": "Recommanded size 800 x 800px for default theme." | trans({}, 'AdminProducts'),
+"files recommandations2": "JPG, GIF or PNG format." | trans({}, 'AdminProducts'),
+"Cover": "Cover" | trans({}, 'AdminProducts'),
+"Are you sure to disable variations ? they will all be deleted": "Are you sure to disable variations ? they will all be deleted" | trans({}, 'AdminProducts'),
+"Are you sure to delete this?": "Are you sure to delete this?" | trans({}, 'AdminProducts'),
+"Quantity": "Quantity" | trans({}, 'AdminProducts'),
+"Combinations": "Combinations" | trans({}, 'AdminProducts'),
+"Virtual product": "Virtual product" | trans({}, 'AdminProducts'),
+"tax incl.": "tax incl." | trans({}, 'AdminProducts'),
+"tax excl.": "tax excl." | trans({}, 'AdminProducts'),
+"You can't create pack product with variations. Are you sure to disable variations ? they will all be deleted.": "You can't create pack product with variations. Are you sure to disable variations ? they will all be deleted." | trans({}, "AdminProducts"),
+"You can't create virtual product with variations. Are you sure to disable variations ? they will all be deleted.": "You can't create virtual product with variations. Are you sure to disable variations ? they will all be deleted." | trans({}, "AdminProducts"),
+}|merge(js_translatable) %}

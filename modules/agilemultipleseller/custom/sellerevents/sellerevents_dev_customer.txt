@@ -1,0 +1,114 @@
+1. Copy following file (new) and run the page from browser, it will add 2 new tables for save events.
+StoreRoot/SQLSellerEventExecuter.php 
+
+2. Copy following new files to specified locations
+StoreRoot/modules/agilemultipleseller/SellerEvent.php
+StoreRoot/modules/agilemultipleseller/AdminSellerEvents.php
+
+StoreRoot/modules/agilemultipleseller/controllers/front/sellereventdetail.php
+StoreRoot/modules/agilemultipleseller/controllers/front/sellerevents.php
+
+StoreRoot/modules/agilemultipleseller/views/templates/front/sellereventdetail.tpl
+StoreRoot/modules/agilemultipleseller/views/templates/front/sellerevents.tpl
+StoreRoot/modules/agilemultipleseller/views/templates/front/event_item.tpl
+StoreRootmodules/agilemultipleseller/views/templates/admin/events/helpers/form/form.tpl
+
+3. Modify CMS controler file CmsController.php
+Make sure do it correctly to avoid syntax error - assume you know PHP coding.
+
+File: StoreRoot/override/controllers/front/CmsController.php
+
+	//Code start ======================================
+	public function init(){
+		parent::init();
+		if(strpos($this->cms->content, "{seller_event_list}") !== false){
+			include_once(_PS_MODULE_DIR_.'agilemultipleseller/SellerEvent.php');
+			include_once(_PS_ROOT_DIR_ .'/modules/agilemultipleseller/SellerInfo.php');
+			//$this->cms->content = '';
+			//$logo_image = SellerInfo::get_seller_logo_url_static(Tools::getValue('id_sellerinfo'));
+			$content = '';
+			$events = SellerEvent::getEventList($this->context->language->id);
+			$page_url = CMS::getLinks($this->context->language->id,array($this->cms->id));
+			foreach ($events as $k=>$v){
+				$v['logo'] = SellerInfo::get_seller_logo_url_static($v['id_sellerinfo']);
+				$v['url'] = @$page_url[0]['link'];
+				$content .= $this->_eventBlock($v);
+				//$this->_debug($v);
+			}
+			$this->cms->content = str_replace("{seller_event_list}", $content, $this->cms->content);
+		}
+		//$this->_debug($this->cms->content);
+		//exit;
+	}
+
+	private function _eventBlock($data){
+		$this->context->smarty->assign(array(
+			'logo' => $data['logo'],
+			'content' => $data['description'],
+			'title' => $data['title'],
+			'place' => $data['place'],
+			'start_date' => $data['start_date'],
+			'end_date' => $data['end_date'],
+			'href' => $data['url'].'?event='.$data['id_event'],
+			'create_date' => $data['create_date'],
+			'company' => $data['company']
+		));
+	
+		return $this->context->smarty->fetch(_PS_MODULE_DIR_.'agilemultipleseller/views/templates/front/event_item.tpl');
+	}
+
+	private function _getFullEventContent($data){	
+		$this->context->smarty->assign(array(
+			'logo' => $data['logo'],
+			'content' => $data['description'],
+			'title' => $data['title'],
+			'place' => $data['place'],
+			'start_date' => $data['start_date'],
+			'end_date' => $data['end_date'],
+			'create_date' => $data['create_date'],
+			'company' => $data['company']
+		));
+	
+		return $this->context->smarty->fetch(_PS_MODULE_DIR_.'agilemultipleseller/views/templates/front/event.tpl');
+	}
+
+	private function _debug($var,$exit = false){
+		echo "<pre>";
+		print_r($var);
+		echo "</pre>";
+		if($exit) exit;
+	}
+
+	//Code End ======================================
+
+4. Modift seller_tabs.tpl to add new Events menu.	
+File: StoreRoot/modules/agilemultipleseller/views/templates/front/seller_tabs.tpl
+
+After following lines:
+					{if $is_seller_pickupcenter_installed}
+					<!-- Disable create pickup location in front page -->
+					<!-- li><a id="seller_pickuplocations" href="{if $seller_tab_id==11}#idTab11{else}{$link->getModuleLink('agilepickupcenter', 'pickuplocations', [], true)}{/if}">{l s='Locations' mod='agilemultipleseller'}</a></li -->
+					{/if}
+
+
+Add this line:
+					<li {if $seller_tab_id==101}class="current"{/if}><a id="seller_event" href="{if $seller_tab_id==1011}#idTab101{else}{$link->getModuleLink('agilemultipleseller', 'sellerevents', [], true)}{/if}">{l s='Events' mod='agilemultipleseller'}</a></li>
+
+
+5. Create new Seller Events menu
+A. Go back office - Administration tab
+B. Click "Add Menu", a adding new menu form appeaers 
+C. Enter following info
+  Name: Seller Events (enter for all languags)
+  Class: AdminSellerEvents
+  Module: agilemultipleseller
+  Status: Yes
+  Parent: choose Administrations
+D.Click Save
+
+		
+6. Create CMS page to include following keyword where the events should appear.
+
+{seller_event_list}
+
+

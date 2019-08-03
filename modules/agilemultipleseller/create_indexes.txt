@@ -1,0 +1,18 @@
+# please change the ps_ to correct one if your database is not using default table prefix
+# Please run this one time only, otherwise, there might be errors
+ALTER TABLE ps_sellerinfo ADD INDEX idx_id_seller (id_seller);
+ALTER TABLE ps_sellerinfo ADD INDEX idx_id_customer (id_customer) ;
+ALTER TABLE ps_category_owner ADD INDEX idx_id_category (id_category);
+ALTER TABLE ps_category_owner ADD INDEX idx_id_owner (id_owner);
+ALTER TABLE ps_product_owner ADD INDEX idx_id_product (id_product);
+ALTER TABLE ps_product_owner ADD INDEX idx_id_owner (id_owner);
+ALTER TABLE ps_customer_owner ADD INDEX idx_id_customer (id_customer);
+ALTER TABLE ps_customer_owner ADD INDEX idx_id_owner (id_owner);
+
+#following lines are fow PrestaShop 1.5x user only
+ALTER TABLE ps_order_owner ADD INDEX idx_id_order (id_order);
+ALTER TABLE ps_order_owner ADD INDEX idx_id_owner (id_owner);
+ALTER TABLE ps_object_owner ADD INDEX idx_id_object (id_object);
+ALTER TABLE ps_object_owner ADD INDEX idx_id_owner (id_owner);
+ALTER TABLE ps_object_owner ADD INDEX idx_id_entity (id_entity);
+

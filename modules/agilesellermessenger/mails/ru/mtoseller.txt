@@ -1,0 +1,11 @@
+[{subject}]
+Запрос от {customer_name} о следующих товарах
+
+Имя товара: {product_name}
+URL товара: {product_link}
+
+Сообщение:
+{message}
+
+{shop_url}
+{shop_name}

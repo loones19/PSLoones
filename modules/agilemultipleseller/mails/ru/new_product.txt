@@ -1,0 +1,8 @@
+Привет,
+
+{seller_company}(Id:{seller_id}) добавил новый продукт.
+
+Имя продукта: {product_name}
+Id продукта: {product_id}
+
+{shop_url} powered by PrestaShop™

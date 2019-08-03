@@ -1,0 +1,99 @@
+How to use this customization
+==============================
+1. If following class does not exists, please add a new override classes with following contents
+
+File:  /override/controllers/AuthController.php
+Content:
+
+<?php
+///-build_id: 2018051408.4945
+
+class AuthController extends AuthControllerCore
+{
+}
+	
+2. Insert into following 2 override methods into override class /override/controllers/AuthController.php
+
+	/* Code Start ****************************************************/
+	public function init()
+	{
+		parent::init();
+
+		if(isset($_GET['vkey']) && !empty($_GET['vkey']))
+		{
+			$data = explode("|",base64_decode($_GET['vkey']));
+			if(count($data)>1)
+			{
+				$secure_key = $data[0];
+				$email = $data[1];
+				$cobj = new Customer();
+				$customer = $cobj->getByEmail($email);
+				if(Validate::isLoadedObject($customer))
+				{
+					$customer->active = 1;
+					$customer->save();
+					$this->context->smarty->assign(array('vconfirm' => '1'));
+				}
+			}
+		}
+		
+	}
+	
+	protected function sendConfirmationMail(Customer $customer)
+	{
+		if (!Configuration::get('PS_CUSTOMER_CREATION_EMAIL')) {
+			return true;
+		}
+		
+		$customer->active = 0 ;
+		$customer->save();
+		
+		$vlink = $this->context->link->getPageLink("authentication") . "?vkey=" . base64_encode($customer->secure_key . "|" . $customer->email);
+
+		return Mail::Send(
+			$this->context->language->id,
+			'account',
+			Mail::l('Welcome!'),
+			array(
+				'{vlink}' => $vlink,
+				'{firstname}' => $customer->firstname,
+				'{lastname}' => $customer->lastname,
+				'{email}' => $customer->email,
+				'{passwd}' => Tools::getValue('passwd')),
+			$customer->email,
+			$customer->firstname.' '.$customer->lastname
+			);
+	}
+
+	/* Code End *****************************************************/
+
+3. Add following lines to email template 
+File: /mails/xx/account.html  - xx is iso language code, such as en, es,...
+Location: after the <span> that embrace password part
+
+                        <br /><br />
+                        <span>
+                            You account is not active yet, please use below link to confimr your email address. <br />
+                            If the link does not work, please copy and paste following URL to your brower directly.<br />
+                            {vlink}
+                        </span>
+
+
+4. Add following line to theme file of log in page
+File: /themes/yourtheme/authentication.tpl
+Location: after line: <h3 class="page-subheading">{l s='Already registered?'}</h3>
+
+Add following line:
+
+				{if isset($vconfirm) && $vconfirm ==1}
+					<h4 style="color:blue">{l s='You email address registration has been confirmed.<br> You account is now activated.'}</h4>
+				{else}
+					{if isset($errors) && count($errors)>0}
+					<h4 style="color:brown">{l s='If you have just signed up your account and have not verify your email address yet, please check your Welcome email to verify your email address.'} </h4>
+					{/if}
+				{/if}
+
+ 
+5. Remove following to clear class cache
+/cache/class_index.php
+

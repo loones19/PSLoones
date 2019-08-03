@@ -1,0 +1,28 @@
+	/* PrestaShop */
+	if(Module::isInstalled('agilemultipleseller') && $employee->id_profile == (int)Configuration::get('AGILE_MS_PROFILE_ID'))
+	{
+		if(isset($src_thumb) && $src_thumb){
+			if (($src_thumb = preg_replace('#('.addslashes($current_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/cms/sellers/' . $cookie->id_employee . '/'), $src_thumb)) == $src_thumb){
+				$src_thumb = preg_replace('#('.addslashes($thumbs_base_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/tmp/cms/sellers/' . $cookie->id_employee . '/'), $src_thumb);
+			}
+		}
+		if(isset($mini_src) && $mini_src){
+			if (($mini_src = preg_replace('#('.addslashes($current_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/cms/sellers/' . $cookie->id_employee . '/'), $mini_src)) == $mini_src){
+				$mini_src = preg_replace('#('.addslashes($thumbs_base_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/tmp/cms/sellers/' . $cookie->id_employee . '/'), $mini_src);
+			}
+		}
+	}
+	else
+	{
+		if (isset($src_thumb) && $src_thumb) {
+			if (($src_thumb = preg_replace('#('.addslashes($current_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/cms/'), $src_thumb)) == $src_thumb) {
+				$src_thumb = preg_replace('#('.addslashes($thumbs_base_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/tmp/cms/'), $src_thumb);
+			}
+		}
+        if (isset($mini_src) && $mini_src) {
+            if (($mini_src = preg_replace('#('.addslashes($current_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/cms/'), $mini_src)) == $mini_src) {
+                $mini_src = preg_replace('#('.addslashes($thumbs_base_path).')#ism', Tools::safeOutput(Context::getContext()->shop->physical_uri.'img/tmp/cms/'), $mini_src);
+            }
+        }
+	}
+	/* END PrestaShop */

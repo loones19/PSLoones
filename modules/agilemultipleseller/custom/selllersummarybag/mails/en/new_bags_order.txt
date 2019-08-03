@@ -1,0 +1,12 @@
+[{shop_name}] New Bags order
+
+You've a new bags order.
+
+Company: {company}
+Name: {firstname} {lastname}
+Address: {fulladdress}
+Phone: {phone}
+Number of bags: {bags}
+
+{shop_name}
+{shop_url}

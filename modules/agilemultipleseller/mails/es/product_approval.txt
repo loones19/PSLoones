@@ -1,0 +1,7 @@
+Hi {firstname} {lastname},
+
+You following product has been approved.
+ID: {id_product}
+Name:{product_name}
+
+{shop_url} powered by PrestaShop™

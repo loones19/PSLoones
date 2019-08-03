@@ -1,0 +1,39 @@
+# All the Product related routes
+admin_elementbridge_association:
+    path: /association/{id}
+    methods:  [GET, POST]
+    defaults:
+        _controller: AgileServeXBundle\Controller\Admin\ElementBridgeController::associationAction
+    requirements:
+        id: \d+
+
+admin_elementbridge_images:
+    path: /images/{id}
+    methods:  [GET, POST]
+    defaults:
+        _controller: AgileServeXBundle\Controller\Admin\ElementBridgeController::imagesAction
+    requirements:
+        id: \d+
+
+
+admin_elementbridge_features:
+    path: /features/{id}
+    methods:  [GET, POST]
+    defaults:
+        _controller: AgileServeXBundle\Controller\Admin\ElementBridgeController::featuresAction
+        _legacy_controller: AdminProducts
+        _legacy_param_mapper_class: PrestaShop\PrestaShop\Adapter\Product\AdminProductDataProvider
+        _legacy_param_mapper_method: mapLegacyParametersProductForm
+    requirements:
+        id: \d+
+
+admin_elementbridge_form:
+    path: /form/{id}
+    methods:  [GET, POST]
+    defaults:
+        _controller: AgileServeXBundle\Controller\Admin\ElementBridgeController::formAction
+        _legacy_controller: AdminProducts
+        _legacy_param_mapper_class: PrestaShop\PrestaShop\Adapter\Product\AdminProductDataProvider
+        _legacy_param_mapper_method: mapLegacyParametersProductForm
+    requirements:
+        id: \d+

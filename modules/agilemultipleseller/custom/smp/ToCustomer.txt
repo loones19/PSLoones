@@ -1,0 +1,24 @@
+Dear Customer
+The customization has been finished. 
+Please keep this as memo and also make a backup of new added/changed files.
+In case you upgrade your store or the modules, or when you reinstall the modules, you will need to restore those files and configuration.
+
+1. Please configure agile multiple seller to custom field "Number1" (I have done so)
+	Please use this fieldto enter Minimum Order Amount for each seller
+	Both seller(at front) and admin(at back office) can set this at Seller Business Info page.
+
+	Please use PrestaShop translation function to change the label "Number1" to "Seller Minimum Order Amount" or anything else you like. 
+	back office - Localization - Translation - choose "Translate installed modules" and then look for agilemultipleseller section.
+
+2. Following files and are added files
+    /modules/agilemultipleseller/custom/smp/SellerMinimumPurchase.php
+
+3. Following files are changed
+    /override/controllers/front/OrderController.php
+	/override/controllers/front/OrderOpcController.php
+
+	Also following 2 files are identical to above 2 files
+	/modules/agilemultipleseller/override/controllers/front/OrderController.php
+	/modules/agilemultipleseller/override/controllers/front/OrderOpcController.php
+
+best regards

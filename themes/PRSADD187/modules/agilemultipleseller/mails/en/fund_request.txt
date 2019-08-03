@@ -1,0 +1,7 @@
+Hi,
+
+{seller_company}(ID:{seller_id}) has made a fund request.
+
+Amount Requested: {amount_requested}
+
+{shop_url} powered by PrestaShop™

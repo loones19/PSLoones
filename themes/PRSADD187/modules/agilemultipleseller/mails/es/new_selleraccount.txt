@@ -1,0 +1,9 @@
+Hola {firstname} {lastname},
+
+Gracias por crear una cuenta de vendedor en {shop_name}.
+
+E-mail : {email}
+Contraseña: en el email de bienvenida.
+Puede acceder a su cuenta de vendedor: Iniciar Sesión (inicio) -> Click en Iniciar Sesión -> Introduce tus email y contraseña.
+
+{shop_url}

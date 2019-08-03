@@ -1,0 +1,9 @@
+Здравствуйте {firstname} {lastname},
+
+Спасибо за создание учетной записи продавца на {shop_name}.
+
+E-mail адрес: {email}
+Пароль находится в вашей почте, письмо - Добро пожаловать.
+{message} 
+
+{shop_url} powered by PrestaShop™

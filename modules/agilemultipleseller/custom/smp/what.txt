@@ -1,0 +1,9 @@
+What does this do?
+==================
+This customization will allow you(seller or admin) to set minimum purchase for each seller.
+
+The error message will displayed at when user try to checkout if the seller's minimum not reached.
+
+The error message will be displayed on popup-up cart block window when a new product is added.
+
+A message "Minimum Purchase: $XXX" will be displayed on cart block (need manually changes as instructed below)

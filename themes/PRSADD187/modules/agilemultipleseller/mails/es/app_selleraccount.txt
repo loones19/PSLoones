@@ -1,0 +1,20 @@
+Hola {firstname} {lastname},
+
+Gracias por crear una cuenta de vendedor en {shop_name}.
+
+Aquí están sus datos de inicio de sesión:
+
+E-mail : {email}
+Contraseña: en su e-mail de bienvenida.
+Puede acceder a su cuenta de vendedor: Iniciar Sesión (inicio) -> Click en Iniciar Sesión -> Introduce tus email y contraseña.
+ 
+Ahora puedes iniciar sesión en nuestro marketplace: {shop_url}
+
+Consejos importantes de seguridad:
+
+1. Mantenga siempre a salvo las credenciales de su cuenta.
+2. Nunca reveles tus datos de acceso a nadie.
+3. Cambia tu contraseña regularmente.
+4. Si sospechas que alguien esta utilizando tu cuenta ilegalmente, por favor notifícanoslo inmediatamente.
+
+{shop_url} 

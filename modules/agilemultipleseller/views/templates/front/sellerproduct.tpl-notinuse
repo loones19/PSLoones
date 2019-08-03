@@ -1,0 +1,48 @@
+{extends file='page.tpl'}
+
+{block name='page_content'}
+
+	{capture name=path}<a href="{$link->getPageLink('my-account', true)}">{l s='My Account' mod='agilemultipleseller'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='My Seller Account'  mod='agilemultipleseller'}{/capture}
+	<script type="text/javascript">		var id_product = {$id_product};
+
+		 $(document).ready(function() {			 $.ajax({
+				type: 'POST',
+				url: base_dir_ssl + admin_folder + "/elementbridge/form/{$id_product}#tab-step1",
+				async: true,
+				cache: false,
+				data: '',
+				success: function (data) {
+					$("#divContext").html(data);
+					$("#divSubmitButton").show();
+
+					  form.init();
+					  relatedProduct.init();
+					  displayFormCategory.init();
+					  defaultCategory.init();
+					  nestedCategories.init();
+					  formCategory.init();
+					  BOEvent.emitEvent("Product Categories Management started", "CustomEvent");
+
+				}
+			});
+
+			$("#submitAssociations").click(function(){
+				$("#firm").submit();
+			});
+		});
+	</script>
+
+
+	<h1>{l s='My Seller Account' mod='agilemultipleseller'}</h1>
+	{include file="module:agilemultipleseller/views/templates/front/seller_tabs.tpl"}
+	<br />
+
+
+	<div id="divContext">
+		<img src="{$base_dir_ssl}/modules/agilekernel/img/loading.gif" width="64">
+	</div>
+
+
+	{include file="module:agilemultipleseller/views/templates/front/seller_footer.tpl"}
+
+{/block}

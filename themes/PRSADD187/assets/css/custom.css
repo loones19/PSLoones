@@ -1,0 +1,376 @@
+/********************************************************
+			Templatemela Custom Styles
+********************************************************/
+.tm-carousel {
+  display: none;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+	-ms-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate3d(0px, 0px, 0px);
+	-moz-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding:0;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item {
+  float: left;
+}
+.owl-carousel .owl-item .manu_image a {
+  display: inline-block;
+}
+.owl-carousel .owl-item .manu_image a img {
+  max-width: 100%;
+}
+.owl-carousel .owl-item:hover a img {
+  /*border-color: blue;*/
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  /* fix */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  text-align: center;
+}
+
+/* mouse grab icon */
+.grabbing {
+  cursor: url("../img/megnor/grabbing.png") 8 8, move;
+}
+.tmcategorylist .customNavigation{
+  top: 55px;
+  opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.tmcategorylist:hover .customNavigation{
+  opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.tmcategorylist .customNavigation a.prev{
+  right: auto;
+  left: 10px !important;
+}
+.tmcategorylist .customNavigation a.next{
+  right: 10px !important;
+  left: auto;
+}
+
+.tm-hometabcontent .customNavigation{  
+  top: -42px;
+	opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+#tmcategorytabs .customNavigation{ top: 10px; }
+ .tm-hometabcontent:hover .customNavigation{
+	opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1; 
+ }
+.customNavigation {
+  position: absolute;
+  z-index: 959;
+  width: 100%;
+  top: 6px;
+  direction: ltr !important;
+  right: 0;
+}
+#tmtestimonialcmsblock .customNavigation{
+  top:-25px;
+  z-index:5;
+  right:-8px;
+}
+
+
+@media(max-width: 991px){
+  #tmtestimonialcmsblock .customNavigation{top:20px !important;}
+}
+
+.lastest_block .customNavigation{ top: 17px;}
+
+.customNavigation a {
+  color: #b1b1b1 !important;
+  cursor: pointer;
+  font-size: 0;
+  font-weight: 500;
+  height: 30px;
+  line-height: 32px;
+  overflow: hidden;
+  padding: 0;
+  background: #fff;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+  border: 1px solid #ededed;
+}
+.customNavigation a:hover{
+  color: #fff !important;
+  border: 1px solid #0b9d47;
+  background: #0b9d47;
+}
+#tmtestimonialcmsblock .customNavigation a{
+  height: 30px;
+  width: 30px;
+  color: #d5d5d5 !important;
+  border:none;
+}
+.customNavigation a:hover {
+/*  background: #235e66 none repeat scroll 0 0;
+  border: 1px solid #235e66;*/
+}
+
+.customNavigation a:hover:before{ color: #fff; }
+#tmtestimonialcmsblock .customNavigation a.prev {
+  right: 45px;
+}
+.customNavigation a.prev {
+  right: 36px;
+}
+
+
+.customNavigation a.next {
+  right: 0px;
+}
+#tmtestimonialcmsblock .customNavigation a.next {
+  right: 22px;
+}
+.js-qv-mask .customNavigation a.next {
+  right: 0;
+}
+.lastest_block .customNavigation{ right: 17px; }
+
+@media(max-width: 1449px){
+	.tmcategorylist .customNavigation{ top: 45px; }
+  .js-qv-mask .customNavigation a.next {
+    right: -10px;
+  }
+  .btn.prev.additional_prev {
+    left: -10px;
+    right: auto;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+	.customNavigation a.prev {
+		/*left: 0px;*/
+	}
+	.customNavigation a.next {
+		right: 0px;
+	}
+	#main .images-container .js-qv-mask { margin:0px; }
+}
+
+.customNavigation a.prev:before {
+  content: "\E314";
+  font-family: "Material Icons";
+  position: absolute;
+  font-size: 23px;
+    right: 2px;
+    top: -1px;
+
+}
+
+.customNavigation a.next:before {
+  content: "\E315";
+  font-family: "Material Icons";
+  position: absolute;
+   font-size: 23px;
+    position: absolute;
+    right: 1px;
+    top: -1px;
+}
+
+#tmleftbanner img,
+#tmrightbanner img{
+	max-width: 100%;
+}	
+
+/******* Subbanner *******/
+#tmsubbanner {
+  background: #ffffff none repeat scroll 0 0;
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 23.4%;
+}
+
+#tmsubbanner li {
+    float: left;
+    overflow: hidden;
+}
+#tmsubbanner li a{
+   display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#tmleftbanner li, #tmleftbanner1 li {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#tmleftbanner li a, #tmleftbanner1 li a, #tmleftbanner1 li a{
+  display: block;
+  position: relative;
+}
+
+
+#tmleftbanner li img, #tmleftbanner1 li img {
+max-width: 100%;
+}
+#tmsubbanner li:first-child a {
+  margin-bottom: 27px;
+}
+#tmsubbanner li a img{ 
+	max-width: 100%;     
+ 	 
+}
+
+
+@media (max-width: 1199px) {
+#tmsubbanner{ width: 21.4%;}
+#tmtestimonialcmsblock .customNavigation a.prev {
+  right: 38px;
+}
+#tmtestimonialcmsblock .customNavigation a.next {
+  right: 15px;
+}
+.customNavigation a.prev::before{ right: 2px; }
+#tmsubbanner li:first-child a {
+  margin-bottom: 22px;
+}
+}
+
+@media (max-width: 991px) {
+  #tmsubbanner {margin: 20px 0 0;}
+  #tmsubbanner li a img{
+  	height: 298px;
+    width: 100%;
+	}
+  #tmrightbanner2 li img,#tmrightbanner1 li img,#tmrightbanner li img,#tmleftbanner li img,#tmsubbanner li a {width: auto;}
+  .js-qv-mask .customNavigation a.next{
+    right: 0;
+  }
+  #tmsubbanner{ width: 100%; float: left;}
+	#tmsubbanner li:first-child {
+		margin-right: 3%;
+		width: 51%;
+	}
+	#tmsubbanner li:last-child {
+	  width: 46%;
+	}
+	#tmsubbanner li:first-child a {
+	  margin-bottom: 0;
+	}
+	#tmtestimonialcmsblock .customNavigation a.prev::before, #tmtestimonialcmsblock .customNavigation a.next::before{ top: -6px;}
+ }
+ @media(max-width: 767px){
+	#tmsubbanner li a img {
+	  height: 288px;
+	}
+  #tmcategorytabs .customNavigation{ top: 50px; }
+  .product-accessories .customNavigation a.prev, .crosssell-products .customNavigation a.prev, .productscategory-products .customNavigation a.prev{
+    right: auto;
+    left: 0;
+  }
+  .customNavigation a.prev {right: auto !important;left: 0 !important;}
+  .customNavigation a.next {left: auto !important;right: 0 !important;}
+  .lastest_block .customNavigation {
+    right: 0;
+  }
+  .lastest_block .customNavigation a.prev {
+    right: auto !important;
+    left: 10px !important;
+  }
+  .lastest_block .customNavigation a.next {
+    left: auto !important;
+    right: 10px !important;
+  }
+  .tmcategorylist .customNavigation{
+  	opacity: 1;
+	-khtml-opacity: 1;
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+  }
+ }
+
+ @media(max-width: 480px){
+  .special-products .customNavigation {top:0;}
+  #tmsubbanner li:first-child, #tmsubbanner li:last-child { width: 100%;}
+  #tmsubbanner li:first-child{ margin-bottom: 20px; margin-right: 0;}
+  #tmrightbanner2 li img:hover, #tmleftbanner li img:hover, #tmsubbanner li a:hover img {
+ 	  transform: scale(1);
+		-webkit-transform: scale(1);
+		-ms-transform:scale(1);
+		-o-transform:scale(1);
+		-moz-transform:scale(1);
+	}
+
+	.special-products .customNavigation {
+	  top: 10px;
+	}
+	.crosssell-products .customNavigation { top: 45px; }
+	#tmsubbanner li a img {
+	  height: auto;
+	}
+	#tmsubbanner li:first-child, #tmsubbanner li:last-child{ width: 100%;}
+	#tmsubbanner li a img,#tmrightbanner2 li img, #tmrightbanner1 li img, #tmrightbanner li img, #tmleftbanner li img, #tmsubbanner li a {
+	  width: auto;
+	}
+	.brands .customNavigation {
+	  top: -30px !important;
+	}
+}
+
+@media (max-width: 479px){
+
+  .tm-hometabcontent .customNavigation { top: -25px; }
+  #tmcategorytabs .customNavigation { top: 26%; }
+  .productscategory-products .customNavigation { top: 40px; }
+
+
+}

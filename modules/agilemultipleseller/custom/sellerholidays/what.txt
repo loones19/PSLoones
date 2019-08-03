@@ -1,0 +1,13 @@
+What does this do?
+==================
+This customization will allow seller or admin to set holidays 
+The error message will displayed when user try to checkout if the seller is closed of the day
+Default message is defined in OrderControllers/OrderOpcController.php
+		Seller %s is in holidays during %s
+
+
+Each 2 custom date fields represent one holiday range (start, end)
+If you want to implement 2 date ranges, please use 4 custom date fields
+
+Customer can set holidays date range by calendar
+   

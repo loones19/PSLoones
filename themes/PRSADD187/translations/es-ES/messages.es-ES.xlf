@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="630058029627ce58e7571e7a5b6ec591">
+        <source>Full Name</source>
+        <target>Full Name</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:31</note>
+      </trans-unit>
+      <trans-unit id="387af98b1574a74e12eb99f3ed220831">
+        <source>Enter your full name</source>
+        <target>Enter your full name</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:33</note>
+      </trans-unit>
+      <trans-unit id="ce8ae9da5b7cd6c3df2929543a9af92d">
+        <source>Email</source>
+        <target>Email</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:38</note>
+      </trans-unit>
+      <trans-unit id="95d3fa6b9e69c588a333f4e78139a7cd">
+        <source>Enter your email</source>
+        <target>Enter your email</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:40</note>
+      </trans-unit>
+      <trans-unit id="0be8406951cdfda82f00f79328cf4efc">
+        <source>Comment</source>
+        <target>Comment</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:45</note>
+      </trans-unit>
+      <trans-unit id="4e9ce95a0f4e750b14ad77bc86d62479">
+        <source>Enter your comment</source>
+        <target>Enter your comment</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:47</note>
+      </trans-unit>
+      <trans-unit id="a4d3b161ce1309df1c4e25df28694b7b">
+        <source>Submit</source>
+        <target>Submit</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\comment.tpl:56</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_local_comment.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="8413c683b4b27cc3f4dbd4c90329d8ba">
+        <source>Comments</source>
+        <target>Comments</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_local_comment.tpl:27</note>
+      </trans-unit>
+      <trans-unit id="1b60ba0c9bf033a378647a9788586bbe">
+        <source>Created On</source>
+        <target>Created On</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_local_comment.tpl:35</note>
+      </trans-unit>
+      <trans-unit id="94936ad65bdf649c16b14b27794effb6">
+        <source>Posted By</source>
+        <target>Posted By</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_local_comment.tpl:36</note>
+      </trans-unit>
+      <trans-unit id="41e29f72f5517ea06e3db9c130dfc282">
+        <source>Comment Link</source>
+        <target>Comment Link</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_local_comment.tpl:37</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\ps_currencyselector\ps_currencyselector.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="77295c7d814e7397c55f64ec06313984">
+        <source>Currency:</source>
+        <target>Currency:</target>
+        <note>Context:
+File: themes\PRSADD187\modules\ps_currencyselector\ps_currencyselector.tpl:30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\tm_categorylist\views\templates\front\tm_categorylist.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="0b4db271fc4624853e634ef6882ea8be">
+        <source>View all</source>
+        <target>View all</target>
+        <note>Context:
+File: themes\PRSADD187\modules\tm_categorylist\views\templates\front\tm_categorylist.tpl:85</note>
+      </trans-unit>
+      <trans-unit id="4ac77645ca6e71dda73593d31d160797">
+        <source>No Category is Selected.</source>
+        <target>No Category is Selected.</target>
+        <note>Context:
+File: themes\PRSADD187\modules\tm_categorylist\views\templates\front\tm_categorylist.tpl:103</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\tm_specials\views\templates\hook\tm_specials.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="1d8c614a374d5e99617f63706e53c2b0">
+        <source>View More Products</source>
+        <target>View More Products</target>
+        <note>Context:
+File: themes\PRSADD187\modules\tm_specials\views\templates\hook\tm_specials.tpl:64</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\templates\catalog\_partials\products-top.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="5174d1309f275ba6f275db3af9eb3e18">
+        <source>Grid</source>
+        <target>Grid</target>
+        <note>Context:
+File: themes\PRSADD187\templates\catalog\_partials\products-top.tpl:29</note>
+      </trans-unit>
+      <trans-unit id="4ee29ca12c7d126654bd0e5275de6135">
+        <source>List</source>
+        <target>Lista</target>
+        <note>Context:
+File: themes\PRSADD187\templates\catalog\_partials\products-top.tpl:30</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

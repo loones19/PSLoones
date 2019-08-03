@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="94936ad65bdf649c16b14b27794effb6">
+        <source>Posted By</source>
+        <target>Posted By</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:45</note>
+      </trans-unit>
+      <trans-unit id="efeb369cccbd560588a756610865664c">
+        <source>In</source>
+        <target>In</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:52</note>
+      </trans-unit>
+      <trans-unit id="521c36a31c2762741cf0f8890cbe05e3">
+        <source>On</source>
+        <target>On</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:59</note>
+      </trans-unit>
+      <trans-unit id="0be8406951cdfda82f00f79328cf4efc">
+        <source>Comment</source>
+        <target>Comment</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:71</note>
+      </trans-unit>
+      <trans-unit id="ebfe5e1791db03c4cd6ab95801e0977d">
+        <source>Hit</source>
+        <target>Hit</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:78</note>
+      </trans-unit>
+      <trans-unit id="35d2a45eda8b8a08903bb80b68f52250">
+        <source>Read more.....</source>
+        <target>Read more.....</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_listing_blog.tpl:91</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\hook\psbloglatest.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="d2d9ce8b5c3f4bb5e85c0b0f39b01a21">
+        <source><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%A"), ENT_QUOTES, 'UTF-8', true]]></source>
+        <target><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%A"), ENT_QUOTES, 'UTF-8', true]]></target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psbloglatest.tpl:53</note>
+      </trans-unit>
+      <trans-unit id="3ff5f9134ec115f15cb110b17ce2e0c6">
+        <source><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%B"), ENT_QUOTES, 'UTF-8', true]]></source>
+        <target><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%B"), ENT_QUOTES, 'UTF-8', true]]></target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psbloglatest.tpl:54</note>
+      </trans-unit>
+      <trans-unit id="569f99b8d10f9056143d730661cedd17">
+        <source><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e"), ENT_QUOTES, 'UTF-8', true]]></source>
+        <target><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e"), ENT_QUOTES, 'UTF-8', true]]></target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psbloglatest.tpl:55</note>
+      </trans-unit>
+      <trans-unit id="7d2de088d9eaab3a009830d25bb1e61f">
+        <source><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y"), ENT_QUOTES, 'UTF-8', true]]></source>
+        <target><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y"), ENT_QUOTES, 'UTF-8', true]]></target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psbloglatest.tpl:56</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\front\default\_grid_blog.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="43340e6cc4e88197d57f8d6d5ea50a46">
+        <source>Read more</source>
+        <target>Read more</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\front\default\_grid_blog.tpl:93</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\hook\categories_menu.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="979ac0eb39f23e70f45b79282ccab548">
+        <source>Blog Categories</source>
+        <target>Blog Categories</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\categories_menu.tpl:33</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\hook\psbloghome.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="35fae84e939038b20ed5f90903389999">
+        <source><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%b"), ENT_QUOTES, 'UTF-8', true]]></source>
+        <target><![CDATA[tmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%b"), ENT_QUOTES, 'UTF-8', true]]></target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psbloghome.tpl:77</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="themes\PRSADD187\modules\psblog\views\templates\hook\psblogrss.tpl" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="10fd25dcd3353c0ba3731d4a23657f2e">
+        <source>No RSS feed added</source>
+        <target>No RSS feed added</target>
+        <note>Context:
+File: themes\PRSADD187\modules\psblog\views\templates\hook\psblogrss.tpl:37</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

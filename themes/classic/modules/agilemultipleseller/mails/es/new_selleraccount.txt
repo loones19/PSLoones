@@ -1,0 +1,9 @@
+Hola {firstname} {lastname},
+
+Gracias por crear una cuenta de vendedor en {shop_name}.
+
+Tu usuario: {email}
+La contraseña esta en el email de bienvenida.
+{message} 
+
+{shop_url}

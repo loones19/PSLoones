@@ -1,0 +1,44 @@
+
+Version 2.7.0.3 - 2017.01.01
+Adjustment to support Agile Kernel 1.7.1.0 with common Google API keys and Agile Modal window for alert messages
+
+
+Version 2.7.0.2 - 2016.12.11
+Compatible with PrestaShop 1.7x
+
+
+Version 2.1.0.1 - 2015.06.07
+-- Changed to use real hook name instead of alias
+-- New feature: Admin is able to edit ratings at back office - Customers - Seller Ratings tab
+
+Version 2.0.0.2 - 2014.06.22
+- Compatible with Smart Cache for Javascript and Smart Cache for CSS
+
+Version 2.0.0.1 - 2014.04.19
+- Compatible with PrestaShop 1.6x
+- Support responsive theme design
+- Fixed the link Seller Name to Seller Shop home page at seller average rating  
+- New feature - show seller rating on seller's private category
+- Show Seller Rating on product list page
+
+Version 1.2.5 - 2013.04.07
+- Compatible with PrestaShop 1.5.4
+- Fixed an issue - Seller Name(company) is not displayed on ranting summary page
+
+Version 1.2.4 - 2013.03.24
+- Add link from Seller Rating summary on product page to Virtual Shop (PrestaShop 1.5x) or Seller products page(PrestaShop 1.4)
+- Do not allow seller to feedback ranting for him/hersef. The transactions will be excluded from rating feedback list even seller places order from his/her own store.
+- Changed to use Seller Company instead of "Firstname/lastname" for seller name
+- Fixed: Seller response to customer back was missing from rating list
+
+Version1.2.3 - 2013.01.22
+- Seller is able to respond to buyer's comment/rating, the response will also be displayed on seller's rating list.
+
+Version1.2.1 - 2012.12.01
+- Integrated with new released Agile Multiple Shop module which allow each seller to have a virtual shop, virtual directory and separated themes.
+
+Version1.2.0 - 2012.10.20
+- Module is adjusted to be compatible with PrestaShop 1.5x
+
+Version 1.1.0 - 2012.06.30
+- Seller is able to respond a message to a buyer's rating/review

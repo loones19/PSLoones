@@ -1,0 +1,60 @@
+[{shop_url}] 
+Hi {seller-firstname} {seller-lastname},
+
+You've received a new order from {firstname} {lastname} on {shop_name}.
+
+ORDER: {order_name} Placed on {date}
+
+PAYMENT: {payment} 		 
+
+REFERENCE
+
+PRODUCT
+
+UNIT PRICE
+
+QUANTITY
+
+TOTAL PRICE
+
+{products} 
+
+{discounts} 
+
+PRODUCTS 
+
+{total_products} 
+
+DISCOUNTS 
+
+{total_discounts} 
+
+GIFT-WRAPPING 
+
+{total_wrapping} 
+
+SHIPPING 
+
+{total_shipping} 
+
+TOTAL TAX PAID 
+
+{total_tax_paid} 
+
+TOTAL PAID 
+
+{total_paid} 
+
+CARRIER: {carrier}
+
+PAYMENT: {payment} 		 
+
+{delivery_block_html} 
+
+{invoice_block_html} 
+
+Customer message:
+{message}
+
+{shop_name} [{shop_url}] 
+

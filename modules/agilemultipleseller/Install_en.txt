@@ -1,0 +1,123 @@
+New Install
+===============
+1. Login to PrestaShop back office and click Modules tab
+2. Click "Add a module from my computer" and choose the module package you have downlaoded and click "Upload this module"
+3. Input "agile" in the search bix of Module page and select "Agile Multiple Seller"
+4. Click "install" link under the module, the module will be installed automatically.
+5. Click "Configure" link under the module, it will bring you to the module configuration screen
+
+For more detailed installation giuide, please read this
+http://addons-modules.com/en/content/35-how-to-install-a-agile-prestashop-moudule
+
+If you ancounter any issue at installation, please read here
+http://addons-modules.com/en/content/36-installation-trouble-shooting-tips
+
+Upgrade from old version
+========================
+0. As best practice, please back up your database for just in case.
+1. Record/Memo the module configuration parameters
+2. Backup the mail templates under the module folder only if you have made any customizaiton changes.
+   /modules/agilemultipleseller/mails/
+3. Uninstall old version of Agile Multiple Seller, 
+    back office - Modules tab - Search the module - Click uninstall 
+4. Delete the module (uninstalled already) 
+    Back office - Modules tab - Search - Click "Delete" link under the module
+   Make sure all files are deleted from the module folder, confirm this via FTP or File manager
+5. Execute above "New Insall"
+6. Apply the changes you have made on your email template manually again.
+   Please do not use old version to overwrite new version.
+
+For more information on how to upgrade Agile module, please read here
+http://addons-modules.com/en/content/20-how-to-upgrade-agile-prestashop-modules
+
+If you ancounter any issue at installation, please read here
+http://addons-modules.com/en/content/36-installation-trouble-shooting-tips
+
+There are 3 PrestaShop original files automatically updated by the modules becasue it does not provide a way to override.
+/admin/ajax_products_list.php
+/admin/filemanager/config/config.php
+/admin/filemanager/dialog.php
+
+
+Configuration Notes:
+===================
+1. Read the description on module configuraton screen and choose correct options for each item
+
+
+2. In order to show seller name on product list pages
+   Modify related themes files - (show seller name on product list page)
+   PrestaShop 1.6x/1.5x
+   ====================
+   A. product list pages
+	YourStoreRoot/themes/YourStoreTheme/product-list.tpl
+    http://addons-modules.com/img/cms/UserGuide/multipleseller/install-seller-name-on-list-productlist-tpl-16x.png
+
+   B. for home fearured module
+   	YourStoreRoot/modules/homefeatures/homefeatured.tpl
+	or
+   	YourStoreRoot/modules/homefeatures/views/templates/hook/homefeatured.tpl
+	or
+   	YourStoreRoot/themes/YourTheme/modules/homefeatures/views/templates/hook/homefeatured.tpl
+	   http://addons-modules.com/img/cms/UserGuide/multipleseller/install-seller-name-on-list-homefeatured-tpl.png
+	or 
+	if the file already included above A, then you do not need to change
+
+   PrestaShop 1.7x
+   ====================
+   YourStoreRoot/themes/classic/templates/catalog/_partials/miniatures/product.tpl
+
+	Add following lines before the code for displaying productname, see the link below for location instructions 
+	{if isset($product.seller)}
+	<p class="agile_sellername_onlist">
+		{l s='Seller:' mod='agilemultipleseller'}
+		{if isset($product.has_sellerlink) AND $product.has_sellerlink ==1}<a href="{$link->getAgileSellerLink({$product.id_seller})}">{/if}
+		{$product.seller}
+		{if isset($product.has_sellerlink)}</a>{/if}
+	</p>
+	{/if}
+
+	To make the modification to take effect, please temporary set Smarty to "Force compile" and disable Smarty cache.
+       Back office - Preferences tab - Performances
+
+Note: the Seller Name links to Seller Virtual shop, it requires Agile Multiple Shop installed, otherwise, the link will not work,
+
+3. Seller name, logo, seller address in order confirmation email, 
+ You need to add following keyword into order confirmation email templates. 
+ {seller_name}
+ {seller_logo}
+ {seller_address}
+
+The email template send to customer - YourStoreRoot/mails/
+The emial template send to sellers - YourStoreRoot/modules/agilemultipleseller/mails/
+
+4. In order to show seller information in PDF invoice
+- For PrestaShp 1.5x or higher, you can use following keywords in /pdf/header.tpl
+{$seller_name}
+{$seller_logo_path}
+{$seller_logo_url}
+
+or {sellerinfo->xxxxx}
+where xxxx is any field of seller info table
+
+And use use following keyword in /pdf/footer.tpl
+{$seller_name}
+{$seller_address}
+{$seller_fax}
+{$seller_phone}
+
+or {sellerinfo->xxxxx}
+where xxxx is any field of seller info table
+
+P.S.
+You use sample pdf footer.tpl and header.tpl that provided by us by copying 
+
+From : YourStoreRoot/modules/agilemultipleseller/pdf/
+To   : YourStoreRoot/themes/YourThemeFolder/pdf/
+
+5. To make product image upload limit works at back office, need to add following 2 lines in back office images.tpl
+location: /adminFolder/themes/default/template/controllers/products/images.tpl
+A. add following line at end of function imageLine() 
+			if(typeof toggleImageUploadControl != "undefined")toggleImageUploadControl(true);
+B. add following line at end of function afterDeleteProductImage(data)
+					toggleImageUploadControl(false);
+

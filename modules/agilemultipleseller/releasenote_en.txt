@@ -1,0 +1,639 @@
+﻿Version 3.7.3.2 - 2018.04.11
+Fix - Javascript error "currentmenuid is undefined" when seller does not have valid membership (membership integration)
+Fix - "Seller Signup" link appears 2 time on seller summary page when membership module integrated is selected.
+Fix - Multiple Shop - seller virtual shop has 500 internal server error - Attempted to load class  from namespace "PrestaShop\PrestaShop\Adapter\...
+
+Fix - Order Return Request email send to seller was not working(2018.05.05)
+
+Change - Improve installation of large amount of override classes/controllers to avoid installation related issues.
+
+
+Version 3.7.3.0 - 2018.02.08
+Fix - Front store - seller management panel - Error message translation issue on managament pages from our modules.
+Fix - Front store - Seller management panel - at product editing page, the product price displayed with 4 floating decimals
+Fix - Delete button in shopping cart summary page was not working 
+Fix - Front store - potential error after payment when using seller collects payment mode.
+Fix - Front store - All new products and all new prince drop page was not returned correct products
+
+Change - Change to use encoded order reference instead of numeric order ID in the URL of link to order details pages. 
+Change - Change to show encoded order reference instead of order ID seller commission history and other places. 
+Feature - Front store - my seller account - Products page, you are able to sorting the list by click Up/Down arrow icons
+Feature - Front store - my seller account - Orders page, you are able to sorting the list by click Up/Down arrow icons
+Feature - Front store - my seller account - Products page, you are able to filter products by column filter
+Feature - Front store - my seller account - Orders page, you are able to filter orders by column filter
+
+
+Version 3.7.2.3 - 2017.10.15
+Fix - Front- Seller Management Panel - Products ta - when you allow seller to copy products from store (public product templates), it does not work properly. 
+Fix - Front Store - Seller Management Panel - Products tab: Validation of Name/Friendly URL field of product editing page
+Fix - Pagination issue on front store seller virtual shop page and products listing pages.
+
+Version 3.7.2.2 - 2017.10.09
+Fix - Related to multiple shop module with multiple themes - when a new seller is signed up, default theme assigned will be go back go "basic". 
+Fix - (Agile BankWire module)When you use agile bank wire module for multiple seller split payment, the Seller Bank Info in payment info email does not show
+Fix - (Multiple Shop module) Seller virtual shop home page product sorting does not work, causes 500 internal server error n ajax request.
+
+Version 3.7.2.1 - 2017.09.09
+Fix - Seller Signup link was displayed on top right corner even when you configred as not allow customer to sign up at front.
+
+Version 3.7.2.0 - 2017.08.03
+Feature - Front store - My Seller Account - Products tab - Bulk Action for delete/disable/enable multiple products
+Changed - Front store - My Seller Account - Move Manufacturer/Supplier from Information tab to Association tan 
+
+Fix - Front Store - Product management - Combination - it show as "Increase" even you set Price Impact set to reductioin  
+Fix - Front store, Product Details page price displayed at front is incorrect - when specific price set at My Seller Account for product with combination 
+Fix - After uninstall agile multiple seller module, there is an error caused by IndexController.php override 
+Fix - Potential security issue - download customer info without login aft front store.
+Fix - Combination quantity change does not save on back office product admin page.
+Fix - Under HTTPS environment, tinemce.js was blocked because it as loaded over non-https
+
+
+Version 3.7.1.0 - 2017.02.12
+Change - Adjusted overrides for PrestaShop 1.7.1
+Fix - warning message appears when there is no multiples seller integrated payment modules using "actionAgilePaymentModuleIntegrate" 
+     ( Illegal string offset 'agilepaypal' in /home/infin158/public_html/modules/agilemultipleseller/agilemultipleseller.php)
+Fix - back office Seller Info management page - Seller Home category dropdownlist does not include "Home" 
+Fix - back office Seller Info management page - Seller Home category changes does not trigger block category cache.
+Fix - Seller Management Panel  - When you seller uploads a virtual product download file, it will upload upload 2 times.
+Fix - Front store seller management Orders tab, some orders may displayed multuiple times in the list when it has multiple order statuses
+Fix - When user manually enter URL of a seller product that has not been approved, it will cause server exception error, changed to show 404 error.
+Fix - Front store, Product CSV export on products list page, Quantity is alwasy exported as 0.
+
+Change - To include the front filemanager in module ZIP package so that it does not need to be copied during installation to reduce installation time 
+Change - Text type custom fields, changed to max length 4000 characters and multiple line textarea input
+change - Changed to hide all shared/public shipping carriers at Seller Management Panel - Shipping page (most customers feedback: confusing sellers)
+Feature - Add seller email address "$seller_email" as smarty variable so that it can be used in PDF template 
+Feature - When upload virtual product digital file, a "uploading in progress" icon will be displayed and it will disappear when upload finished.
+
+Version 3.7.0.5 - 2017.02.12
+Support last version of PrestaShop 1.7.0.4
+Feature - Support Agile Cash On Delivery module
+Feature - Membership integration with new feature to limit the number of product images based on membership type
+Fix - when main store domain changed, seller virtual shop was not changed automatically(for example, when you move your store to different domain). 
+Fix - Sometimes admin may see some customers displayed multiple time on customer list page if the customer has purchased products from multiple sellers.
+Fix - javascript error occurs on some pages (for example seller signup page) when enable "Smart cache for JavaScript".
+
+Version 3.7.0.4 - 2017.01.02
+Feature - Show banner or header image on seller virtual shop home page. Seller can upload banner/header image at Seller Business Info page.
+Feature - Change all JavaScript alert message to user friendly Modal dialog message box
+Feature - When ad new shipping carrier is added, enable all existing installed payment modules for this carrier. (payment module has restrictions on shipping carriers)
+Feature - File manager for sellers to upload images and files that can be used in their products and CMS page with the link to the files or images(in seller manager tools module)
+Feature - Add new link "Sell with us" on top user info block (area).
+Feature - Store(marketplace) owner is able to choose the way of seller product URLs when user at main store or seller virtual shop(multiple shop module).
+
+
+Improvement - Removed AgileModule class and changed to use override of Module.php to implement some basic common features of agile modules.
+Improvement - Moved to manage Google Map api key at agile kernel as common component to be able to share with other modules.
+Improvement - Moved and merged cart controller from multiple seller/membership/prepaidcredit module into agilekernel 
+Remove - The option Store Takes Care of shipping fee cost is removed, because it causes problems when "Seller Collects Payment" mode.
+
+Fix - seller business info page, id_country validation error because of HTML element not formatted properly.
+Fix - undefined error when a country contains states and the state is not initialised properly.
+Fix - When customer changed password via password recovery or update personal information, the association of customer and seller will got lost.
+Fix - Breadcrumb Main store URL was incorrect when user in inside a seller virtual shop. it was pointing to seller virtual shop.
+Fix - When there is no seller logo, it should "X" 0 it should show sample logo image "No-Logo".
+Fix - Undefined index elinks error on front store - Seller Management Panel - Seller Payment Info page
+Fix - When try to send an email to seller for non-seller order (store owner products), because seller does not exists, then invalid email address will cause error.
+Fix - Error when try to load saved configuration of CSV field mapping(Agile Seller Tools module)
+Fix - Error at deleting product attribute linked images when choose to delete all products before import.(Agile Seller Tools module)
+Fix - JavaScript error "Image not found error" at front store seller product editing page - Images tab.
+
+
+Version 3.7.0.1
+Fix - URL generated in Link.php for Shop By Seller page used 'country" as default location level even you have configured it as 'city' or 'state' level
+Fix - Error when admin import products and choose delete all existing products.
+Fix - Installation error on PHP 7 or higher because using DEPRECATED method calling Validate::$dataValidator() 
+Fix - Front store product page - combination does not work, it was caused of existing attribute group does not have owner assigned(editing each attribute group and save it will fix the issue).
+Fix - Back office - Customes tab, admin was not able to search some of the customers because of customer does not have an order.
+Fix - Front Store - Specific price % discount issue - Default combination shows doubled discount
+Fix - Front store - Seller Virtual Shop warning message of theme_id undefined.
+
+
+Feature - Front Store - Product export by seller. (not for impiort purpose, only the fields displayed on the page will be exported to CSV)
+Feature - Front Store - Order Export by seller.
+Feature - Management - For payment collection mode, you can set some sellers to always use "Store Collects Payment", but other sellers are based on module configuraiton 
+Feature - Support Product Tags module (a file module from agile and partner)
+
+Version 3.3.3.4 - 2016.08.21
+Fix - Seller upload product image size limitation was not enforced at front store product editing page.
+Fix - 500 server internal error when at seller sign up page when you enter invalid characters for name like numbers.
+
+Feature - Exclude Home Category from category list inside multiple seller module
+Feature - Add max size upload file size for seller logo upload and carrier logo upload. (max size is defined in related files)
+
+Version 3.3.3.3 - 2016.07.17
+Changes - Seller is able to set product images captions like same way of admin - only from PrestaShop 1.6.1.0 or higher
+Changes - Support Google API key for Google maps.
+
+Fix - email subject for seller product approval/disapproval email send from back office, the email subject language was not based on seller, but based on admin who approve/disapprove
+Fix - On manufacturer or Supplier list page, the number of products for each manufacturer or supplier was not correct.
+Fix - The amount to store is calculated incorrectly when using Parallel Payment Mode & using Store collect shippuing fee.
+Fix - Approval email was not sent when use Duplicate function to create new product
+Fix - Error when leave email address as empty while trying create seller account from back office 
+Fix - Front store seller product image upload page - image upload button layout issue
+Fix - Error when filtering by column "seller" at back office Bulk Approval page.
+Fix - smarty cache id related issue when multiple shop
+Fix - front store - My Seller Account - Orders - Order Details page, order status history - First name shows 2 times but missing last name.
+
+
+Version 3.3.3.0 - 2016.04.03
+Feature - Send notification to seller when product is approved or disapproved - it is configurable to send or not by admin. Only when product list approval required is also configured.
+Feature - Seller is able to manage private Attributes at back office 
+Feature - Admin is able to set maximum number of images for each product to prevent seller from uploading too many product images.
+		 [for back office limitation, need to add 2 lines to images.tpl file, install_en.txt for details]
+
+Fix - When admin change "Is Free Shipping" via the enable icon on carrier list page  at back office, it will lost carrier ownership(assigned seller).
+Fix - Seller does not receive New Order email if shopping cart products have different shipping carriers and agile seller shipping module is not installed.
+Fix - SQL error under PHP 5.6(that requires all fields of Primary Key NOT NULL) when install the module  - create extension table ps_agile_subcart
+Fix - Seller is able to set product to Home via front Server Manage Panel even you have configured to not allow seller to register product at HOME
+Fix - Some email send to seller using the language selection of admin profile instead of seller employee profile
+Fix - Combination button did not work because of undefined ecotaxTaxRate
+
+
+Version 3.3.2.0 - 2016.02.28
+Fix - Tax related calculation issue at Combination tab of front store seller management panel(displaying issue)
+Fix - Final Price displaying issues at front store, seller product management - Combination tab
+Fix - Issue occurred in some server environment only: When seller upload images via HTML editor/media server, the image thumbnail shows "?".
+Feature - Added 15 new custom fields for seller info - string (general text fields - not multiple language)
+Feature - Implemented customs field hints text - translatable into any language - make it easy for store admin to provide explanations for each new custom fields.
+Feature - Admin is able to choose Shipping Fee recipient, default is seller receive shipping fee from customer (it was always for seller previously - it should be most cases)
+Feature - Admin is able to choose Google map appearance on Seller Info tab of public listing page
+Feature - Admin is able to configure to allow seller to choose virtual shop theme or not.
+
+
+Version 3.3.1.1 - 2016.02.05
+Bug Fix - When seller upload images via HTML editor/media server, the image size was reduced to thumbnail size
+Bug Fix - At back office product admin page, the seller drop down list does not show in some server environment (related to change code)
+Bug Fix - Seller Shipping module shipping fee calculation related issue when use weight and attribute combination
+Bug Fix - At back office/Catalogue/Products tab product editing page : not able to add product to "Pack" when you create new product with type of "Pack"
+Bug Fix - Terms & Conditions popup up did not work at Seller Sign up page when Product Quick View is disabled.
+Bug Fix - When at front store CMS page,  language switch does not work - it only happens when agile multiple seller module is installed, but agile multiple shop module is not installed.
+Feature - Remove unnecessary parameter "sensor" from Google MAP API url.
+Feature - After payment with 3rd party payment module the Order Confirmation page was not displayed, but instead redirected to Order History page before. Now it will show order confirmation page even when use 3rd party payment modules.
+Feature - If seller shipping module is installed, when seller set product level carriers, then the module will automatically include "Default Carrier"
+
+Version 3.3.1.0 - 2015.12.29
+Improvement - Seller Info - Postcode required validation will be based on Country need_zip_code field configuration (both front and back office)
+Improvement - Seller Info - Postcode appearance will be based on Country need_zip_code field configuration (front only) 
+Improvement - Back office - Administration - Seller Business Info page - "Shop" field field availability will be based on installation of Agile Multiple Shop
+Improvement - Back office - Administration - Seller Business Info page - Add new column "Seller ID" to avoid confusion between with ID(Info) column.
+Improvement - It is configurable for store admin to choose use Paypal for payments between seller and store or not.
+			  If choose not - Seller will not need to enter Paypal account unless use the seller use Paypal module to accept payment from customers
+			  This configuration is added to Agile Seller Commission module.
+Improvement - Make PrestaShop original Cash On Delivery module available for Seller Collects Payment mode or Store Collects Payment mode.
+Improvement - seller is able to choose Theme for virtual shop at business info page.
+Improvement - use address format defined in Country entity to generate seller address
+Bug Fix - Address entity data ownership related issue: before it only works for customer address, now it works for customer/manufacturer/supplier.
+Bug Fix - "Create Seller Account" check box option was shown at back office Customer Editing page even when logged in as sellers. 
+Bug fix - Browser cache issue of seller logo - when a new logo uploaded, you has to refresh browser to see the new logo image.
+Bug Fix - Seller is not able to see some of the customers even if the customer has purchase from the seller.
+
+
+Version 3.3.0.3 - 2015.10.28
+Improvement - Admin is able to specify the order statuses to trigger Seller Commission creation/generation (configure at seller commission module).
+Improvement - Admin is able to specify the order statuses to trigger Seller Commission cancellation (configure at seller commission module) .
+Improvement - Change "Shop By Seller" and "Shop By Location" pages controllers (from normal front page controller to standard module front controller)
+A. admin will be able to change/define the URL of each page at back office Preferences - SEO & URLs tab
+B. developer is able to use normal theme file override those pages in /themes/YourTheme/modules/modulename/views/templates/....)
+Improvement - Apply new architecture with Agile Kernel and related modules so that it will not adding any new files to PresatShop unless override files. All modules will before self-constrained.
+Improvement - Agile Multiple Seller/Membership module integration GUI enhancement 
+A. showing data loading icon Seller Summary page
+B. hide or disappear links in customer My Account area based on module integration setting
+Improvement - Trim payment info entered by seller to avoid errors caused by invisible characters like white spaces, tab.
+Improvement - When create a new product, the product editing tab menu will show "1. Information" only, other menus will show after save. Before menu "1 .Information" will not show before saving a new product.
+Improvement - Seller Payment info management page, the validation will be performed only when "In Use" is selected, otherwise the information will be saved but not validated.
+Fixed - When a voucher is used in shopping cart with products from multiple sellers, the split discount has an issue when there is a tax.
+(Note- we do not officially support discount vouchers at shopping cart contains products from multiple sellers, see Limitation section No.4)
+Fix - When admin use bulk action button to enable/disable products, the product ownership got lost.
+Fix - Seller was able to see the disabled categories at product management page.
+Fix - Cancelled/Refunded orders were included in seller total sold amount on seller summary page
+Fix - When seller use media server at front store, log in screen appears if it is not logged in yet - change to automatically login seller
+Fix- When Seller media server seller was able to see other sellers images
+Fix - At front store, if seller refresh the page after copying/duplicating a product, the copy/duplicate will be performed again. 
+Fix - A bug in specific version of Agile multiple seller 3.2.x, it did not assign virtual shop properly when sign up from new seller sign up page.
+Change - Seller sign up form is removed from Customer Signup form, a link will bring customer to seller sign up if customer want to sign up a seller
+
+
+Version 3.2.1.1 - 2005.09.20
+- Extension payment module integration API 
+   allow read-only only payment infos- that will be set by payment module automatically like Stripe Connect
+   allow external links
+   allow tool-tip beside label
+- Automatically filtering out the payment modules based on Payment collection mode - hide the payment module if it does not support
+- A new payment module Agile Stripe Marketplace becomes available for all payment collection mode including "Seller Collect Payment" and "Both Seller and Store Collect Payment"
+
+Version 3.2.0.1 - 2005.08.13
+- New architecture for payment module integration with agile multiple seller module 
+  Make it easier to integrate 3rd party payment modules into agile multiple seller module.
+  See details here - http://addons-modules.com/store/en/content/76-payment-module-integration-with-agile-multiple-seller
+  Payment module can specify what payment mode to support
+  Payment module can provide validator for each field of payment info 
+  Payment module can provide specify Label for each field of payment info    
+- Authorize.NET credit payment module now integrated with Agile Multiple Seller module, and it can be used at any Payment Collection mode
+- Adjusted Agile Bank Wire, Agile Pay By Cheque, Agile Paypal Parallel, Agile Paypal Adaptive for the new integration architecture.
+- Removing modification of back office theme file (controllers/products/informaiton.tpl) during module installation
+- Seller private "Catalogue Price Rule" management at back office that will apply only to the seller's products.
+- Validate uploaded logo file is JPG or PNG file, otherwise it will not upload.
+
+Fix - Seller info does not work for PDF invoice because PrestaShop changed the override class methods.
+Fix - When a re-enable a "disabled" employee, a seller account approved email will be sent 
+
+
+Version 3.1.0.2 - 2015.07.01
+New feature - (2015.07.01)Seller is able to add/create new orders from back office. (Back office Shopping Carts tab-menu will be hidden to sellers)
+Bug fix - (2015.07.01)An issue only happens in PHP 5.3 environment.
+Bug Fix - (2015.07.08)Sates dropdown list is not populated when seller access back office - such as Suppliers tab
+
+Version 3.1.0.1 - 2015.06.15
+New features
+- A new seller sign up page separated from general customer sign up, configurable to use customer signup page for seller signup or not
+- Changed to log the seller ID when seller changed order status from front store seller management panel(Orders tab).
+- Media server access available for sellers - Sellers can upload private images and use the images in product description, seller business info description and any HTML fields at both back office or front Seller Manager Panel.
+- Seller is able to duplicate/copy an existing product
+- Add validation to prevent sellers from using the same email address of other employee (of back office).
+- Seller is able to copy main store product from existing catalogue by searching catalogue (seller can only search main store product or the seller's product)
+- It is configurable for admin to allow seller to copy products from main store or not
+
+Bug fixes
+- Sorting and Filtering function at product list page at front Seller Management Panel 
+- seller commission calculation related to shipping tax (exclude tax)
+- fixed an error when preview a product from back office if it is not approved or not active.
+- some admin tan-menu from module will disappear on some some specific pages such as "Permissions" page.
+
+Version 3.0.6.2 - 2015.03.13
+- It is configurable to include tax or not for commission calculation (related to seller commission module)
+- Changed to show changed order status at order details page at front store seller management panel(Orders tab).
+- Adjustment for Sporting PrestaShop 1.6.0.12/13/14
+- Changed all email template to use the PrestaShop 1.6x default design style
+
+Bug fixes
+- Front store seller management panel - seller business info page - upload button and message translation issue.
+- javascript error at product management page(front) - general informaiton
+- when seller import products from back office, if choose "Force all ID numbers" option, and if it is new product, then it would cause errors
+- when seller import products from back office, if choose "Delete all products before import", it will delete all products in the store.
+
+
+Version 3.0.5.1 - 2015.01.14
+Bug fixes
+- Fixed page dead-loop issue when agile multiple shop is installed at HTTPS environment.
+- Fix front - Order Details page - using wrong id_carrier in ps_orders table
+- Fix - Seller name disappear when switch between list view and grid view on product list page such as category page, search result page,...
+(note - in order to show seller name on product list page, you need modify related view file (theme file), see install_en.txt file for more details.
+- Fix - Unit price was not saved in front seller product management page.
+- Fix - SQL error at best seller products block in ProductSale class
+- Fix - back office seller login does not see supplier at product editing page/suppliers tab
+- Fix - Commission currency display issue
+- Fix - Seller Summary page Total Sold in wrong currency if your store receive payments in different currency other than default currency. Now it shows separated total for each currency
+
+New features/Improvements
+- Seller is able to enter shipping tracking number at front management panel - Orders tab, and "package in transit" email notification will be sent to customer automatically.
+- Change - hide or show seller sign up form based on Customer Registration Process Type 
+- changed all hooks to use real hook name in PrestaShop 1.6x instead of using alias hook name.
+- Allow enter "," instead of "." for prices in European market
+- Change to use free text input for product unity instead of using drop down list of pre-defined unities.\
+- "My Virtual Shop" link is added at bottom of My Seller Account(Seller management panel) pages.
+- At sign up page, when user choose sign up as a seller, the entered data will be kept when there was an validation error. (it was not kept before)
+- when a new seller account created at back office, the customer will receive "Welcome" email with password and also your seller seller account email.
+
+Version 3.0.3.1 - 2014.08.08
+- Change seller commission to exclude tax
+- changed to restrict country of seller to the enabled countries in presstashop configured at back office.
+- Fixed smarty error(PrestaShop 1.6.0.9) at back office Administration - Seller Business Info page
+
+Version 3.0.2.4 - 2014.07.12  
+- Configurable to choose show category URL based on main store URL or current virtual shop URL
+- When admin duplicate a product, the product owner (seller) info will also be copied over.
+- Seller is also able to duplicate product at back office.
+- Configurable to disable or enable seller back office access
+- When choose to delete Customer completely, it will delete the seller account linked to that customer and also seller virtual shops
+
+- Fixed seller info records duplications issue when you delete a customer account and sign up a new one with same email address
+- Fixed tinymce JavaScript error issue at single language environment. 
+- Fixed [Base Price] displaying issue at product list page in Seller Management Panel (My Seller Account)
+
+
+
+Version  3.0.0.3 - 2014.04.05
+- PrestaShop 1.6x support+ following improvements 
+- Synchronize seller account credential between front (customer) account and back office (employee) account.
+- You can use any field of seller info data in invoice header or footer.
+- Hide [create seller] check box and form at One Page Checkout
+- Seller List option module improvements - disable [reorder] function if any products in the order has been expired list options.
+(it will displayed an error message when user try to reorder from My Account - Order History page) 
+- Front end seller management panel - enhance seller business information data validation to avoid exception error when entering wrong data in city/address/company name.
+- Filter out Products and Orders section in Customer details page at back office when logged in as Seller
+
+Version 2.2.2.1 - 2013.12.22
+- Show following tabs before seller is approved to allow seller to enter to required information before approval.
+      Seller Summary/Seller Payment Info/Seller Business Info
+- Configurable allow seller to register products to Home category or not (as Featured Products)
+- Open category tree for those selected category make it easy for seller to manage the product association.
+- When seller info is saved, copy empty multiple language filed from non- empty fields in current language
+- fixed an issue at front product management panel - image tab, it does not work properly at Italian language because of seismical characters
+- fixed an issue at back office - seller is able add category via Quick Access link even the module is configured as not allowed.
+ 
+
+Version 2.2.2.0 - 2013.10.06
+1. New features to front catalogue management page
+A. Seller is able to manage product shipping info
+B. Seller is able to management product attachment
+C. Seller is able to have private attachments (those created by seller will only visible to sellers)  
+ 
+2. Custom fields for Seller Info, make it easier for you to customize
+A.It makes more flexible for store owner and system integrator to customize the module by using custom fields.
+B.Support different type of custom fields: datetime, number, text, HTML
+C.Configurable to choose the the usage of the fields
+D.Use translation function to name the custom fields at your own needs
+ 
+3. Enforce Seller Home Category
+- Admin can set Seller Home Category for each seller at Seller Business Info
+- Seller can only register products under categories start from Seller Home Category
+- When seller logged in at both from or back office Management pages, the category tree will start from Seller Home Category
+ 
+4.Token/credit module integration improvement
+This is available when Agile Multiple module, Seller Commission module and Prepaid credit module are all installed. 
+A. Seller can request Convert account balances to credits/tokens (to use it at front store)
+B. Seller can request Convert tokens/credit to Seller Account Balance
+ 
+5. New fields are added to seller signup form front store by default
+ When customer choose to sign up a seller and click on Agree on Term & Conditions, a set of new seller info fields will be displayed for seller to fill in.
+ - Company
+ - Address (all fields)
+ - Phone
+ 
+6. Following tabs back office has been changed to use PS 1.5x standard, removed compatibility with PrestaShop 1.4x
+A. Bulk Approval (Under Catalogue tab when product list approval required)
+B. Order Products (under Orders tab)
+ 
+7 When seller signup at front office, seller basic information like address and phone information will be included in the sign up form
+ 
+8. [New Order] email send to seller now include product customization information.
+ 
+9. You can choose to show Seller Management Panel position on left or right side of front store page. It is configurable at module configuration screen.
+   By Default, front store Seller Management Panel uses left column and centre column, that is at left side of the page. You can change that based on your theme design.
+ 
+10. Changes and fixes
+Change - When Seller List Options module is installed, it will always show store owner's products because it never need to pay for list options
+Change - Special product like membership/tokens/list options will not be included in Top Seller list
+Change - Agile Installer is updated to detect override conflicts automatically and override classes installation in a standard way
+Change - Exclude special products like membership/token/list options from Top Seller list
+Change - Always show store owner products even when Seller List Options is installed
+Fixed bug - product customization data lost when splitting the cart contains products from multiple sellers.
+Fixed bug - Error occurs when Seller to try to update order carrier tracking number at order details page at back office
+Fixed bug - Google displaying issue in some themes that does not have same DIV tag as the PrestaShop default theme.
+Fixed bug - Check box for show_price is always disabled even remove [available for order]
+Fixed bug - Paypal email address validation error even it is not selected as in use
+Fixed bug - Description length validation is not correct, it is hard coded with 256
+Fixed bug - Error occurs when seller try to delete price/weight range at back office
+Fixed bug - Error occurs when Seller to try to update order carrier tracking number at order details page at back office
+Fixed bug - Error occurs when seller try to delete price/weight range at back office
+ 
+
+Version 2.1.5.0 - 2013.06.01
+- Multiple language support for seller info company name and description field
+- Integrated with Agile prepaid token module, and seller can convert account balance to token/credit so that seller can use it to purchase products at store.
+- removed default category field from Information tab at front store My Seller Account - Products page
+(this is to avoid performance and resource issue when build full name path category tree when there are many categories)
+- seller paypal email address format validation when entering payment info at both front store and back office.
+- Add image format validation for product image uploading at front store My Seller Account management panel
+- fixed an issue that bank wire account owner info nor saved at front store My Seller Account - Payment Info tab
+- fixed and issue : seller can delete any products from front store My Seller account
+- fixed an issue that products and categories will be displayed duplicated after add or import a new language.
+- fixed filtering issue at Bulk Approval tab
+- fixed mail subject translation issue
+
+Version 2.1.4.3 - 2013.03.24
+- Removed seller type from this module and added into Agile multiple seller module.
+- Hide [root] category at front store My Seller Account - Product tabs - Information page
+- Display fill path of category in drop down list at My Seller Account - Product tab - Information page 
+- Show seller type fields at business info form only when agile multiple shop module is installed
+- Use category full path name in category drop down list for default category selections at My Seller Account - Products tab - Information page
+- Enforced required field validation - company, address1, city, postcode, country
+- Gift warping fee will apply to each seller when a sopping cart contains products from multiple sellers.
+- Separate the module for PrestaShop 1.4x and prestahop 15.x or higher
+- Fixd an issue at Seller front office Product Management page - price increased automatically when there is combination of the price.
+- Fixed an error that non seller was able to add a products
+- Fixed a bug at front store My Seller Account - Account History page. It displays wrong records of transactions data.
+- Fixed a bug at back office Customers tab - a new seller was created even when you update non seller customer account
+- Fixed a bug at Seller Product management at front store - when adding specific price, if you lease the price to 0(to apply default price), it will be really set price to 0, but it should not.
+- fixed an Fatal Error when admin create order from back office.
+- fixed an Final price display issue at front office My Seller Account product list page
+- fixed an displaying issue at specific price (discount) at My Seller Account product - specific price page.
+- Fixed some translations issue
+- Fixed an issue in My Seller Account when SSL is enabled - that data in form is not saved.
+
+Version 2.1.4 - 2013.03.11
+- Add new field Seller Type to seller info, each seller can have primary seller type and secondary seller type
+- Seller type can be managed at back office new tab Administration tab - Seller Types tab
+- At Agile Multiple Shop module - you are able to search sellers by Seller Type and Location
+- When customer send a message/comment about an order from My Account - Order History, seller will also received the message by email.
+- It is configurable to allow store owner to choose use Seller/Vendor Terms & Conditions or not and choose a CMS page for Seller/Vendor Terms & Conditions, and require seller/vendor agree on it before signup.
+- Seller can use import function of Categories/Products/Customers(PrestaShop 1.5x only) at back office
+- Order status [Payment Remotely accepted] will be be considered as same as status [Payment Accepted] for a valid order.
+- New product notification function - when you configure the module as [Product Listing Approval Required], as admin you will receive a [New Product] notification.
+- Assigned the Seller to be the owner of his/her front customer account, before it was set as public. 
+- At [Seller Collects Payment] payment collection mode - now Seller is able to choose to use a specific payment method or not from available payment methods. 
+and the each payment method will appear or disappear in the payment method list when customer checkout process.
+- Fixed an issue at Seller front office Product Management page - price increased automatically when there is combination of the price.
+- Fixed an error that non seller was able to add a products
+- Fixed a bug at front store My Seller Account - Account History page. It displays wrong records of transactions data.
+- Fixed a bug at back office Customers tab - a new seller was created even when you update non seller customer account
+- Fixed a bug at Seller Product management at front store - when adding specific price, if you lease the price to 0(to apply default price), it will be really set price to 0, but it should not.
+
+Version  2.1.2 - 2013.01.07
+- Adjusted the module to be compatible with PrestaShop 1.5.3
+- Able to assign all products in a category including sub-category to the owner of current category  (The button visible to admin and when the category has an owner (seller).
+->Seller is able to choose List Options at front Product management page when add/edit product (My Seller Account).
+-Seller is able to register virtual(downloadable) products at front store Product Management page
+-Fixed an displaying issue at Back office, Seller Payment Info tab - seller payment info list (company name was displayed incorrectly)
+-Fixed an issue at Seller Collects payment, the tax is not displayed correctly at payment selection page.
+-Fixed an issue at front store adding a new product and choose language other than default language
+ 
+Version 2.1.1 - 2012.12.07
+- New seller account email send to seller and admin
+- Seller account approval email send to seller (only when module is configured at Seller Account Approval required) 
+
+Version 2.1.0 - 2012.12.01
+- Integrated with new released Agile Multiple Shop module which allow each seller to have a virtual shop, virtual directory and separated themes.
+
+Version 2.0.0 - 2012.10.20
+- Module compatible with PrestaShop 1.5x, most functionalities are rebuilt in new PrestaShop architecture.
+- Implemented seller front office management functionality. Seller is able to manage products/orders/business info/payment info/product inquiry
+
+Version 1.5.0 - 2012.09.20
+- Implemented multiple payment function for Payment Collection mode:  Seller collects Payments
+ Allow shopping cart contains products from multiple seller's products, and buyer can pay sellers one by one in multiple times . Only Integrated payment modules listed in [Payment modules] section are supported.
+ 
+ 
+Version 1.4.2.8 - 2012.08.11
+- fixed a bug at Customers tab back office when filtering by email address (SQL?error)
+- fixed a bug at split-discount, even there is no discount voucher in order, value 0 split-discount-voucher is created at order splitting.
+- If seller logo is not uploaded, it will display a representative image [Log Not Available] based on languages.
+
+Version 1.4.2.7 - 2012.08.05
+- Admin is able to assign multiple products at a time to a selected seller on catalog
+- product list page at back office- Automatically exclude categories from sellers in category browsing at back office, such as Memberships category for membership module, Tokens category for Prepaid Credit/Tokens module, List Options category for Seller List Options
+- Automatically exclude categories from sellers in category selection product page at back office, such as Memberships category for membership module, Tokens category for Prepaid Credit/Tokens module, List Options category for Seller List Options
+- Fix a bug that shopping cart is not cleared after order payment IF the shopping contains products from multiple sellers. This is bug is caused by split shopping cart.
+
+Version 1.4.2.6 - 2012.07.14
+- fixed message lost issue when split multiple seller cart into multiple carts(done)
+- Changed to use Order data instead of shopping cart for commission generation, so even if product price is changed, it will not be affected.
+- fixed a bug at seller invoice PDF file (state/country ID was used instead of name in the seller address)
+- Hide Google Map related GUI if SSL/HTTPS is enabled at store because Google does not provide free SSL/HTTPS based Google maps.
+
+
+
+Version 1.4.2.4 - 2012.06.22
+- Deduction x% from total sale for commission calculation? specify deduction rate percentage at Insertion Fee tab? display deduction amount and order origin at Account History?
+- Integrated to prestabay module so that?? you can specify deduction for orders imported from ebay (via prestabay)
+- Hide [Approved] field if module configuration setting [Listing Approval Required] is not selected
+
+
+Version 1.4.2.1 - 2012.06.08
+- Implement SEO friendly URL for My Seller Account page.
+- Implement canonical redirection, , even user input a non-SEO-friendly URL, it will automatically redirect to a SEO friendly URL
+
+
+Version 1.4.2.0 - 2012.06.02
+- Changed to use company name as display seller name at back office
+- configurable to enable/disable category browsing and show all products in one place for seller?? 
+- configurable to display seller name on product list pages(category/home featured/search result)
+- Display Seller Logo/Name/Address on PDF invoice file? and order confirmation email address? 
+- Split shopping cart into multiple orders if the cart contains products from multiple sellers. One order per seller.
+-The installer will copy all override file automatically. Back up original file it is necessary.
+- new tab under Order tab, to show list of products ordered, each seller can see their own products
+
+
+
+Version 1.4.1.11 - 2012.04.27
+[those are configured at Agile Sellers commission]
+- The module support voucher functions for sellers. Vouchers can only be issued by store, but shared by sellers by the percentage of products amount in an order. 
+The voucher cost could be in following two mode
+* At sellers cost: the voucher discount amount will be deducted from sellers sales amount. 
+* At store's cost: the voucher discount amount will not be deducted from sellers amount. 
+- Shipping fee handling in commission calculation now is configurable in two different ways. 
+* Include shipping - Shipping fee will be included in Insertion/commission calculation
+* Exclude shipping - Shipping fee will be excluded in Insertion/commission calculation
+
+
+
+Version 1.4.2.11 - 2012.08.19
+- A new tab [Bulk Approval] is created for admin to bulk approve products. Admin can approve many products or all product at one click. It is useful if you have already registered many products before you install Agile Multiple Seller module.
+- Now each seller can have its own default category. If you set default category, it will become root category of the seller and the seller will be redirected to this automatically after log in to the back office.
+
+Version 1.4.1.10 - 2012.04.22
+- Fixed an issue with integration with seller shipping module 
+- Display seller shipping info at sellers products list section at Order Details page at back office
+
+
+Version 1.4.1.9 - 2012.04.18
+- Fixed an installation issue caused by PrestaShop Hook->Save() at create_hook. It only saves name, but there are other non-null-able field, it fails in some Windows NT Environment, most cases are OK.
+- Integrated?into Google Checkout module, make it possible for seller collect payment by Google Checkout
+
+Version 1.4.1.8 - 2012.04.14
+- Integration with Agile Seller Shipping module 
+- Integration with Agile Membership module so that you can use membership module to limit the number?of products listing for sellers
+
+Version 1.4.1.14 - 2012.05.21
+Integrated into Agile Seller Shipping module that a allow customer to choose carrier at product item level, and allow sellers set private carriers and all Shopping Cart mode.
+
+Version 1.4.1.13 - 2012.05.10
+- Fixed the translation issue for message [This order contains products from other seller....] 
+- Fixed seller logo upload issue - the folder img/as is not created in some circumstance.
+- Fixed customer and seller account link issue
+
+Version 1.4.1.12 - 2012.05.02 
+- Changed to use company name instead of first name/last name for sellers on front office page
+- Add new tab [Order Products] under Orders tab ta back office so that admin is able to see ordered products from sellers.
+
+
+
+Version 1.4.1.7 - 2012.04.08
+- Remove configuration item [Automatically sign up seller account]
+- Adds Checkbox option at customer sign up page to choose [Create Seller Account] or not
+- Hide [Position] column of categories list and product list from sellers if the seller is not the owner of the category, to prevent from sellers to changing sort positions.  
+
+
+
+ Version 1.4.1.6 - 2012.03.22
+- Merged Seller Info tab (back office) into Employees tab so that manage seller's other info and payment info are in in one tab.
+- Seller can set Bank Account information for receiving bank transfer payment
+- Integrated Bank transfer payment method, so that [Seller Collect payments] is available for bank transfer(Must use customized Agile Bank Transfer module)
+- It also make it available for [Seller Collect payments] available Cash On Delivery (PrestaShop original Cash On Delivery module)
+- Send all new order to store admin (send to Shop Email)
+
+
+
+Version 1.4.1.3 - 2012.02.28
+- Integrated with Agile PresteShop Paypal Adaptive payment, now can handle commission payment automatically without manually perform any payment.
+
+- Listing product approval feature is implemented and it is configurable at module configure screen. You can easily enable and disable listing approval function.
+
+Version 1.4.1.2 - 2012.02.17
+- Make it configurable for the approval requirement when Seller signup from front office
+
+Version 1.4.1 - 2012.02.04
+- Integration of Seller List options module
+  Show as HOT option
+  Show on HOME option
+  Show on TOP of the list(category)
+- remove expiry date of product. It is implemented by listing option module 
+
+Version 1.4.0 - 2012.01.21
+ - Limit one cart only allow products from the same seller
+ - Each seller is able to set his/her shipping
+ - Order is no longer shared by different sellers.
+
+Version 1.3.0 - 2011.11.05
+- Integration with seller commission module 
+- If customer sign up a seller account from front office, the seller account is initially inactive. 
+   Admin has to activate the seller account.
+
+With this version, you have an option to use seller commission module(separated module) so that you can manage commissions calculations and commission payments. It give a great flexibility to set different level of commission for different sellers.
+
+
+Version 1.2.5 - 2011.11.05
+- Hide products from other sellers in order alert email sent to seller and display a notes
+- Hide products from other sellers in order detailed page at back office if current logged in is a seller.
+- Hide products from other sellers in PDF invoice at back office if current logged in is a seller.
+- Display following message in above 3 [This order contains products from other sellers, they are hidden from you. But they they are visible to admin and your customer.]
+- Enable HTML editor for seller info description fields. 
+- Fix the duplication display of customer in customer [Tab]
+- Moved the [Seller Info] tab from [Employees] tab to [Customers] tab in back office.
+
+
+Version 1.2.4 - 2011.10.08
+- product listing expiry date(like eBay), it will be disabled automatically when it goes expired.
+- seller can direct go to back office from front office My-Account page. 
+  (It is available when [Allow customer becomes seller] is enabled) 
+
+
+Version 1.2.4 - 2011.10.08
+- product listing expiry date(like eBay), it will be disabled automatically when it goes expired.
+- seller can direct go to back office from front office My-Account page. 
+  (It is available when [Allow customer becomes seller] is enabled) 
+
+Version 1.2.3
+- fixed an issue with Customer Message (seller filtering was not working) 
+- fixed an potential security issue(when seller manually input id_order at URL to see other sellers orders)
+- fixed label/message translation issue 
+
+Version 1.2.2
+- Some changes on configuration screen
+- Seller collects sales, cart items control now support both ajaxCart and non ajaxCart[done]
+- filtering out products list for Auto complete input box -  ajax_product_list.php
+- filtering out the category list at product detail page for set product category/default category
+
+
+
+Version 1.2 
+- No manually file change is required at installation.
+- Integrated with Agile paypal, make it possible for seller to collect their own sales
+- Disable all products when a seller is disabled or deleted
+- Seller can have their own categories 
+- Seller info extend - photo (logo), address other info 
+- Seller can create and maintain their own CMS pages
+- Able to show seller info & Google map as a tab on product details page
+- Admin is able to register categories/products for seller, then assign it to seller
+

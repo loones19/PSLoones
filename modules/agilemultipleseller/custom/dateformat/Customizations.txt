@@ -1,0 +1,65 @@
+﻿1. /modules/agilemultipleseller/agilemultuipleseller.hph
+
+method: ensure_date_custom_field()
+
+change
+From ---------------
+		for($idx=1;$idx<=5;$idx++)
+		{
+			if(!$conf['AGILE_MS_SELLER_DATE' .$idx] OR !isset($_POST['ams_custom_date' .$idx]) OR !Validate::isDate($_POST['ams_custom_date' .$idx]))
+			{
+				$_POST['ams_custom_date'.$idx] = null;
+			}
+		}
+
+TO -------------
+		for($idx=1;$idx<=5;$idx++)
+		{
+			if(!$conf['AGILE_MS_SELLER_DATE' .$idx] OR !isset($_POST['ams_custom_date' .$idx]) OR !Validate::isDate($_POST['ams_custom_date' .$idx]))
+			{
+				if(!Validate::isDate($_POST['ams_custom_date' .$idx]) and isset($_POST['ams_custom_date' .$idx]))
+				{
+					$_POST['ams_custom_date' .$idx] = str_replace('/', '-', $_POST['ams_custom_date' .$idx]);
+					$_POST['ams_custom_date' .$idx] = date("Y-m-d",strtotime($_POST['ams_custom_date' .$idx]));
+					if(!Validate::isDate($_POST['ams_custom_date' .$idx]))
+					{
+						$_POST['ams_custom_date'.$idx] = null;
+					}
+				}
+				elseif(!isset($_POST['ams_custom_date' .$idx]))
+				{
+					$_POST['ams_custom_date'.$idx] = null;
+				}
+				
+			}
+		}
+ 
+
+ 2. /modules/agilemultipleseller/views/templates/sellerbusiness.tpl
+
+A. Change lines 
+From------------------------------
+ 				$('.datepicker').datepicker({
+					prevText: '',
+					nextText: '',
+					dateFormat: 'yy-mm-dd',
+				});
+
+TO------------------------------
+				$('.datepicker').datepicker({
+					prevText: '',
+					nextText: '',
+					dateFormat: 'dd/mm/yy',
+				});
+
+
+B.change input field 
+
+From ----------------------------
+
+							<input type="text" id="{$field_name}" name="{$field_name}" class="datepicker"
+								value="{if isset($smarty.post[$field_name])}{$smarty.post[$field_name]}{else}{if isset($sellerinfo->{$field_name})}{$sellerinfo->{$field_name}|escape:'htmlall':'UTF-8'}{/if}{/if}" />
+
+TO -----------------------------
+							<input type="text" id="{$field_name}" name="{$field_name}" class="datepicker" 
+								value="{if isset($smarty.post[$field_name])}{$smarty.post[$field_name]|date_format:'%d/%m/%Y'}{else}{if isset($sellerinfo->{$field_name})}{$sellerinfo->{$field_name}|date_format:'%d/%m/%Y'}{/if}{/if}" />

@@ -1,0 +1,124 @@
+A. /config/config.inc.php
+   set automtic import password in
+
+   define('_CSV_AUTOIMPORT_PASS', 'YourPassCodeHere');
+
+B. Set up a cron job on server to calling following URL to execute automatically 
+   StoreRootUrl/module/agilesellertools/productimport?auto=1&pass=passcordhere 
+
+C. AgileModuleFrontController.php (file path is different in PS 1.6x/1.7x)
+   Change "private" to "protected" if it is not as following in file 
+
+	protected $public_pages = array("sellersummary.php","sellersignup.php","agilesellers.php","sellerlocation.php","showcaseform.php","showcaselist.php","showcaseview.php");
+
+D. /modules/agilesellertools/controllers/front/productimport.php
+  D.1 Add following lines in "public function init()" before line of parent::init();
+
+		if(Tools::getValue('auto') == 1){
+			if(Tools::getValue('pass') == "" || Tools::getValue('pass') != _CSV_AUTOIMPORT_PASS)
+			{
+				die($this->l("Invalid pass code for automatic import"));
+			}
+			
+			$entity = Tools::getValue('entity','');
+			
+			if($entity !="0" && $entity !="1")
+			{
+				die($this->l("Specified entity is invalid."));
+			}
+			
+			$csv = "";///_0 stands for "as admin", otherwise, use seller ID
+			$type_value = [];
+			if($entity =="0")
+			{
+				$csv = "auto_import_products_0.csv";
+				$type_value = explode("|", "id_seller|id|active|name|category|price_tex|id_tax_rules_group|wholesale_price|on_sale|reduction_price|reduction_percent|reduction_from|reduction_to|reference|supplier_reference|supplier|manufacturer|ean13|upc|ecotax|width|height|depth|weight|quantity|minimal_quantity|visibility|additional_shipping_cost|unity|unit_price|description_short|description|tags|meta_title|meta_keywords|meta_description|link_rewrite|available_now|available_later|available_for_order|available_date|date_add|show_price|image|delete_existing_images|features|online_only|condition|customizable|uploadable_files|text_fields|out_of_stock|shop|advanced_stock_management|depends_on_stock|warehouse");
+
+			}
+			if($entity =="1")
+			{
+				$csv = "auto_import_combinations_0.csv";
+				$type_value = explode("|", "id_seller|id_product|product_reference|group|attribute|supplier_reference|reference|ean13|upc|wholesale_price|price|ecotax|quantity|minimal_quantity|weight|default_on|available_date|image_position|image_url|delete_existing_images|shop|advanced_stock_management|depends_on_stock");
+			}
+			
+			if(!file_exists(_PS_ROOT_DIR_ . "/modules/agilesellertools/import/0/" . $csv))
+			{
+				die($this->l("CSV file does not exist, please upload your file to specified folder.") . "<BR>" . $csv);
+			}
+			
+			
+			if(Context::getContext()->customer->isLogged()){
+				die($this->l("Please log out from store before you run auto import."));
+			}
+			
+			$this->auth = false;
+			$this->public_pages[] = "productimport.php";
+			
+			$_POST['csv'] = $csv;
+			$_POST['type_value'] = $type_value;
+			$_POST['entity'] = $entity;
+
+			$_POST['convert'] = "on";
+			$_POST['regenerate'] = "";
+			$_POST['iso_lang'] = "en";
+			$_POST['separator'] = ";";
+			$_POST['multiple_value_separator'] = ",";
+			$_POST['skip'] = "1";
+			$_POST['import'] = "";
+			$_POST['forceIDs'] = (int)Configuration::get('AST_PRODUCT_IMPORT_ALLOW_FORCE_ID');
+		}
+				
+
+   D.2 Replace following line in side "public function productImport()"
+
+	  Before changes
+  				if(!AgileSellerManager::hasOwnership('product',(int)$product->id))
+
+	  After change
+ 				if(Tools::getValue('auto') != 1 && !AgileSellerManager::hasOwnership('product',(int)$product->id))
+
+  D.3 Replace following line in side "public function productImport()" -- at bottom of the function
+
+
+	 Before
+			AgileSellerManager::assignObjectOwner('product', $product->id, $this->seller->id);
+
+	 After Change
+			AgileSellerManager::assignObjectOwner('product', $product->id, $this->seller->id > 0 ? $this->seller->id : (isset($info['id_seller']) ? (int)	$info['id_seller'] : 0));
+
+
+  D.4 Replace following line in side "public function attributeImport()" -- at bottom of the function
+
+
+	 Before
+			AgileSellerManager::assignObjectOwner('product', $product->id, $this->seller->id);
+
+	 After Change
+			AgileSellerManager::assignObjectOwner('product', $product->id, $this->seller->id > 0 ? $this->seller->id : (isset($info['id_seller']) ? (int)	$info['id_seller'] : 0));
+
+  D.5 Add following lines in "function postProcess()" at end of CODE BLOCK 
+   
+   Location:
+		if (Tools::isSubmit('import'))
+		{
+		.....
+
+		Here
+		}	
+
+
+    Code to add:
+
+			if(Tools::getValue('auto') == 1){
+				if(!empty($this->errors)){
+					print '<p style="color:red">';
+					foreach($this->errors as $err)print $err . "<BR>";
+					print '</p>';
+				}
+				
+				if(file_exists(_PS_ROOT_DIR_ . "/modules/agilesellertools/import/0/" .  Tools::getValue('csv') . ".done"))
+					unlink(_PS_ROOT_DIR_ . "/modules/agilesellertools/import/0/" .  Tools::getValue('csv') . ".done");
+
+				rename(_PS_ROOT_DIR_ . "/modules/agilesellertools/import/0/" . Tools::getValue('csv'), _PS_ROOT_DIR_ . "/modules/agilesellertools/import/0/" .  Tools::getValue('csv') . ".done");
+				die("<br>Done");
+			}

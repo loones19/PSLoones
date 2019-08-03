@@ -1,0 +1,13 @@
+What does this do?
+==================
+This custom change will implement CSV Auto Import via a special URL with new column of id_seller in CSV file
+This works for PrestaShop 1.6x or higher
+Agile Seller Tools module must be installed
+
+A. The CSV data file name and path must be following folder
+   /modules/agilesellertools/import/0/auto_import_0.csv
+
+B. After the run, the file will be renamed to  auto_import_0.csv.done
+
+C. Please use CSV template in the same folder as sample
+
