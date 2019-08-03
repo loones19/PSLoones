@@ -81,13 +81,16 @@
 
           {block name="content_wrapper"}
             <div id="content-wrapper" class="left-column right-column col-sm-4 col-md-6">
-                {block name="breadcrumb_wrapper"}         
-                  <div id="breadcrumb_wrapper" class="">       
-                      {block name='breadcrumb'}
-                         {include file='_partials/breadcrumb.tpl'}
-                        {/block}
+                {* LOONES - 03/08/2019 - Remove Breadcrumbs *}
+                {if Tools::getValue('id_cms') neq 6 && Tools::getValue('id_cms') neq 7 && Tools::getValue('id_cms') neq 8}       
+                  {block name="breadcrumb_wrapper"}         
+                    <div id="breadcrumb_wrapper" class="">    
+                        {block name='breadcrumb'}
+                          {include file='_partials/breadcrumb.tpl'}
+                          {/block}
                     </div>
-                {/block}   
+                  {/block}
+                {/if}   
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>
