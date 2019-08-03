@@ -28,13 +28,18 @@
 
   <section id="main">
 
-    {block name='page_header_container'}
-      {block name='page_title' hide}
-        <header class="page-header">
-          <h1 class="h1">{$smarty.block.child}</h1>
-        </header>
+    {* LOONES - 03/08/2019 - Remove Page Header *}
+    {if Tools::getValue('id_cms') neq 6 && Tools::getValue('id_cms') neq 7 && Tools::getValue('id_cms') neq 8} 
+        
+      {block name='page_header_container'}
+        {block name='page_title' hide}
+          <header class="page-header">
+            <h1 class="h1">{$smarty.block.child}</h1>
+          </header>
+        {/block}
       {/block}
-    {/block}
+
+    {/if}
 
     {block name='page_content_container'}
       <section id="content" class="page-content card card-block">
