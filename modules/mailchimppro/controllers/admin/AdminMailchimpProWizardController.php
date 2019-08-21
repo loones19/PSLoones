@@ -296,9 +296,7 @@ class AdminMailchimpProWizardController extends ModuleAdminController
                 $customerIds
             );
             $command->setSyncMode($command::SYNC_MODE_REGULAR);
-            $command->setMethod($command::SYNC_METHOD_POST);
-            $results[] = $command->execute();
-            $command->setMethod($command::SYNC_METHOD_PATCH);
+            $command->setMethod($command::SYNC_METHOD_PUT);
             $results[] = $command->execute();
             $this->ajaxDie(array(
                 'hasError' => false,

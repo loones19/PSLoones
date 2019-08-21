@@ -122,6 +122,7 @@ class OrderSyncCommand extends BaseApiCommand
                 $this->mailchimp,
                 array($customer->id)
             );
+            $command->setMethod(CustomerSyncCommand::SYNC_METHOD_PUT);
             $command->triggerDoubleOptIn(true);
             $command->execute();
             if (!$this->mailchimp->success()) {

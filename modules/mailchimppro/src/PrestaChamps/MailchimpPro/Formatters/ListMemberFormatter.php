@@ -30,6 +30,7 @@ class ListMemberFormatter
     const EMAIL_TYPE_TEXT = 'text';
 
     const STATUS_SUBSCRIBED = 'subscribed';
+    const STATUS_TRANSACTIONAL = 'transactional';
     const STATUS_UNSUBSCRIBED = 'unsubscribed';
     const STATUS_CLEANED = 'cleaned';
     const STATUS_PENDING = 'pending';
@@ -63,7 +64,7 @@ class ListMemberFormatter
      */
     public function format()
     {
-        $customer = new \Customer(8);
+        $customer = $this->customer;
         $addresses = $customer->getAddresses(\Configuration::get('PS_LANG_DEFAULT'));
         if (!empty($addresses)) {
             $address = reset($addresses);

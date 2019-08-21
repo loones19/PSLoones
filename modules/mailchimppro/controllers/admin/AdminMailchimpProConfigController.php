@@ -226,19 +226,19 @@ class AdminMailchimpProConfigController extends ModuleAdminController
                         'lang'     => false,
                         'required' => true,
                         'options'  => array(
-                            'query' => $lists['lists'],
+                            'query' => isset($lists['lists']) ? $lists['lists'] : array(),
                             'id'    => 'id',
                             'name'  => 'name',
                         ),
                     ),
-//                    [
-//                        'type'     => 'text',
-//                        'label'    => $this->l('API Key'),
-//                        'name'     => MailchimpProConfig::MAILCHIMP_API_KEY,
-//                        'lang'     => false,
-//                        'required' => true,
-//                        'hint'     => $this->l('API Key'),
-//                    ],
+                    //                    [
+                    //                        'type'     => 'text',
+                    //                        'label'    => $this->l('API Key'),
+                    //                        'name'     => MailchimpProConfig::MAILCHIMP_API_KEY,
+                    //                        'lang'     => false,
+                    //                        'required' => true,
+                    //                        'hint'     => $this->l('API Key'),
+                    //                    ],
                 ),
                 'submit' => array(
                     'title' => $this->l('Save'),

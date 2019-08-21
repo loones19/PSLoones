@@ -277,10 +277,10 @@ class AdminMailchimpProSyncController extends ModuleAdminController
             $service->triggerDoubleOptIn(false);
             $service->setSyncMode($service::SYNC_MODE_BATCH);
             if ($method === 'post') {
-                $service->setMethod($service::SYNC_METHOD_POST);
+                $service->setMethod($service::SYNC_METHOD_PUT);
             }
             if ($method === 'patch') {
-                $service->setMethod($service::SYNC_METHOD_PATCH);
+                $service->setMethod($service::SYNC_METHOD_PUT);
             }
             if ($method === 'delete') {
                 $service->setMethod($service::SYNC_METHOD_DELETE);
