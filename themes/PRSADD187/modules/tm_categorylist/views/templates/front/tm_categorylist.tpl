@@ -56,11 +56,11 @@
 								<br/>
 								<h1 style="color:green;">
 								{if $tmcategoryinfo.name == "Virgen Extra"}
-									2.445,96
+									2.159,28
 								{elseif $tmcategoryinfo.name == "Virgen"}
-									2.028,19
+									2.049,90
 								{elseif $tmcategoryinfo.name == "Lampante"}
-									1.880,65
+									1.999,80
 								{elseif $tmcategoryinfo.name == "Tinto"}
 									264,1
 								{elseif $tmcategoryinfo.name == "Blanco"}
@@ -75,7 +75,7 @@
 									0.0
 								{/if}
 								<span><i class="material-icons">&#xe8e5;</i></span></h1>
-								<p>(€/Ton)</p>
+								<p>(€/T)</p>
 							</div>
 						</div>
 						{*$datoscat|@debug_print_var*}
