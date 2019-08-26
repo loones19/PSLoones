@@ -100,8 +100,9 @@
 		    {/if}
 	    {/foreach}
 	    </div>
+    {*
     {else}
 	    <p class="align_center">{l s='There are currently no questions for this product.' mod='agilesellermessenger'}<br />{l s='Be the first to ask a question.' mod='agilesellermessenger'}</p>
+    *}
     {/if}
-
 </div>
