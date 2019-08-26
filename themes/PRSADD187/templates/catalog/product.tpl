@@ -271,7 +271,7 @@
             </section>
           </div>
         {/if}
-      {/block}<br>
+      {/block}
 
       {* Product Rating *}
       {block name="product_rating"}
@@ -281,14 +281,17 @@
             {$product.rating}
           </div>
         {/if}  
-      {/block} <br><br>
+      {/block} <br>
       
       {block name="extra_content"}
         
-        <h2>{l s='Seller information' d='Shop.Theme.Catalog'}</h2>
-        <br>
-        {foreach from=$product.extraContent item=extra key=extraKey}
+        {* <h2>{l s='Seller information' d='Shop.Theme.Catalog'}</h2> *}
+
+        {foreach from=$product.extraContent item=extra key=extraKey}  
+          {* Show all information except the Seller Info *}
+          {if $extra.title neq "Seller info"}
             {$extra.content nofilter}
+          {/if}
         {/foreach}
       {/block}
 
